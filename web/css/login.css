@@ -1,0 +1,40 @@
+/*大图背景*/
+html,body{height:100%;}
+body{
+	background: url(../images/loadingbg.png) no-repeat 100% 100%;
+}
+/*中间注册模块*/
+.login_box{
+	width: 460px;
+	height: 628px;
+	border-radius: 10px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -314px 0 0 -230px;
+	padding: 20px;
+}
+.login_topname{
+	color: #198cff;
+	font-size: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 24px;
+}
+.login_nav{
+	width: 376px;
+	height: 36px;
+	text-align: center;
+	margin: 0 auto;
+	border-bottom: 2px solid #d8d8d8;
+}
+.login_nav li{
+	
+	display: block;
+	position: relative;
+	float: left;
+	font-size: 18px;
+	color: rgba(0,0,0,0.45);
+
+}
