@@ -28,4 +28,27 @@ $(function(){
 	$('.clickthisbtn').click(function(){
 		$('.thanbtn').click();
 	})
+
+	/*获取验证码 60s后重试*/
+	var ding = null;
+	var ifclick = true;
+	$(".thisYZM").click(function(){
+		var time = 10;
+		if (ifclick==true) {
+			ding = setInterval(function(){
+				ifclick = false;
+		        $(".thisYZM").text(time+"s 重试");
+		        $(".thisYZM").css({"cursor":"not-allowed","color":"rgba(0,0,0,0.65)"});
+		        
+		        time--;
+		        if(time==-2){
+			    	ifclick = true;
+			    	clearInterval(ding);
+			    	$(".thisYZM").text("重新获取");
+			    	$(".thisYZM").css({"cursor":"pointer","color":"#198cff"});
+			    }
+		    },1000);
+		} 
+	})
+	/*获取验证码 60s后重试结束*/
 })
