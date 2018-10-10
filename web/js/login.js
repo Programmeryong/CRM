@@ -9,6 +9,7 @@ $(function(){
 	})
 	$('.login_nav li').eq(0).click();
 	var ii =0;
+	var jj =0;
 	$('.thischeckbox').click(function(){
 		ii++;
 		if(ii%2 ==0){
@@ -25,10 +26,28 @@ $(function(){
 			$('.thisbox').click();
 		}
 	})
+	$('.thischeckbox1').click(function(){
+		jj++;
+		if(jj%2 ==0){
+			// 不变色
+			$('.thischeckbox1').removeClass('icon-duoxuankuang1');
+			$('.thischeckbox1').addClass('icon-icon-');
+			$('.thischeckbox1').css({'color':'rgba(0,0,0,.45)'});
+			$('.thisbox1').click();
+		}else{
+			// 变蓝色
+			$('.thischeckbox1').removeClass('icon-icon-');
+			$('.thischeckbox1').addClass('icon-duoxuankuang1');
+			$('.thischeckbox1').css({'color':'#1A8CFF'});
+			$('.thisbox1').click();
+		}
+	})
 	$('.clickthisbtn').click(function(){
 		$('.thanbtn').click();
 	})
-
+	$('.clickthisbtn1').click(function(){
+		$('.thanbtn1').click();
+	})
 	/*获取验证码 60s后重试*/
 	var ding = null;
 	var ifclick = true;
