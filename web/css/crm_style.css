@@ -12,6 +12,7 @@ a{
 ul,ol,li{
   list-style: none;
 }
+input{outline:none;}
 .mar{
 	margin: 0;
 }
@@ -20,4 +21,7 @@ ul,ol,li{
 }
 .clear{
   clear: both;
+}
+.cursor{
+	cursor:pointer;
 }
