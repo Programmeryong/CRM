@@ -1,7 +1,7 @@
 /*大图背景*/
 html,body{height:100%;}
 body{
-	background: url(../images/loadingbg.png) no-repeat 100% 100%;
+	background: url(../images/bg/loadingbg.png) no-repeat 100% 100%;
 }
 /*中间注册模块*/
 .login_box{
