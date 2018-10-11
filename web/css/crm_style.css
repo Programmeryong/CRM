@@ -163,3 +163,8 @@ a:hover{
   cursor: pointer;
 }
 /*头部结束*/
+.onehide{
+	white-space:nowrap;/*不显示的地方用省略号...代替*/
+	text-overflow:ellipsis;/* 支持 IE */
+  -o-text-overflow: ellipsis;    /* 支持 Opera */
+}
