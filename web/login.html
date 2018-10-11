@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>注册页面</title>
+	<link rel="stylesheet" type="text/css" href="css/crm_style.css">
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_865677_14tsiakud6o.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body class="mar">
+	<!-- 物业入驻注册和企业注册 -->
+	<div class="login_box">
+		<div class="login_topname">云海OA</div>
+		<!-- 切换标签 -->
+		<ul class="login_nav mar pad clear">
+			<li class="cursor">物业申请入驻</li>
+			<li class="cursor">企业手机注册</li>
+		</ul>
+		<ul class="login_content mar pad">
+			<!-- 物业 -->
+			<li>
+				<form>
+					<input type="text" name="" placeholder="请输入物业名字">
+					<input type="text" name="" placeholder="请输入联系人姓名">
+					<input type="tel" name="" placeholder="请输入手机号码">
+					<!-- 模拟点击多选框 已隐藏 -->
+					<input class="thisbox" type="checkbox" name="" style="display: none;position: absolute;">
+					<div class="login_agreement mar"><i class="iconfont icon-icon- mar thischeckbox cursor"></i>用户同意并已阅读<a href="#" class="mar">《CRM服务协议》</a></div>
+					<input class="thanbtn" type="submit" name="" style="display: none;position: absolute;">
+					<div class="clickthisbtn cursor">入驻</div>
+				</form>
+				<div class="bomtext">已有账号？<a href="#">直接登录</a></div>
+			</li>
+			<!-- 企业 -->
+			<li>
+				<form>
+					<input type="text" name="" placeholder="请输入手机号码">
+					<input type="password" name="" placeholder="请输入密码">
+					<input type="password" name="" placeholder="请再次输入密码">
+					<input class="oneYZM" type="tel" name="" placeholder="输入验证码">
+					<div class="thisYZM cursor">获取验证码</div>
+					<!-- 模拟点击多选框 已隐藏 -->
+					<input class="thisbox1" type="checkbox" name="" style="display: none;position: absolute;">
+					<div class="login_agreement mar"><i class="iconfont icon-icon- mar thischeckbox1 cursor"></i>用户同意并已阅读<a href="#" class="mar">《CRM服务协议》</a></div>
+					<input class="thanbtn1" type="submit" name="" style="display: none;position: absolute;">
+					<div class="clickthisbtn1 cursor">注册</div>
+				</form>
+				<div class="bomtext">已有账号？<a href="#">直接登录</a></div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
