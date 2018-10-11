@@ -1,4 +1,17 @@
 $(function(){
+	/*物业社区（控制布局）*/
+	var zomes = $('.zome').length;
+	for (var i=1; i<=zomes;i++) {
+		if (i%3==0) {
+			$('.zome').eq(i-1).css("margin","0");
+		} else{
+			
+		}
+	}
+	/*物业社区（控制布局）结束*/
+	
+	
+	
 	/*头部导航*/
 	$('.header-2-l>ul li').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
@@ -51,4 +64,55 @@ $(function(){
 			$('.zddl i').css("color","rgba(0,0,0,0.45)");
 		}
 	})
+	
+	
+	
+	/*判断是哪种内核浏览器*/
+	var browser={
+	    versions:function(){
+	        var u = navigator.userAgent, app = navigator.appVersion;
+	        return {
+	            trident: u.indexOf('Trident') > -1, //IE内核
+	            presto: u.indexOf('Presto') > -1, //opera内核
+	            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+	            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+	            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+	            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+	            android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
+	            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+	            iPad: u.indexOf('iPad') > -1, //是否iPad
+	            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+	            weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+	            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+	        };
+	    }(),
+	    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+	}
+	
+
+	if(browser.versions.trident){ /*IE浏览器*/
+		/*视觉盛宴溢出点点点*/
+		var aa = document.querySelector('.wysq');
+		var module1 = aa.querySelectorAll('.zome-introduce');
+		console.log(module1.length);
+		for (var i=0;i<module1.length; i++) {
+			$clamp(module1[i], {clamp: 3});
+		} 
+	}else if(browser.versions.webKit){ /*webKit内核*/
+		/*视觉盛宴溢出点点点*/
+		var aa = document.querySelector('.wysq');
+		var module1 = aa.querySelectorAll('.zome-introduce');
+		console.log(module1.length);
+		for (var i=0;i<module1.length; i++) {
+			$clamp(module1[i], {clamp: 3});
+		}
+	}else{/*IE,webkit以外的浏览器*/
+		/*视觉盛宴溢出点点点*/
+		var aa = document.querySelector('.wysq');
+		var module1 = aa.querySelectorAll('.zome-introduce');
+		console.log(module1.length);
+		for (var i=0;i<module1.length; i++) {
+			$clamp(module1[i], {clamp: 3});
+		} 
+	}
 })
