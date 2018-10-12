@@ -1,0 +1,159 @@
+main{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;	
+	margin-bottom: 24px;
+	padding-top: 40px;
+}
+/*预留位*/
+.yuliu{
+	width: 100%;
+	height: 223px;
+	background: #fff;
+}
+/*筛选*/
+.screen{
+	margin-top: 46px;
+	border-bottom: 2px solid #198CFF;
+}
+.screen ul .active,.screen ul li:hover{
+	background: #198CFF;
+	color: #fff;
+}
+.screen ul li{
+	font-size: 16px;
+	float: left;
+	width: 104px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	color: rgba(0,0,0,0.65);
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+/*左和右*/
+.main-l-r{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+/*左*/
+.main-l{
+	width: 880px;
+}
+/*需求列表*/
+.list-box{
+	margin-top: 20px;
+}
+.list-box ul li{
+	margin-bottom: 24px;
+}
+.list-box ul li:hover .label-each>span:nth-of-type(1){background: #FFF7E6; color: #FFB319;}
+.list-box ul li:hover .label-each>span:nth-of-type(2){background: #FFEEEB; color: #FF8066;}
+.list-box ul li:hover .label-each>span:nth-of-type(3){background:rgba(25,140,255,0.2); color: #4CA6FF;}
+.list-box ul li:hover .label-each>span:nth-of-type(4){background: #D0F3F3; color: #27C2C2;}
+.list-box ul li:hover .label-each>span:nth-of-type(5){background: #E3D5F6; color: #9469D1;}
+.list-box ul li:hover .label-each>span:nth-of-type(6){background: #DFF5D4; color: #6DCC3D;}
+
+.list-box ul li:hover .list-each{
+	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+}
+
+.list-each{
+	transition: all 0.8s;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 128px;
+	background: #fff;
+}
+
+.touxiang{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 20px 20px;
+}
+.touxiang img{
+	width: 100%;
+	height: 100%;
+}
+.list-xq-l{
+	width: 10%;
+}
+.list-xq-m{
+	padding-top: 20px;
+	width: 75%;
+}
+.list-xq-r{
+	text-align: right;
+	width: 14%;
+	padding-right: 20px;
+	padding-top: 20px;
+	color: rgba(0,0,0,0.65);
+}
+.title-list{
+	display: inline-block;
+	overflow: hidden;
+	max-width: 89%;
+	position: relative;
+	padding-right: 60px;
+}
+.qiye-logo,.zome-logo{
+	padding: 2px 10px;
+	color: #fff;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 0;
+	right: 0px;
+}
+.qiye-logo{
+	background: #198CFF;
+}
+.zome-logo{
+	background: #FFB31A;
+}
+.detail-each{
+	margin-top: 12px;
+	color: rgba(0,0,0,0.45);
+}
+.detail-each>span{
+	margin-right: 90px;
+}
+.label-each{
+	margin-top: 15px;
+}
+.label-each>span{
+	transition: all 0.8s;
+	color: rgba(0,0,0,0.65);
+	font-size: 12px;
+	padding: 2px 10px;
+	background: #F2F2F2;
+	border-radius:2px;
+	margin-right: 11px;
+}
+/*需求列表结束*/
+
+/*右*/
+.main-r{
+	padding-top: 20px;
+	width: 300px;
+}
+.saoma-box{
+	width: 100%;
+	height: 244px;
+	background: #fff;
+	padding-top: 28px;
+}
+.saoma-box img{
+	display: block;
+	margin: 0 auto;
+}
+.img-box img{
+	margin-top: 24px;
+	width: 100%;
+	height: 400px;
+}

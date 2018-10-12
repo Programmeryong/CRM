@@ -11,14 +11,6 @@ $(function(){
 	/*物业社区（控制布局）结束*/
 	
 	
-	
-	/*头部导航*/
-	$('.header-2-l>ul li').click(function(){
-		$(this).addClass('active').siblings().removeClass('active');
-	})
-	
-	
-	
 	/*中部行业*/
 	$('.main-top-l-index').hover(function(){
 		$('.hangye-content').show();

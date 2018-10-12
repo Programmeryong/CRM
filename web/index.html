@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>首页</title>
 		<link rel="stylesheet" type="text/css" href="css/crm_style.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/index.js" ></script>
 		<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
 		<script type="text/javascript" src="js/clamp.js" ></script>
+		<script type="text/javascript" src="js/crm-style.js" ></script>
 	</head>
 	
 	<body style="background: #F5F7FA;">
@@ -92,16 +93,16 @@
 					<div class="swiper-container main-top-lunbo">
 						<div class="swiper-wrapper">
 		                    <div class="swiper-slide">
-		                        <img src="images/banner/banner_1.jpg"/>
+		                        <a href=""><img src="images/banner/banner_1.jpg"/></a>
 		                    </div>
 		                    <div class="swiper-slide">
-		                        <img src="images/banner/banner_1.png"/>
+		                        <a href=""><img src="images/banner/banner_1.png"/></a>
 		                    </div>
 		                    <div class="swiper-slide">
-		                        <img src="images/banner/banner_2.jpg"/>
+		                        <a href=""><img src="images/banner/banner_2.jpg"/></a>
 		                    </div>
 		                    <div class="swiper-slide">
-		                        <img src="images/banner/banner_3.jpg"/>
+		                        <a href=""><img src="images/banner/banner_3.jpg"/></a>
 		                    </div>
 						</div>
 						<!--轮播小圆点-->
@@ -172,7 +173,7 @@
 							<a href="">企业认证</a>
 						</div>
 						<!--<p class="isJoin" style="text-align: center;">
-							<img src="images/logo_1.png"/>
+							<img src="images/icon/logo_1.png"/>
 							已入驻平台
 						</p>-->
 						
@@ -260,7 +261,7 @@
 								<div class="list-each">
 									<div class="list-xq-l">
 										<div class="touxiang">
-											<img src="images/logo_1.png"/>
+											<img src="images/icon/logo_1.png"/>
 										</div>
 									</div>
 									
@@ -298,7 +299,7 @@
 								<div class="list-each">
 									<div class="list-xq-l">
 										<div class="touxiang">
-											<img src="images/logo_1.png"/>
+											<img src="images/icon/logo_1.png"/>
 										</div>
 									</div>
 									
@@ -348,7 +349,7 @@
 						<div class="zome">
 							<div class="zome-top">
 								<div class="zome-img">
-									<img src="images/logo_1.png"/>
+									<img src="images/icon/logo_1.png"/>
 								</div>
 								
 								<div class="zome-info">
@@ -369,7 +370,7 @@
 						<div class="zome">
 							<div class="zome-top">
 								<div class="zome-img">
-									<img src="images/logo_1.png"/>
+									<img src="images/icon/logo_1.png"/>
 								</div>
 								
 								<div class="zome-info">
@@ -390,7 +391,7 @@
 						<div class="zome">
 							<div class="zome-top">
 								<div class="zome-img">
-									<img src="images/logo_1.png"/>
+									<img src="images/icon/logo_1.png"/>
 								</div>
 								
 								<div class="zome-info">
@@ -411,7 +412,7 @@
 						<div class="zome">
 							<div class="zome-top">
 								<div class="zome-img">
-									<img src="images/logo_1.png"/>
+									<img src="images/icon/logo_1.png"/>
 								</div>
 								
 								<div class="zome-info">
@@ -432,7 +433,7 @@
 						<div class="zome">
 							<div class="zome-top">
 								<div class="zome-img">
-									<img src="images/logo_1.png"/>
+									<img src="images/icon/logo_1.png"/>
 								</div>
 								
 								<div class="zome-info">
@@ -452,7 +453,69 @@
 				</div>
 			</div>
 			<!--物业社区结束-->
+			<!--广告-->
+			<div class="gugao">
+				<img src="images/gugao/1.png"/>
+				<a href=""><span class="fabu-gugao">发布房源</span></a>
+			</div>
 		</main>
+		
+		<footer class="pc">
+	        <div style="width: 1200px; margin: 0 auto;">
+	           <div class="footer_title">广州乙租信息科技有限公司</div>
+	           <div class="footer_conter">
+	               <div class="footer_conter1">
+	                   <span>关于乙租</span>
+	                   <ul class="pad">
+	                       <li><a href="{:U('AboutUs/index')}?tag=1">联系我们</a></li>
+	                       <li><a href="{:U('AboutUs/index')}?tag=2">商务合作</a></li>
+	                        <!--<li><a href="{:U('AboutUs/index')}?tag=3">网站地图</a></li>-->
+	                        <li><a href="{:U('AboutUs/index')}?tag=3">常见问题</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=4">用户协议</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=5">隐私条款</a></li>
+	                   </ul>
+	               </div>
+	               <div class="footer_conter2">
+	                   <span>友情链接</span>
+	                   <ul class="pad">
+	                       <li><a href="{$vo.link_url}">今日头条</a></li>
+	                       <li><a href="{$vo.link_url}">知乎</a></li>
+	                       <li><a href="{$vo.link_url}">腾讯网</a></li>
+	                       <li><a href="{$vo.link_url}">搜狐</a></li>
+	                       <li><a href="{$vo.link_url}">UC头条</a></li>
+	                       <li><a href="{$vo.link_url}">网易</a></li>
+	                       <li><a href="{$vo.link_url}">新浪网</a></li>
+	                       <li><a href="{$vo.link_url}">南方财富网</a></li>
+	                   </ul>
+	               </div>
+	               <div class="footer_conter3">
+	                   <span>电话</span>
+	                   <h2 class="conter3_h2">400-886-6391</h2>
+	                   <span>地址</span>
+	                   <p style="color: rgba(255,255,255,.65);font-size: 14px;margin-bottom: 24px;">广州市白云大道北广贸商务中心C栋401</p>
+	                   <span>邮箱</span>
+	                   <p style="color:rgba(255,255,255,.65);font-size: 14px;">epassrent@163.com</p>
+	               </div>
+	               <div class="footer_conter4">
+	                    <span><img src="images/qrcode/qrcode_1.jpg"></span>
+	                    <span class="gzgzh">关注公众号</span>
+	               </div>
+	           </div>
+	        </div>
+	        <!-- 最底下 备案 -->
+	        <div class="foot_t_box">
+	            <div class="foot_t">
+	                <span>
+	                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102002056">
+	                        <img src="images/GABA.png" />
+	                        粤公网安备 44011102002056号
+	                    </a>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                </span>
+	                <span>&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/"style="color:#fff">Copyright &#169 2017 广州乙租信息科技有限公司 粤ICP备18097655号</a></span>
+	            </div>
+	        </div>
+		</footer>
 	</body>
 	
 	<script type="text/javascript">

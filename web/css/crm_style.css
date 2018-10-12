@@ -64,6 +64,13 @@ a:hover{
 .fsize32{font-size: 32px;}
 .fsize36{font-size: 36px;}
 
+/*头部结束*/
+.onehide{
+	white-space:nowrap;/*不显示的地方用省略号...代替*/
+	text-overflow:ellipsis;/* 支持 IE */
+  -o-text-overflow: ellipsis;    /* 支持 Opera */
+}
+
 /*头部开始*/
 .header-1{
   width: 100%;
@@ -162,9 +169,105 @@ a:hover{
   margin-left: 40px;
   cursor: pointer;
 }
-/*头部结束*/
-.onehide{
-	white-space:nowrap;/*不显示的地方用省略号...代替*/
-	text-overflow:ellipsis;/* 支持 IE */
-  -o-text-overflow: ellipsis;    /* 支持 Opera */
+
+
+/*底部样式开始*/
+footer{
+		overflow: hidden;
+    width: 100%;
+    height: 36.667rem;
+    position: relative;
+    background: url(../images/bto/bg_sloces.png) no-repeat;
+    background-size: 100% 100%;
 }
+.footer_conter{
+		position: relative;
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_conter1{
+    width: 15%;
+    height: 114px;
+}
+.footer_conter2{
+    width: 15%;
+    height: 180px;
+}
+.footer_conter3{
+    width: 22%;
+    height:216px;
+}
+.footer_conter4{
+    width: 10.5%;
+    height: 120px;
+}
+.footer_conter1 span,.footer_conter2 span,.footer_conter3 span{
+    font-size: 18px;
+    color: rgba(255,255,255,.8);
+}
+.footer_conter1 ul,.footer_conter2 ul{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.footer_conter1 ul li,.footer_conter2 ul li{
+    width: 47%;
+    margin-top: 12px;
+}
+.footer_conter1 ul li a,.footer_conter2 ul li a{
+    color: rgba(255,255,255,.65);
+}
+.footer_conter4 span:nth-of-type(1){
+    position: relative;    
+}
+.footer_conter4 span img{
+    width: 100%;
+    height: 100%;
+}
+.gzgzh{
+    position: absolute;
+    width: 28px;
+    height: 115px;
+    background: #00a0e9;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 5px;
+    top: 0;
+    right: -24px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.footer_title{
+    font-size: 18px;
+    color: #fff;    
+    padding-left: 35px;
+    margin-top: 70px;
+    background: url(../images/logo/min_logo_1.png) no-repeat;
+    background-size: 28px 20px;
+    background-position: 0px 0px;
+}
+.conter3_h2{
+    font-size: 24px;
+    color: rgba(255,255,255,.8);
+    margin:12px 0 24px 0;
+}
+.foot_t_box{
+    position: absolute;
+    width: 1200px;
+    left: 50%;
+    margin-left: -600px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.foot_t span{
+    text-align: center;
+    color: rgba(0,0,0,.45)!important;
+}
+.foot_t span a{
+    color: rgba(0,0,0,.45)!important;
+}
+/*底部样式结束*/
