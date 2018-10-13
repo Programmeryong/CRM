@@ -7,4 +7,4 @@ $(function(){
 		$('.yes_this_btn').animate({left: '+50px',opacity: '0'}, 500)
 		$('.no_this_btn').animate({left: '+100px',opacity: '1'}, 500);
 	})
-})
+})	
