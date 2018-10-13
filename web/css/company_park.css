@@ -335,3 +335,49 @@ footer{
 	margin-left: 11px;
 }
 /*park结束*/
+
+/*物业社区页面开始*/
+.main_content_l_7 ul{
+	padding: 10px;
+	width: 100%;
+}
+.main_content_l_7 ul li{
+	width: 368px;
+	height: 160px;
+	float: left;
+	border: 1px solid rgba(0,0,0,.09);
+	margin: 10px;
+	padding: 24px 20px;
+}
+.l7_top{
+	position: relative;
+	
+}
+.l7_top img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.l7_top span{
+	position: absolute;
+}
+.l7_top span:nth-of-type(1){
+	top:5px;
+	left: 75px;
+	font-weight:500;
+	color: rgba(0,0,0,.85);
+}
+.l7_top span:nth-of-type(2){
+	top:30px;
+	left: 75px;
+	color: rgba(0,0,0,.45);
+}
+.l7_top span:nth-of-type(2) i{
+	padding-left: 10px;
+}
+.l7_bom{
+	margin-top: 12px;
+}
+.l7_bom p{
+	color: rgba(0,0,0,.65);
+}
