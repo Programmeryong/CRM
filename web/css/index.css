@@ -130,7 +130,7 @@
 	outline: none;
 	padding-left: 12px;
 }
-.telphone{
+.telphone,.account{
 	margin-top: 20px;
 }
 .sendYZM{
@@ -166,12 +166,15 @@
 	margin-top: 20px;
 }
 .regAndLog .login-btn,.regAndLog .reg-btn{
+	display: inline-block;
 	width: 98px;
 	height: 36px;
 	line-height: 36px;
 	color: #fff;
 	border: 0;
 	outline: 0;
+	text-align: center;
+	cursor: pointer;
 }
 .login-btn{
 	background:linear-gradient(270deg,rgba(25,163,255,1) 0%,rgba(25,140,255,1) 100%);

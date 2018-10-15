@@ -8,6 +8,31 @@ main{
 	display: flex;
 	justify-content:space-between;
 }
+/*未登录 和未入驻*/
+.noLogin,.noJoin{
+	width: 880px; 
+	height: 724px; 
+	background: #fff;  
+    text-align: center; 
+    box-sizing: border-box;
+}
+.noLogin{
+	padding-top: 258px; 
+}
+.noJoin{
+	padding-top: 171px;
+}
+.share{
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 24px;
+	width:168px;
+	height:48px;
+	line-height: 48px;
+	background:rgba(216,216,216,1);
+	border:1px solid rgba(151,151,151,1);
+}
+/*未登录 和未入驻结束*/
 .main_content_l{
 	width: 73.33%;
 	height: 100%;
@@ -131,20 +156,28 @@ main{
 	margin: 10px;
 }
 .content_3_li{
-	height: 82px;
+	height: 85px;
 	padding: 20px 12px;
 	border: 1px solid rgba(0,0,0,.09);
 }
 /*回头还要微调*/
 .content_3_li p{
-	height: 42px;
-	display: -webkit-box;
-	display: -moz-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+	height: 45px;
+	overflow:hidden;
+	position: relative; 
 	font-size: 16px;
 	color: rgba(0,0,0,.85);
 }
+.title{
+	line-height: 24px;
+}
+.zome-logo{
+	padding: 0px 4px; 
+	color: #fff; 
+	background:linear-gradient(270deg,rgba(255,201,25,1) 0%,rgba(255,179,26,1) 100%);
+	border-radius:2px;
+}
+
 .li_mintext{
 	width: 100%;
 	height: 25px;
@@ -266,18 +299,7 @@ footer{
 	width: 16px;
 	height: 16px;
 }*/
-.content_3_li a p:after{
-	content: '园';
-	width: 16px;
-	height: 16px;
-	font-size: 14px;
-	border-radius: 2px;
-	padding: 0 2px;
-	text-align: center;
-	line-height: 16px;
-	color: #fff;
-	background:linear-gradient(270deg,rgba(255,201,25,1) 0%,rgba(255,179,26,1) 100%);
-}
+
 .content_3_li_btn{
 	width: 100%;
 	height: 25PX;

@@ -270,4 +270,8 @@ footer{
 .foot_t span a{
     color: rgba(0,0,0,.45)!important;
 }
+.foot_t span a img{
+	position: relative;
+	bottom: -3px;
+}
 /*底部样式结束*/

@@ -1,4 +1,6 @@
 $(function(){
+	var aa = true,bb=true;
+	var loginType;
 	/*物业社区（控制布局）*/
 	var zomes = $('.zome').length;
 	for (var i=1; i<=zomes;i++) {
@@ -30,7 +32,7 @@ $(function(){
 	/*头》右部登录方式*/
 	$('.loginType ul li').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
-		var loginType = $(this).index();
+		loginType = $(this).index();
 		if (loginType==0) {
 			$('.phoneLogin').show();
 			$('.accountLogin').hide();
@@ -42,6 +44,124 @@ $(function(){
 	$('.loginType ul li').eq(0).click();
 	
 	
+	/*表单验证*/
+	$(".telphone,.yzm").focus(function () {
+        $(this).css("border", "1px solid #198CFF");
+    })
+	
+	function Phone(){
+		var tel = $(".telphone").val();
+        var phone = /^[1][3,4,5,7,8][0-9]{9}$/;
+        if (tel == null || tel == "") {
+            $(".telphone").css({"border": "1px solid #F52230"});
+            aa = false;
+        } else if (!phone.test(tel)) {
+            $(".telphone").css({"border": "1px solid #F52230"});
+            aa = false;
+        } else {
+            $(".telphone").css({"border": "1px solid #5FCC29"});
+            aa = true;
+        }
+	}
+	function Yzm(){
+		var yzm_val = $(".yzm").val();
+        var yanzm = /^[0-9]{4}$/;
+        if (yzm_val == "" || !yanzm.test(yzm_val)) {
+            $(".yzm").css({"border": "1px solid #F52230"});
+            aa = false;
+        } else {
+            $(".yzm").css({"border": "1px solid #5FCC29"});
+            aa = true;
+        }
+	}
+	function Account(){
+		var acc = $(".account").val();
+        if (acc == null || acc == "") {
+            $(".account").css({"border": "1px solid #F52230"});
+            bb = false;
+        }else {
+            $(".account").css({"border": "1px solid #5FCC29"});
+            bb = true;
+        }
+	}
+	function Pwd(){
+		var yzm_val = $(".pwd").val();
+        var yanzm = /^[0-9]{6}$/;
+        if (yzm_val == "" || !yanzm.test(yzm_val)) {
+            $(".pwd").css({"border": "1px solid #F52230"});
+            bb = false;
+        } else {
+            $(".pwd").css({"border": "1px solid #5FCC29"});
+            bb = true;
+        }
+	}
+	
+	$(".telphone").blur(function () {
+        Phone();
+    })
+
+    $(".yzm").blur(function () {
+       Yzm();
+    });
+    
+    $(".account").blur(function () {
+       Account();
+    });
+    
+    $(".pwd").blur(function () {
+       Pwd();
+    });
+    
+	/*获取验证码 60s后重试*/
+    var ding = null;
+    var ifclick = true;
+    $(".sendYZM").click(function () {
+        var time = 60;
+        if (ifclick == true) {
+            ding = setInterval(function () {
+                ifclick = false;
+                $(".sendYZM").text(time + "s 重试");
+                $(".sendYZM").css({"cursor": "not-allowed", "color": "rgba(0,0,0,0.65)"});
+                time--;
+                if (time == -2) {
+                    ifclick = true;
+                    clearInterval(ding);
+                    $(".sendYZM").text("重新获取");
+                    $(".sendYZM").css({"cursor": "pointer", "color": "#F52230"});
+                }
+            }, 1000);
+        }
+    });
+    /*获取验证码 60s后重试结束*/
+   
+   	/*提交表单*/
+   	$('.noLogin form').submit(function(){
+   		
+   		if (loginType == 0) {//手机登录
+   			Phone();
+   			Yzm();
+   			if (aa) {
+   			
+	   		} else{
+	   			return false;
+	   		}
+   		} else{//账号密码登录
+   			Account();
+   			Pwd();
+   			if (bb) {
+   			
+	   		} else{
+	   			return false;
+	   		}
+   		}
+   	})
+   	/*提交表单结束*/
+   	
+   	$('.login-btn').click(function(){//模拟点击提交表单
+   		$(".noLogin input[type='submit']").click();
+   	})
+	/*表单验证结束*/
+	
 	/*自动登录*/
 	var zddl=0;
 	$('.zddl').click(function(){
@@ -50,10 +170,12 @@ $(function(){
 			$('.zddl i').removeClass('icon-icon-');
 			$('.zddl i').addClass('icon-duoxuankuang1');
 			$('.zddl i').css("color","#198CFF");
+			$('.zddl-check').prop("checked",true);
 		} else{
 			$('.zddl i').addClass('icon-icon-');
 			$('.zddl i').removeClass('icon-duoxuankuang1');
 			$('.zddl i').css("color","rgba(0,0,0,0.45)");
+			$('.zddl-check').prop("checked",false);
 		}
 	})
 	
@@ -83,7 +205,6 @@ $(function(){
 	
 
 	if(browser.versions.trident){ /*IE浏览器*/
-		/*视觉盛宴溢出点点点*/
 		var aa = document.querySelector('.wysq');
 		var module1 = aa.querySelectorAll('.zome-introduce');
 		console.log(module1.length);
@@ -91,15 +212,12 @@ $(function(){
 			$clamp(module1[i], {clamp: 3});
 		} 
 	}else if(browser.versions.webKit){ /*webKit内核*/
-		/*视觉盛宴溢出点点点*/
 		var aa = document.querySelector('.wysq');
 		var module1 = aa.querySelectorAll('.zome-introduce');
-		console.log(module1.length);
 		for (var i=0;i<module1.length; i++) {
 			$clamp(module1[i], {clamp: 3});
 		}
 	}else{/*IE,webkit以外的浏览器*/
-		/*视觉盛宴溢出点点点*/
 		var aa = document.querySelector('.wysq');
 		var module1 = aa.querySelectorAll('.zome-introduce');
 		console.log(module1.length);
