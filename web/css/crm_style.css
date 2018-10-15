@@ -17,7 +17,8 @@ a{
 ul,ol,li{
   list-style: none;
 }
-input{outline:none;}
+input,select,textarea{outline:none;}
+select:focus,textarea:focus{outline: none;}
 a:hover{
   color: #198CFF;
 }
