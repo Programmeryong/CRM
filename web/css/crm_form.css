@@ -27,7 +27,7 @@ main{
 	padding-left: 12px;
 	border-radius: 2px;
 }
-.form_box1 li select:hover,.form_box1 li input:hover,.form_box2 input:hover,.form_box3 textarea:hover{
+.form_box1 li select:hover,.form_box1 li input:hover,.form_box2 input:hover,.form_box3 textarea:hover,.simulationtext:hover{
 	border: 1px solid #198cff;
 }
 .form_box2 div,.form_box3 div{
@@ -113,4 +113,24 @@ main{
 .simulationtext{
 	display: inline-block;
 	line-height: 40px;
+}
+.biaoqian{
+	width: 550px;
+	height: 38px;
+	line-height: 38px;
+	padding-left: 24px;
+	margin-top: 18px;
+}
+.biaoqian span{
+	font-size: 18px;
+	color: #000;
+	font-weight: 400;
+}
+.biaoqian input{
+	width: 358px;
+	height: 38px;
+	margin-left: 40px;
+	border-radius: 2px;
+	padding-left: 12px;
+	border: 1px solid rgba(0,0,0,.15);
 }

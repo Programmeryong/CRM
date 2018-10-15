@@ -15,4 +15,5 @@ $(function(){
 		$('.navbigbox').hide();
 		$('.curtain').hide();
 	})
+	
 })
