@@ -14,19 +14,20 @@ $(function(){
 	
 	
 	/*中部行业*/
-	$('.main-top-l-index').hover(function(){
-		$('.hangye-content').show();
-	},function(){
-		$('.hangye-content').hide()
-		$('.hangye-biaoti li').removeClass('active');
+	$('.main-top-l-index').hover(function(){},function(){
+		$('.hy-all').hide();
 	})
 	
-	$('.hangye-biaoti li').hover(function(){
+	$('.hangye-biaoti>li,.hy-all>li').hover(function(){
 		$(this).addClass('active').siblings().removeClass('active');
-		$('.hangye-content>ul').stop();
-		var i = $(this).index();
-		var height = i*-360;
-		$('.hangye-content>ul').animate({"top":height+"px"},100);
+	},function(){
+		$(this).removeClass('active');
+	})
+	
+	$('.showAll').hover(function(){
+		$('.hy-all').show();
+	},function(){
+		
 	})
 	
 	/*头》右部登录方式*/

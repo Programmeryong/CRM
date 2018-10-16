@@ -16,4 +16,12 @@ $(function(){
 		$('.curtain').hide();
 	})
 	
+	
+	$('.hy-title li').hover(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$('.hy-lable>ul').stop();
+		var i = $(this).index();
+		var height = i*-678;
+		$('.hy-lable>ul').animate({"top":height+"px"},100);
+	})
 })

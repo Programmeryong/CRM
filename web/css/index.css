@@ -17,8 +17,30 @@
 	background: #fff;
 	position: relative;
 }
-
-.hangye-biaoti li{
+.hangye-biaoti-box{
+	width: 240px;
+	background: #fff;
+	position: absolute;
+	z-index: 999;
+	height: 320px;
+}
+.showAll{
+	border-top: 1px dashed rgba(0,0,0,0.15);
+	position: absolute;
+	bottom: 0;
+	padding-left: 20px;
+	width: 195px;
+	height: 38px;
+	line-height: 38px;
+	color: #00c2b3;
+}
+.hangye-biaoti,.hy-all{
+	background: #fff;
+}
+.hy-all{
+	display: none;
+}
+.hangye-biaoti>li,.hy-all>li{
 	height: 40px;
 	line-height: 40px;
 	padding-left: 20px;
@@ -26,13 +48,17 @@
 	position: relative;
 	cursor: pointer;
 }
-.hangye-biaoti .active,.hangye-biaoti li:hover{
+.hangye-biaoti .active,.hangye-biaoti>li:hover,.hy-all .active,.hy-all>li:hover{
 	background: #198CFF;
 	color: #fff;
 }
-.hangye-biaoti li i{
+.hangye-biaoti>li i,.hy-all>li i{
 	position: absolute;
 	right: 20px;
+}
+
+.hangye-biaoti>li:hover .hy-menu,.hy-all>li:hover .hy-menu{
+	display: block;
 }
 
 .hangye-all{
@@ -40,23 +66,36 @@
 	top: 320px;
 	left: 0;
 }
-.hangye-content{
+.hy-menu{
 	display: none;
-	z-index: 9999;
-	width: 720px;
-	height: 360px;
+	z-index: 999;
+	width: 508px;
 	background: #fff;
 	position: absolute; 
 	left: 240px; 
-	top: 0;
+	top: 0px;
 	overflow: hidden;
 	box-shadow: 0 1px 6px rgba(6,0,1,.1);
+	color: rgba(0,0,0,0.65);
+	padding: 24px;
+	cursor: default;
 }
-.hangye-content ul li{
-	width: 720px;
-	height: 360px;
-	background: #fff;
+.hy-all .hy-menu{
+	margin-top: -30%;
 }
+.hy-menu>ul li{
+	box-sizing: border-box;
+	width: 33%;
+	float: left;
+	cursor: pointer;
+	padding-left: 10px;
+}
+.hy-menu>ul li:hover{
+	color: #198CFF;
+}
+
+
+
 /*中部轮播*/
 .main-top-m-index{
 	width: 720px;
@@ -99,7 +138,7 @@
 	line-height: 42px;
 	
 }
-.loginType ul li{
+.loginType>ul>li{
 	float: left;
 	color: rgba(0,0,0,0.45);
 	width: 50%;
