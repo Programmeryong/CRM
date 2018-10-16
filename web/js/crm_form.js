@@ -24,4 +24,5 @@ $(function(){
 		var height = i*-678;
 		$('.hy-lable>ul').animate({"top":height+"px"},100);
 	})
+
 })

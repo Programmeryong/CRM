@@ -126,7 +126,11 @@ main{
 	color: #000;
 	font-weight: 400;
 }
-.biaoqian input{
+.clickthisbiaoqian{
+	position: relative;
+	display: inline-block;
+}
+.clickthisbiaoqian input{
 	width: 358px;
 	height: 38px;
 	margin-left: 40px;
@@ -134,7 +138,17 @@ main{
 	padding-left: 12px;
 	border: 1px solid rgba(0,0,0,.15);
 }
-
+.clickthisbiaoqian .tijiao{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38px;
+	height: 38px;
+	font-size: 20px;
+	line-height: 38px;
+	text-align: center;
+	color: rgba(0,0,0,.25);
+}
 .selected{
 	width: 100%;
 	padding: 24px 24px;
@@ -198,7 +212,16 @@ main{
 	cursor: pointer;
 }
 .hy-title .active{
+	position: relative;
 	background: #fff;
+}
+.hy-title .active:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 60px;
+	border-left:6px solid #198cff;
 }
 .hy-lable{
 	position: relative;
@@ -233,8 +256,8 @@ main{
 	cursor: pointer;
 	display: inline-block;
 	font-size: 18px;
-	width:180px;
-	height:40px;
+	width:178px;
+	height:38px;
 	line-height: 40px;
 	color: rgba(0,0,0,0.65);
 	padding-left: 12px;

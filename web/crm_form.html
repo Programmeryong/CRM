@@ -15,20 +15,17 @@
 	<div class="curtain"></div>
 	<div class="navbigbox">
 		<!-- 删除icon -->
-		<i class="thisclose"><img src="images/icon/close.png"></i>
+		<i class="thisclose cursor"><img src="images/icon/close.png"></i>
 		<div class="biaoqian">
 			<span>请选择标签</span>
-			<input type="text" name="" placeholder="输入关键词">
+			<div class="clickthisbiaoqian">
+				<input class="inputing" type="text" name="" placeholder="输入关键词">
+				<i class="tijiao iconfont icon-fangdajing cursor"></i>
+			</div>
 		</div>
 		<!--已选标签-->
 		<div class="selected">
-			<ul class="clear">
-				<li title="点击删除">安全服务</li>
-				<li title="点击删除">电子商务</li>
-				<li title="点击删除">移动开发</li>
-				<li title="点击删除">资源置换</li>
-				<li title="点击删除">费用支持</li>
-				<li title="点击删除">数据服务</li>
+			<ul class="selectedul clear">
 				<span class="block45" style="height: 23px; line-height: 23px;">最多选择6个标签</span>
 			</ul>
 			<span class="ok-navbigbox">确定</span>
@@ -65,8 +62,11 @@
 								<li>测试服务</li>
 								<li>安全服务</li>
 								<li>IT解决方案</li>
+								<li>安全服务</li>
+								<li>IT解决方案</li>
 							</ul>
-							<span class="add-lable-btn">添加标签</span>
+							<input class="add-lable-btn" type="text" name="" placeholder="添加标签">
+							<!-- <span class="add-lable-btn">添加标签</span> -->
 						</div>
 					</li>
 					<li>
@@ -79,7 +79,8 @@
 								<li>安全服务</li>
 								<li>IT解决方案</li>
 							</ul>
-							<span class="add-lable-btn">添加标签</span>
+							<!-- <span class="add-lable-btn">添加标签</span> -->
+							<input class="add-lable-btn" type="text" name="" placeholder="添加标签">
 						</div>
 					</li>
 					<li>
@@ -273,4 +274,96 @@
         </div>
 	</footer>
 </body>
+<script type="text/javascript">
+	$(function(){
+		var ii=0;
+		var typearr=[];//已选择的标签数组
+		var oldtypearr;
+		$('.inputing').keydown(function (e) {
+	        var e = e || window.event, ec = e.keyCode || e.which;
+	        var nulls = /^[\s]*$/;
+	        if (!e.ctrlKey && 13 == ec) {
+            	$('.tijiao').click();//监控回车键 调用tijiao方法
+            	return false;
+        	}
+    	})
+		$('.tijiao').click(function(){
+			// 弹窗顶部的搜索框 点击提交的时候 这里写ajax方法
+
+		})
+
+		// 动态添加和删除标签
+		// 输入框输入结束回车提交和失去焦点提交方法
+		$('.add-lable-btn').keydown(function(e) {
+			var f = e || window.event, ec = e.keyCode || e.which;
+	        var nulls = /^[\s]*$/;
+	        if (!f.ctrlKey && 13 == ec) {
+            	thisfocunsout();
+            	return false;
+        	}
+		});
+		$('.hy-lable>ul>li').focusout(function(){
+			thisfocunsout();//失去焦点就提交
+		})
+		function thisfocunsout(){
+			let thisval = $('.add-lable-btn').val();
+			let j = $(this).attr('id');
+			if (thisval == '') {
+				//判断不为空
+			}else if(typearr.length == 6){
+				//判断数组长度为6的时候
+			}else{
+				typearr.push({'thistext':thisval,'thisid':j});
+				ergodicarr();
+				oldtypearr = typearr;
+			}
+			$('.add-lable-btn').val('');//方法结束之后清空输入框
+		}
+		// 点击添加当前标签的方法
+		$('.hy-lable-box ul li').click(function(){
+			let i = $(this).text();
+			let j = $(this).attr('id');
+			if(typearr.length == 6){
+
+			}else{
+				typearr.push({'thistext':i,'thisid':j});
+				ergodicarr();
+				oldtypearr = typearr;
+				console.log(oldtypearr);
+			}
+		})
+		//遍历数组并打印到页面上  还要加上一个新旧数组比对的方法 
+		function ergodicarr(){
+			$('.selectedul li').remove();
+			for(let iii = 0 ; iii<typearr.length;iii++){
+				$('.selectedul').append('<li title="点击删除">'+typearr[iii].thistext+'</li>')
+			}
+		}
+		// 点击删除对应数组下标的方法
+		// 重构remove方法
+		Array.prototype.removearr=function(dx){
+			if(isNaN(dx)||dx>this.length){
+				return false;
+			}
+			for(let i=0,n=0;i<this.length;i++){
+				if(this[i]!=this[dx]){
+					this[n++]=this[i]
+				}
+			}
+			this.length-=1
+		　}
+		$('.selectedul').on('click','li',function(){
+			let i = $(this).index();
+			typearr.removearr(i-1);
+			console.log(typearr);
+			$('.selectedul li:eq('+(i-1)+')').remove();
+		})
+
+		// 提交之后在打印typearr数组
+		$('.ok-navbigbox').click(function(){
+			console.log(typearr);
+		})
+
+	})
+</script>
 </html>
