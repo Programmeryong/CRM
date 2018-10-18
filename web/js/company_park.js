@@ -14,8 +14,6 @@ $(function(){
 	for (var i =0;i<titles;i++) {
 		var num = $('.title').eq(i).text().length;
 		var nText = $('.title').eq(i).text();
-		console.log(num);
-		console.log(nText);
 		if (num==15) {
 			$('.zome-logo').eq(i).css({"position": "absolute","right":"3px","bottom":"21px"});
 		}else if(num>31){
@@ -24,4 +22,13 @@ $(function(){
 		}
 	}
 	
+	
+	var ps = $('.l7_bom').length;
+	for (var i =0;i<ps;i++) {
+		var numP = $(".l7_bom:eq("+i+") p").text().length;
+		var pText = $(".l7_bom:eq("+i+") p").text();
+		if(numP>105){
+			$(".l7_bom:eq("+i+") p").text(pText.substring(0,104)+"...");
+		}
+	}
 })	

@@ -1,17 +1,6 @@
 $(function(){
 	var aa = true,bb=true;
 	var loginType;
-	/*物业社区（控制布局）*/
-	var zomes = $('.zome').length;
-	for (var i=1; i<=zomes;i++) {
-		if (i%3==0) {
-			$('.zome').eq(i-1).css("margin","0");
-		} else{
-			
-		}
-	}
-	/*物业社区（控制布局）结束*/
-	
 	
 	/*中部行业*/
 	$('.main-top-l-index').hover(function(){},function(){
@@ -131,6 +120,9 @@ $(function(){
                     $(".sendYZM").css({"cursor": "pointer", "color": "#F52230"});
                 }
             }, 1000);
+            /*
+             * 这里写发送验证码的功能
+             * */
         }
     });
     /*获取验证码 60s后重试结束*/
