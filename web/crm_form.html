@@ -14,6 +14,8 @@
 	<!-- 弹窗框 -->
 	<div class="curtain"></div>
 	<div class="navbigbox">
+		<!-- 透明层 -->
+		<div class="curtainfff"></div>
 		<!-- 删除icon -->
 		<i class="thisclose cursor"><img src="images/icon/close.png"></i>
 		<div class="biaoqian">
@@ -21,6 +23,19 @@
 			<div class="clickthisbiaoqian">
 				<input class="inputing" type="text" name="" placeholder="输入关键词">
 				<i class="tijiao iconfont icon-fangdajing cursor"></i>
+				
+				<ul class="searchnav">
+					<li>1旅游-旅游产品开发/策划</li>
+					<li>2旅游-旅游产品开发/策划</li>
+					<li>3旅游-旅游产品开发/策划</li>
+					<li>4旅游-旅游产品开发/策划</li>
+					<li>5旅游-旅游产品开发/策划</li>
+					<li>6旅游-旅游产品开发/策划</li>
+					<li>7旅游-旅游产品开发/策划</li>
+					<li>8旅游-旅游产品开发/策划</li>
+					<li>9旅游-旅游产品开发/策划</li>
+					<li>10旅游-旅游产品开发/策划</li>
+				</ul>
 			</div>
 		</div>
 		<!--已选标签-->
@@ -361,7 +376,11 @@
 
 		// 提交之后在打印typearr数组
 		$('.ok-navbigbox').click(function(){
-			console.log(typearr);
+			// 点击确定之后关闭页面
+			$('.curtain').hide();
+			$('.navbigbox').hide();
+
+			console.log(oldtypearr.thistext);
 		})
 
 	})
