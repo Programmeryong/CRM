@@ -5,15 +5,79 @@ main{
 	margin-bottom: 24px;
 	padding-top: 40px;
 }
-/*预留位*/
-.yuliu{
+/*预留位(筛选)*/
+.screen-box{
+	box-sizing: border-box;
 	width: 100%;
-	height: 223px;
+	padding: 12px 20px;
 	background: #fff;
 }
-/*筛选*/
+.scr-type{
+	border-bottom: 1px solid rgba(0,0,0,0.09);
+	height: 30px;
+	line-height: 30px;
+}
+.scr-type ul li{
+	cursor: pointer;
+	float: left;
+	padding: 0 20px;
+}
+.scr-type ul .active{
+	color: #198CFF;
+}
+/*行业*/
+.scr-hy{
+	position: relative;
+	padding: 5px 0;
+	border-bottom: 1px solid rgba(0,0,0,0.09);
+	line-height: 34px;
+}
+.showMore-hy{
+	cursor: pointer;
+	position: absolute;
+	right: 0px;
+	top: 5px;
+}
+
+.scr-hy-info,.scr-hy-info-all{
+	background: #F5F7FA;
+}
+
+.scr-hy-info>ul>li,.scr-hy-info-all>ul>li{
+	padding: 5px 0;
+	margin-bottom: 8px;
+	display: none;
+}
+.scr-hy-title li,.scr-hy-all li,.scr-hy-once li{
+	cursor: pointer;
+	float: left;
+	padding: 0 20px;
+}
+.scr-hy-title li:hover,.scr-hy-all li:hover,.scr-hy-once li:hover,.showMore-hy:hover,
+.scr-hy-title .active,.scr-hy-all .active,.scr-hy-once .active{
+	color: #198CFF;
+}
+/*地区*/
+.scr-area{
+	margin-top: 8px;
+	height: 30px;
+	line-height: 30px;
+}
+.scr-area ul li{
+	cursor: pointer;
+	float: left;
+	padding: 0 20px;
+}
+.scr-area ul .active,.scr-area ul li:hover{
+	color: #198CFF;
+}
+
+/*筛选结束*/
+
+
+/*排序*/
 .screen{
-	margin-top: 46px;
+	margin-top: 40px;
 	border-bottom: 2px solid #198CFF;
 }
 .screen ul .active,.screen ul li:hover{
@@ -59,6 +123,12 @@ main{
 .list-box ul li:hover .list-each{
 	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
 }
+.title-list a,.title-list{
+	transition: all 0.8s;
+}
+.list-box ul li:hover .title-list a,.list-box ul li:hover .title-list{
+	color: #198CFF;
+}
 
 .list-each{
 	transition: all 0.8s;
@@ -74,19 +144,31 @@ main{
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	overflow: hidden;
 	margin: 20px 20px;
+	position: relative;
+}
+.isjoin{
+	position: absolute;
+	padding: 2px 8px;
+	background: #F52230;
+	color: #fff;
+	left: 50%;
+	bottom: -12px;
+	margin-left: -26px;
+	border-radius: 2px;
 }
 .touxiang img{
 	width: 100%;
 	height: 100%;
+	border-radius: 50%;
 }
 .list-xq-l{
 	width: 10%;
 }
 .list-xq-m{
 	padding-top: 20px;
-	width: 75%;
+	padding-left: 5px;
+	width: 76%;
 }
 .list-xq-r{
 	text-align: right;
@@ -101,6 +183,9 @@ main{
 	max-width: 89%;
 	position: relative;
 	padding-right: 60px;
+}
+.title-list a{
+	font-size: 18px;
 }
 .qiye-logo,.zome-logo{
 	padding: 2px 10px;

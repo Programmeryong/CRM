@@ -10,6 +10,9 @@ html{
 i{
   font-style:normal
 }
+header,nav,article,section,aside,footer,main{
+	display: block;
+}
 a{
   text-decoration: none;
   color: rgba(0,0,0,0.85);
@@ -88,14 +91,45 @@ a:hover{
   height: 36px;
   line-height: 36px;
 }
+.gzyz{
+	width: 108px;
+	margin-left: 40px; 
+	position: relative;
+	cursor: pointer;
+}
+.gzyz ul{
+	display: none;
+	width: 108px;
+	border: 1px solid rgba(0,0,0,0.09);
+	border-top: none;
+	background: #fff; position: absolute; left: 0; top: 36px;
+	z-index: 9999;
+}
+.gzyz ul li{
+	height: 36px;
+	line-height: 36px;
+	padding-left: 16px;
+}
+.gzyz:hover{
+	background: #fff;
+}
+.gzyz:hover ul{
+	display: block;
+}
+.gzyz ul li:hover{
+	background: #F5F7FA;
+}
+.gzyz ul li:hover a{
+	color: rgba(0,0,0,0.85);
+}
 
 .href-yz{
   color: #198CFF;
-  margin-left: 60px;
+  margin-right: 40px;
 }
 
 .href-joinZ{
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .header-2{
@@ -171,6 +205,34 @@ a:hover{
   cursor: pointer;
 }
 
+
+/*右边固定导航栏*/
+.right_box{
+    width: 60px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    position:fixed;
+    top: 20%;
+    right: 0px;
+    z-index: 999;
+    background-color: rgba(255,255,255,1);
+    box-shadow:4px 4px 4px rgba(0,0,0,.04);
+}
+.right_icon li{cursor: pointer;}
+.right_icon li p{
+    margin-bottom: 10px;
+    text-align: center;
+    color: #666666;
+}
+.right_icon li:nth-of-type(1) p:nth-of-type(1){
+    margin-top: 10px;
+}
+.right_icon li p img{
+    width: 30px;
+}
+.gototop{
+	padding-top: 10px;
+}
 
 /*底部样式开始*/
 footer{

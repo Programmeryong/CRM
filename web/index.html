@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/crm_style.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_865677_l17zg37963n.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_865677_rxy1srq6vzn.css"/>
 		<link rel="stylesheet" href="css/crm_style.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript" src="js/index.js" ></script>
@@ -19,16 +19,24 @@
 		<header>
 			<div class="header-1">
 				<div class="header-1-ct">
-					<div class="header-1-l">
+					<div class="header-1-l" style="display: flex;">
 						<span>广州</span>
-						<a href="" class="href-yz">乙租网</a>
+						<div class="gzyz">
+							<p style="text-align: center;">广州乙租 
+								<i class="iconfont icon-Group-" style="position: relative; top: 2px;"></i>
+							</p>
+							<ul>
+								<li><a href="">账号设置</a></li>
+								<li><a href="">系统通知</a></li>
+								<li><a href="">用户信息</a></li>
+							</ul>
+						</div>
 					</div>
 					
 					<div class="header-1-r">
+						<a href="" class="href-yz">乙租网</a>
 						<a href="" class="href-joinZ">入驻物业社区</a>
-						<a href="">登录</a>
-						<span>|</span>
-						<a href="">注册</a>
+						<a href="">关于我们</a>
 					</div>
 				</div>
 			</div>
@@ -52,6 +60,28 @@
 						<button class="fabu-bt">发布房源</button>
 					</div>
 				</div>
+			</div>
+			
+			<!--/*右边固定导航栏*/-->
+			<div class="right_box">
+			    <ul class="right_icon">
+			        <li class="clickKF">
+			            <p><img src="images/icon/custom.png"></p>
+			            <p class="fsize18">客服</p>
+			        </li>
+			        <li class="clickSM">
+			            <img class="thisSM" style="display: none;position: absolute;top:80px;left:-120px;z-index: 999999;" src="images/qrcode/qrcode.png">
+			            <p><img src="images/icon/scan.png"></p>
+			            <p class="fsize18">扫码</p>
+			        </li>
+			        <li class="fankui">
+			            <p><img src="images/icon/feedback.png"></p>
+			            <p class="fsize18">反馈</p>
+			        </li>
+			        <li class="gototop" title="回到顶部">
+			            <p><img src="images/icon/arrow_top.png"></p>
+			        </li>
+			    </ul>
 			</div>
 		</header>
 		
@@ -241,7 +271,7 @@
 							</li>
 						</ul>
 					</div>
-					<span class="showAll">显示全部职位</span>
+					<span class="showAll">显示全部分类</span>
 				</div>
 				<!--中（轮播）-->
 				<div class="main-top-m-index">
@@ -304,7 +334,7 @@
 							</div>
 							<div class="regAndLog">
 								<span class="login-btn">登录</span>
-								<span class="reg-btn">注册</span>
+								<a href=""><span class="reg-btn">注册</span></a>
 							</div>
 							<input class="zddl-check" type='checkbox' name='' style="display: none;">
 							<input type="submit" value="" style="display: none;"/>
@@ -380,55 +410,61 @@
 				<div class="list-box">
 					<ul>
 						<li>
-							<a href="">
-								<div class="list-each">
-									<div class="list-xq-l">
+							<div class="list-each">
+								<div class="list-xq-l">
+									<a href="">
 										<div class="touxiang">
 											<img src="images/icon/logo_1.png"/>
 										</div>
-									</div>
-									
-									<div class="list-xq-m">
-										<p class="fsize18 title-list onehide">
-											【小米之家】高质量高转化高进量靠谱贷超乙方，寻靠谱甲方现金贷产品，转化说话  
-											<span class="qiye-logo">企业</span>
-											<!--<span class="zome-logo">园区</span>-->
-										</p>
-										<p class="detail-each">
-											<span>行业：综合服务</span>
-											<span>公司阶段：C轮</span>
-											<span>人员规模：<span class="nnb">100-1000</span>人</span>
-										</p>
-										<p class="label-each">
-											<span>软件SaaS</span>
-											<span>移动开发</span>
-											<span>网站建设</span>
-											<span>软件开发</span>
-											<span>费用支持</span>
-											<span>资源置换</span>
-										</p>
-									</div>
-									<div class="list-xq-r">
-										<p>李先生 | CEO</p>
-										<p style="margin-top: 12px;">2018-01-01</p>
-									</div>
+									</a>
 								</div>
-							</a>
+								
+								<div class="list-xq-m">
+									<p class="fsize18 title-list onehide">
+										<a href="">
+										【小米之家】高质量高转化高进量靠谱贷超乙方，寻靠谱甲方现金贷产品，转化说话 
+										</a>
+										<span class="qiye-logo">企业</span>
+										<!--<span class="zome-logo">园区</span>-->
+									</p>
+									<p class="detail-each">
+										<span>行业：综合服务</span>
+										<span>公司阶段：C轮</span>
+										<span>人员规模：<span class="nnb">100-1000</span>人</span>
+									</p>
+									<p class="label-each">
+										<span>软件SaaS</span>
+										<span>移动开发</span>
+										<span>网站建设</span>
+										<span>软件开发</span>
+										<span>费用支持</span>
+										<span>资源置换</span>
+									</p>
+								</div>
+								<div class="list-xq-r">
+									<p>李先生 | CEO</p>
+									<p style="margin-top: 12px;">2018-01-01</p>
+								</div>
+							</div>
 						</li>
 						<li>
 							<a href="">
 								<div class="list-each">
 									<div class="list-xq-l">
-										<div class="touxiang">
-											<img src="images/icon/logo_1.png"/>
-										</div>
+										<a href="">
+											<div class="touxiang">
+												<img src="images/icon/logo_1.png"/>
+											</div>
+										</a>
 									</div>
 									
 									<div class="list-xq-m">
 										<p class="fsize18 title-list onehide">
+											<a href="">
 											【小米之家】高质量高转化高进量靠谱贷超乙方，寻靠谱甲方现金贷产品，转化说话  
 											【小米之家】高质量高转化高进量靠谱贷超乙方，寻靠谱甲方现金贷产品，转化说话  
 											【小米之家】高质量高转化高进量靠谱贷超乙方，寻靠谱甲方现金贷产品，转化说话  
+											</a>
 											<!--<span class="qiye-logo">企业</span>-->
 											<span class="zome-logo">园区</span>
 										</p>
@@ -457,14 +493,18 @@
 							<a href="">
 								<div class="list-each">
 									<div class="list-xq-l">
-										<div class="touxiang">
-											<img src="images/icon/logo_1.png"/>
-										</div>
+										<a href="">
+											<div class="touxiang">
+												<img src="images/icon/logo_1.png"/>
+											</div>
+										</a>
 									</div>
 									
 									<div class="list-xq-m">
 										<p class="fsize18 title-list onehide">
+											<a href="">
 											【小米之家】高质量高转化高进量靠谱贷超乙方
+											</a>
 											<span class="qiye-logo">企业</span>
 											<!--<span class="zome-logo">园区</span>-->
 										</p>
