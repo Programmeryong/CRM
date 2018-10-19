@@ -6,4 +6,6 @@ $(function(){
 		$('.main_l_tab').hide();
 		$('.main_l_tab').eq(i).show();
 	})
+	
+	
 })

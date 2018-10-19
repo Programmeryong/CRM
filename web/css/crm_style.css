@@ -154,9 +154,14 @@ a:hover{
   margin-right: 22px;
   min-width: 45px;
   text-align: center;
-  cursor: pointer;
 }
-
+.header-2-l>ul li a{
+	font-size: 18px;
+	color:rgba(255,255,255,1);
+}
+.header-2-l>ul li a:hover{
+	font-weight:bold;
+}
 .header-2-l>ul .active{
   font-weight:bold;
   position: relative;
