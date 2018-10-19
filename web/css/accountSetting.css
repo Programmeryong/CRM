@@ -1,0 +1,144 @@
+main{
+	width: 1152px;
+	height: 956px;
+	padding:24px;
+	margin: 40px auto;
+	background: #fff;
+}
+.setting_toptext{
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0,.09);
+}
+.powbox{
+	width:100%;
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
+.powboxtext,.phonetext{
+	position: relative;
+	font-size: 18px;
+	color: rgba(0,0,0,.85);
+}
+.powboxtext:after,.phonetext:after{
+	content: '';
+	width: 40px;
+	border: 2px solid #198cff;
+	position: absolute;
+	top: 25px;
+	left: 0;
+}
+.powboxul{
+	margin-top: 20px;
+}
+.powboxul li{
+	margin-top: 12px;
+}
+.powlitext{
+	float: left;
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	font-weight: 400;
+	line-height: 40px;
+	text-align: right;
+	padding-right: 5px;
+}
+.powliinput input{
+	width: 300px;
+	height: 40px;
+	padding-left: 10px;
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,.09);
+}
+.powboxul li span{
+	display: inline-block;
+	width: 76px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	cursor:pointer;
+}
+.powboxul li span:nth-of-type(1){
+	margin-left: 155px;
+	background: #198cff;
+	color: #fff;
+}
+.phonenunber{
+	height: 40px;
+	line-height: 40px;
+}
+.phonenunber span:nth-of-type(1){
+	margin-left: 100px;
+}
+.phonenunber span:nth-of-type(2){
+	margin-left: 10px;
+}
+.phonenunber i{
+	margin-left: 10px;
+	color: #6dcc3d;
+}
+.falsebtn{
+	display: inline-block;
+	width: 118px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #F5F7FA;
+	margin-left: 100px;
+	cursor: pointer;
+}
+.phonebox form ul li{
+	margin-top: 12px;
+}
+.phonelitext{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	padding-right: 5px;
+}
+.phoneliinput{
+	display: inline-block;
+	width: 300px;
+	height: 40px;
+}
+.phoneliinput input{
+	width: 290px;
+	height: 40px;
+	padding-left: 12px;
+	border: 1px solid rgba(0,0,0,0.09);
+}
+.phonebox form ul li>span{
+	display: inline-block;
+	width: 	104px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 12px;
+	background: #F5F7FA;
+	cursor:pointer;
+}
+.phoneliinput span:nth-of-type(1){
+	width: 76px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	background: #198cff;
+	color: #fff;
+}
+.phoneliinput span:nth-of-type(2){
+	width: 76px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+}

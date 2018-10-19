@@ -106,24 +106,28 @@ $(function(){
     var ding = null;
     var ifclick = true;
     $(".sendYZM").click(function () {
-        var time = 60;
-        if (ifclick == true) {
-            ding = setInterval(function () {
-                ifclick = false;
-                $(".sendYZM").text(time + "s 重试");
-                $(".sendYZM").css({"cursor": "not-allowed", "color": "rgba(0,0,0,0.65)"});
-                time--;
-                if (time == -2) {
-                    ifclick = true;
-                    clearInterval(ding);
-                    $(".sendYZM").text("重新获取");
-                    $(".sendYZM").css({"cursor": "pointer", "color": "#F52230"});
-                }
-            }, 1000);
-            /*
-             * 这里写发送验证码的功能
-             * */
-        }
+    	Phone();
+    	if (aa) {
+    		var time = 60;
+	        if (ifclick == true) {
+	            ding = setInterval(function () {
+	                ifclick = false;
+	                $(".sendYZM").text(time + "s 重试");
+	                $(".sendYZM").css({"cursor": "not-allowed", "color": "rgba(0,0,0,0.65)"});
+	                time--;
+	                if (time == -2) {
+	                    ifclick = true;
+	                    clearInterval(ding);
+	                    $(".sendYZM").text("重新获取");
+	                    $(".sendYZM").css({"cursor": "pointer", "color": "#F52230"});
+	                }
+	            }, 1000);
+	            /*
+	             * 这里写发送验证码的功能
+	             * */
+	        }
+    	}
+        
     });
     /*获取验证码 60s后重试结束*/
    
