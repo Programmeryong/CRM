@@ -53,23 +53,22 @@
 .map{
 	width: 100%;
 	height: 406px;
-	border: 1px solid red;
 }
-.footer_conter4{
+.gzgzh_box{
     width: 96px;
     height: 96px;
     position: absolute;
-    right: 34px;
+    right: 38px;
     bottom: 24px;
 }
-.footer_conter4 span:nth-of-type(1){
+.gzgzh_box span:nth-of-type(1){
     position: relative;   
 }
-.footer_conter4 span img{
+.gzgzh_box span img{
     width: 100%;
     height: 100%;
 }
-.gzgzh{
+.gzgzh_box .gzgzh{
     position: absolute;
     width: 22px;
     height: 88px;
@@ -82,6 +81,35 @@
     right: -18px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+}
+#allmap{width:100%;height:100%;}
+.BMapLib_SearchInfoWindow>img{left: -1px!important; top: 218px!important;}
+/*商务合作*/
+.swhz>img{
+	margin-top: 24px;
+	width: 100%;
+}
+.swhz>div{
+	margin-top: 24px;
+}
+.swhz>div>p:first-child{
+	margin-bottom: 8px;
+}
+
+/*用户协议*/
+.user_xy>div{
+	margin-top: 24px;
+}
+.user_xy>div>p:first-child{
+	margin-bottom: 8px;
+}
+
+/*隐私条例*/
+.ystk>div{
+	margin-top: 24px;
+}
+.ystk>div>p:first-child{
+	margin-bottom: 8px;
 }
 
 /*右*/
