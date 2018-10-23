@@ -1,0 +1,41 @@
+main{
+	width: 1200px;
+	margin: 0 auto;
+}
+.form_box{
+	width: 100%;
+	display: flex;
+	justify-content:space-between;
+	margin-bottom: 40px;
+}
+/*左边盒子开始*/
+.form_box_l{
+	width: 73.333%;
+	height: 100%;
+	padding: 24px 20px 40px;
+	background: #fff;
+}
+.fbox_1,.fbox_2,.fbox_3{
+	margin-bottom: 12px;
+}
+.fbox_1_span{
+	position: relative;
+	color:rgba(0,0,0,.85);
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+.fbox_1_span:after{
+	content: '';
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 40px;
+	border-top: 2px solid #198cff;
+}
+/*左边盒子结束*/
+/*右边盒子开始*/
+.form_box_r{
+	width: 25%;
+}
+/*右边盒子结束*/
