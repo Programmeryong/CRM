@@ -10,9 +10,10 @@ main{
 }
 /*左边盒子开始*/
 .form_box_l{
-	width: 73.333%;
+	width: 880px;
 	height: 100%;
-	padding: 24px 20px 40px;
+	padding: 24px 0 40px 20px;
+	box-sizing: border-box;
 	background: #fff;
 }
 .fbox_1,.fbox_2,.fbox_3{
@@ -114,6 +115,84 @@ input[type="number"]{
 /*左边盒子结束*/
 /*右边盒子开始*/
 .form_box_r{
-	width: 25%;
+	width: 300px;
 }
+/*个人信息*/
+.per_info{
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	padding-bottom: 40px;
+}
+.compile{
+	position: absolute;
+	right: 12px;
+	top: 12px;
+}
+.compile:hover{
+	color: #198CFF;
+}
+.head-img{
+	width: 60px;
+	height: 60px;
+	margin: 24px auto 12px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.head-img img{
+	width: 100%;
+	height: 100%;
+}
+.approve{
+	margin-top: 8px;
+	box-sizing: border-box;
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+}
+.approve img{
+	width: 20px;
+	height: 18px;
+	position: relative;
+	top: 3px;
+}
+.post-xq,.myCollect,.myFocus{
+	text-align: center;
+}
+
+
+/*公司或园区名片*/
+.card{
+	margin-top: 24px;
+	width: 100%;
+	height: 168px;
+	box-sizing: border-box;
+	background: #fff;
+	padding: 24px 20px;
+	
+}
+.card img{
+	width: 60px;
+	height: 60px;
+}
+
+.look_company,.look_zome{
+	display: inline-block;
+	width: 100%;
+	height: 36px;
+	color: #fff;
+	margin-top: 24px;
+	line-height: 36px;
+	text-align: center;
+}
+.look_company:hover,.look_zome:hover{
+	color: #fff;
+}
+.look_company{
+	background: #198CFF;
+}
+.look_zome{
+	background: #FFB31A;
+}
+
 /*右边盒子结束*/
