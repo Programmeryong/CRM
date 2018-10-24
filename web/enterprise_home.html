@@ -86,8 +86,27 @@
     		乙租>写字楼出租>三号线>天河客运站</p>
     	<div class="form_box">
     		<div class="form_box_l">
-    			<form>
+    			<!-- <form> -->
+    				<!-- 后添加新盒子  base64格式的图片在textarea里面-->
+    				<div class="fbox_3">
+    					<span class="fbox_span">企业认证</span>
+    					<div class="fbox_3_box">
+    						<span>上传营业执照</span>
+	    					<ul class="clear">
+								<input class="filesfz1" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
+								<textarea class="sfzbase1" style="display: none;position: absolute;top: -9999px;"></textarea>
+								<li><img class="shangchuan1" src="images/icon/Group.png"></li>
+								<li><img src="images/icon/ID_positive.png"></li>
+							</ul>
+							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
+    					</div>
+    				</div>
+    				<!-- <input class="firstform" type="submit" name="" style="display: none;position: absolute;top: -999999px;"> -->
 					<!-- 基本资料 -->
+				<!-- </form>	 -->
+				<form>	
+					<div class="fbox_3_txt">公司全称</div>
+					<input class="fbox_3_int" type="text" name="" placeholder="不需要填写，上传证件后显示">
     				<div class="fbox_1">
     					<span class="fbox_span">基本信息</span>
     					<div class="fbox_div">
@@ -102,6 +121,44 @@
 			                    </div>
 			                </div>
 			                <span class="fbox_div_text2">最大文件不超过2Mb，只支持.jpg .png 格式。</span>
+			                <ul class="fbox_1_ul clear">
+			                	<li>
+			                		<p>公司阶段</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                	<li>
+			                		<p>人员规模</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                	<li>
+			                		<p>所在区域</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                	<li>
+			                		<p>所在行业</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                </ul>
 			                <p class="fbox_div_text3">物业简称</p>
 			                <input class="property_text" type="text" name="" placeholder="建议在四个字内，创建后不可修改">
     					</div>
@@ -116,6 +173,21 @@
     							<span class="newnumber"></span><span>/300</span>
     						</div>
     					</div>
+    					<ul class="fbox_2_ul clear">
+							<li>
+								<p>所在园区</p>
+								<select name="cars">
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+								</select>
+							</li>
+							<li>
+								<p>添加备注</p>
+								<input type="text" name="" placeholder="备注园区号，如C401">
+							</li>
+						</ul>
     				</div>
 
     				<input class="thissubmit" type="submit" name="" style="display: none;position: absolute;top: -9999px;">
