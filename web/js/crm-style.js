@@ -16,5 +16,26 @@ $(function(){
 		$('.thisSM').stop();
 		$('.thisSM').fadeOut(500);
 	})
-    
+	
+	
+	/*上，中，下午好，晚上好*/
+	function timess(){
+		var mydate = new Date();  
+	   	var thisTime = mydate.getHours();
+	 	if (thisTime>=3 && thisTime<=11) {
+	 		$('.hours span').eq(0).show().siblings().hide();
+	 	} else if (thisTime>=12 && thisTime<14) {
+	 		$('.hours span').eq(1).show().siblings().hide();
+	 	} else if(thisTime>=14 && thisTime<18){
+	 		$('.hours span').eq(2).show().siblings().hide();
+	 	}else{
+	 		$('.hours span').eq(3).show().siblings().hide();
+	 	}
+ 	}
+	timess();
+	setInterval(function () {
+		timess();
+	},60000);
+ 	/*上，中，下午好，晚上好   结束*/
+ 	
 });

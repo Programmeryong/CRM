@@ -68,6 +68,10 @@ a:hover{
 .fsize32{font-size: 32px;}
 .fsize36{font-size: 36px;}
 
+.hours span{
+	display: none;
+}
+
 /*头部结束*/
 .onehide{
 	white-space:nowrap;/*不显示的地方用省略号...代替*/

@@ -264,6 +264,9 @@
 	color: #fff;
 	margin: 12px 0; 
 }
+.grzx-href:hover{
+	color: #fff;
+}
 .isJoin img{
 	width: 20px;
 	height: 18px;
