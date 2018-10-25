@@ -168,6 +168,9 @@ main{
 	text-overflow:ellipsis;/* 支持 IE */
     -o-text-overflow: ellipsis;    /* 支持 Opera */
 }
+.main_content_l_4{
+	margin-top: 20px;
+}
 .main_content_l_4 li{
 	width: 25%;
 	overflow: hidden;
