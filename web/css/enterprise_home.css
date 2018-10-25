@@ -16,7 +16,7 @@ main{
 	box-sizing: border-box;
 	background: #fff;
 }
-.fbox_1,.fbox_2{
+.fbox_1,.fbox_2,.fbox_3{
 	margin-bottom: 12px;
 }
 .fbox_span{
@@ -135,31 +135,60 @@ main{
 .fbox_2_ul li input:hover,.fbox_2_ul li select:hover,.fbox_1_ul li select:hover{
 	border:1px solid #198cff;
 }
-.fbox_3_box{
+.SFZzm>span,.SFZfm>span{
+	font-size: 18px;
+	color: rgba(0,0,0,.65);
+}
+.SFZzm>ul,.SFZfm>ul{
+	margin: 12px 0;
+}
+.SFZzm>p,.SFZfm>p{
+	font-size: 12px;
+	color: rgba(0,0,0,.45);
+}
+.SFZzm ul li,.SFZfm ul li{
+	width: 130px;
+	height: 104px;
+	float: left;
+}
+.SFZzm ul li:nth-of-type(1),.SFZfm ul li:nth-of-type(1){
+	cursor: pointer;
+}
+.SFZzm ul li:nth-of-type(1) img,.SFZfm ul li:nth-of-type(1) img{
+	width: 130px;
+	height: 104px;
+}
+.SFZzm ul li:nth-of-type(2),.SFZfm ul li:nth-of-type(2){
+	margin-left: 12px;
+}
+.SFZfm{
 	margin-top: 24px;
 }
-.fbox_3_box span{
+.fbox_4_box{
+	margin-top: 24px;
+}
+.fbox_4_box span{
 	color: rgba(0,0,0,.65);
 	font-size: 18px;
 	display: inline-block;
 	margin-bottom: 12px;
 }
-.fbox_3_box ul{
+.fbox_4_box ul{
 	width: 100%;
 }
-.fbox_3_box ul li{
+.fbox_4_box ul li{
 	width: 130px;
 	height: 103px;
 	float: left;
 }
-.fbox_3_box ul li img{
+.fbox_4_box ul li img{
 	width: 130px;
 	height: 103px;
 }
-.fbox_3_box ul li:nth-of-type(2){
+.fbox_4_box ul li:nth-of-type(2){
 	margin-left: 12px;
 }
-.fbox_3_box p{
+.fbox_4_box p{
 	color: rgba(0,0,0,.45);
 	margin: 12px 0;
 }

@@ -44,4 +44,70 @@ $(function(){
             }
         }
     }
+
+    // 正则判断  职位和电话号码只判断了不为空~~
+    function textchines(thisdiv){  //中文判断 
+        let Utext = $(thisdiv).val();
+        let Thisterm = /[\u4e00-\u9fa5]{2,30}/;
+        if(Thisterm.test(Utext)==false || Utext==''){
+            $(thisdiv).css({'border':'1px solid #F52230'});
+            return false;
+        }else if(Thisterm.test(Utext)==true){
+            $(thisdiv).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
+    function textphone(thisclass){  //电话号码判断
+        let Uphone = $(thisclass).val();
+        let Tphone = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+        if(Tphone.test(Uphone) == false|| Uphone == ''){
+            $(thisclass).css({'border':'1px solid #F52230'});
+            return false;
+        }else if(Tphone.test(Uphone)==true){
+            $(thisclass).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
+    function textemail(thisclass){  //邮箱判断
+        let Uemail = $(thisclass).val();
+        let Temail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if(Temail.test(Uemail) == false || Uemail == ''){
+            $(thisclass).css({'border':'1px solid #F52230'});
+            return false;
+        }else if(Temail.test(Uemail) == true){
+            $(thisclass).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
+    function textqq(thisclass){   //QQ号码判断
+        let Uqq = $(thisclass).val();
+        let Tqq = /^[1-9][0-9]\d{5,12}$/;
+        if(Tqq.test(Uqq) == false || Uqq == ''){
+            $(thisclass).css({'border':'1px solid #F52230'});
+            return false;
+        }else if(Tqq.test(Uqq) == true){
+            $(thisclass).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
+    function textnull(thisclass){   //不为空判断
+        let Unull = $(thisclass).val();
+        if(Unull == ''){
+            $(thisclass).css({'border':'1px solid #F52230'});
+            return false;
+        }else{
+            $(thisclass).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
+
+    $('#thisform').submit(function(){
+        if(textchines('.dataform1') == true && textnull('.dataform2') == true &&
+           textphone('.dataform3') == true && textnull('.dataform4') == true &&
+           textemail('.dataform5') == true && textqq('.dataform6')){
+            return true;
+        }else{
+            return false;
+        }
+    })
 })
