@@ -154,10 +154,50 @@ $(function(){
     		textphone('.logintext3') == true && textnum('.oneYZM') == true){
     		return true;
     	}else{
-    		if(textnull('.logintext1') == false){$('.formp1').show();}else{$('.formp1').hide();}
-    		if(textnull('.logintext2') == false){$('.formp2').show();}else{$('.formp2').hide();}
-    		if(textnull('.logintext3') == false){$('.formp3').show();}else{$('.formp3').hide();}
-    		if(textnull('.logintext4') == false){$('.formp4').show();}else{$('.formp4').hide();}
+    		if(textnull('.logintext1') == false){
+    			let thistext = $('.logintext1').val();
+    			if(thistext == ''){
+					$('.formp1').text('不能为空').show();
+    			}else if(thistext.length >=30){
+    				$('.formp1').text('字数不能超过30字').show();
+    			}else if(thistext.length <=3){
+    				$('.formp1').text('字数不能小于3个字').show();
+    			}
+    		}else{
+    			$('.formp1').hide();
+    		}
+    		if(textchines('.logintext2') == false){
+    			let thistext = $('.logintext2').val();
+    			if(thistext == ''){
+					$('.formp2').text('不能为空').show();
+    			}else if(thistext.length >=4){
+    				$('.formp2').text('字数不能超过4个字').show();
+    			}else if(thistext.length <=2){
+    				$('.formp2').text('字数不能小于2个字').show();
+    			}
+    		}else{
+    			$('.formp2').hide();
+    		}
+    		if(textphone('.logintext3') == false){
+    			let thistext = $('.logintext3').val();
+    			if(thistext == ''){
+    				$('.formp3').text('不能为空').show();
+    			}else{
+    				$('.formp3').text('请输入正确的电话号码').show();
+    			}
+    		}else{
+    			$('.formp3').hide();
+    		}
+    		if(textnum('.oneYZM') == false){
+    			let thistext = $('.oneYZM').val();
+    			if(thistext == ''){
+    				$('.formp4').text('不能为空').show();
+    			}else{
+    				$('.formp4').text('验证码错误').show();
+    			}
+    		}else{
+    			$('.formp4').hide();
+    		}
     		return false;
     	}
     })
