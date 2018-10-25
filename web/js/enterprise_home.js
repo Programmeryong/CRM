@@ -2,24 +2,32 @@ $(function(){
 	$('.lastsubmit').click(function(){
 		$('.thissubmit').click();
 	});
-	$('.shangchuan1').click(function(){
-		$('.filesfz1').click();
-	})
-	$('.shangchuan2').click(function(){
-		$('.filesfz2').click();
-	})
+    $('#demo1').click(function(){
+        $('#test1').click();
+    })
+    $('.propert_textarea').keydown(function(){
+        let text = $('.propert_textarea').val();
+        let textnumber = $('.propert_textarea').val().length;
+        if(textnumber <= 300){
+            $('.newnumber').text(textnumber);
+        }else{
+            $('.propert_textarea').val(text.substring(0,299));
+        }
+        console.log(textnumber);
+    })
 
+    // 图片转换成base64 模拟点击触发上传弹框 监听上传框是否有值，有变化则触发转换方法并返回到文本域里
+    $('.shangchuan1').click(function(){
+        $('.filesfz1').click();
+    })
     $(".filesfz1").change(function () {
         run(this,'.sfzbase1', function (data) {
             $('.shangchuan1').attr('src', data);
         });
+        // $('.firstform').click();
     });
-    $(".filesfz2").change(function () {
-        run(this,'.sfzbase2', function (data) {
-            $('.shangchuan2').attr('src', data);
-        });
-    });
-	function run(input_file,textval, get_data) {
+    function run(input_file,textval, get_data) {
+        $(textval).val('');
         /*input_file：文件按钮对象*/
         /*get_data: 转换成功后执行的方法*/
         if (typeof (FileReader) === 'undefined') {

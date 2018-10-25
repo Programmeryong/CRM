@@ -5,11 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/crm_style.css">
-	<link rel="stylesheet" type="text/css" href="css/data_form.css">
+	<link rel="stylesheet" type="text/css" href="css/enterprise_home.css">
 	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_865677_rxy1srq6vzn.css"/>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/data_form.js"></script>
+	<script type="text/javascript" src="js/enterprise_home.js"></script>
 </head>
+<!-- 这个是企业公司认证 公司logo那里需要补充url接收地址 -->
 <body style="background: rgba(0,0,0,.04)">
 	<header>
 		<div class="header-1">
@@ -85,75 +86,110 @@
     		乙租>写字楼出租>三号线>天河客运站</p>
     	<div class="form_box">
     		<div class="form_box_l">
-    			<form>
+    			<!-- <form> -->
+    				<!-- 后添加新盒子  base64格式的图片在textarea里面-->
+    				<div class="fbox_3">
+    					<span class="fbox_span">企业认证</span>
+    					<div class="fbox_3_box">
+    						<span>上传营业执照</span>
+	    					<ul class="clear">
+								<input class="filesfz1" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
+								<textarea class="sfzbase1" style="display: none;position: absolute;top: -9999px;"></textarea>
+								<li><img class="shangchuan1" src="images/icon/Group.png"></li>
+								<li><img src="images/icon/ID_positive.png"></li>
+							</ul>
+							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
+    					</div>
+    				</div>
+    				<!-- <input class="firstform" type="submit" name="" style="display: none;position: absolute;top: -999999px;"> -->
 					<!-- 基本资料 -->
+				<!-- </form>	 -->
+				<form>	
+					<div class="fbox_3_txt">公司全称</div>
+					<input class="fbox_3_int" type="text" name="" placeholder="不需要填写，上传证件后显示">
     				<div class="fbox_1">
-    					<span class="fbox_span">基本资料</span>
+    					<span class="fbox_span">基本信息</span>
     					<div class="fbox_div">
-    						<ul class="clear">
-    							<li>
-    								<span>姓名</span>
-    								<input type="text" name="">
-    							</li>
-    							<li>
-    								<span>职位</span>
-    								<input type="text" name="">
-    							</li>
-    						</ul>
+    						<span class="fbox_div_text1">公司LOGO</span>
+    						<div class="layui-upload">
+			                    <button type="button" class="layui-btn" id="test1" style="display:none">上传图片</button>
+			                    <div class="layui-upload-list">
+			                        <img class="layui-upload-img" id="demo1" style="border: 2px dashed rgba(0,0,0,.15);width:130px;height: 104px;"
+			                             src="images/icon/Group.png">
+			                        <p id="demoText"></p>
+			                        <textarea class="slt" style="display:none;" name="fengmian_img" id="fengmian_img"></textarea>
+			                    </div>
+			                </div>
+			                <span class="fbox_div_text2">最大文件不超过2Mb，只支持.jpg .png 格式。</span>
+			                <ul class="fbox_1_ul clear">
+			                	<li>
+			                		<p>公司阶段</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                	<li>
+			                		<p>人员规模</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                	<li>
+			                		<p>所在区域</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                	<li>
+			                		<p>所在行业</p>
+			                		<select>
+			                			<option value="volvo1">Volvo1</option>
+			                			<option value="volvo2">Volvo2</option>
+			                			<option value="volvo3">Volvo3</option>
+			                			<option value="volvo4">Volvo4</option>
+			                		</select>
+			                	</li>
+			                </ul>
+			                <p class="fbox_div_text3">物业简称</p>
+			                <input class="property_text" type="text" name="" placeholder="建议在四个字内，创建后不可修改">
     					</div>
     				</div>
 					<!-- 合作联系方式 -->
     				<div class="fbox_2">
-    					<span class="fbox_span">合作联系方式</span>
+    					<span class="fbox_span">基本信息</span>
     					<div class="fbox_div">
-    						<ul class="clear">
-								<li>
-									<span>手机号码</span>
-									<input type="tel" name="">
-								</li>
-								<li>
-									<span>电话</span>
-									<input type="tel" name="">
-								</li>
-								<li>
-									<span>邮箱</span>
-									<input type="email" name="">
-								</li>
-								<li>
-									<span>QQ</span>
-									<input type="number" name="">
-								</li>
-    						</ul>
-    					</div>
-    				</div>
-					<!-- 身份认证 -->
-    				<div class="fbox_3">
-    					<span class="fbox_span">身份认证</span>
-    					<div class="fbox_div">
-    						<!-- 身份证正面 -->
-    						<div class="SFZzm">
-    							<span>上传身份证正面</span>
-    							<ul class="clear">
-    								<input class="filesfz1" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-    								<textarea class="sfzbase1" style="display: none;position: absolute;top: -9999px;"></textarea>
-    								<li><img class="shangchuan1" src="images/icon/Group.png"></li>
-    								<li><img src="images/icon/ID_positive.png"></li>
-    							</ul>
-    							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
-    						</div>
-    						<!-- 身份证反面 -->
-    						<div class="SFZfm">
-    							<span>上传身份证反面</span>
-    							<ul class="clear">
-    								<input class="filesfz2" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-    								<textarea class="sfzbase2" style="display: none;position: absolute;top: -9999px;"></textarea>
-    								<li><img class="shangchuan2" src="images/icon/Group.png"></li>
-    								<li><img src="images/icon/ID_opposite.png"></li>
-    							</ul>
-    							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
+    						<div class="fbox_div_text1">园区简介</div>
+    						<textarea class="propert_textarea" placeholder="请输入园区简介"></textarea>
+    						<div class="numberbox">
+    							<span class="newnumber"></span><span>/300</span>
     						</div>
     					</div>
+    					<ul class="fbox_2_ul clear">
+							<li>
+								<p>所在园区</p>
+								<select name="cars">
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+								</select>
+							</li>
+							<li>
+								<p>添加备注</p>
+								<input type="text" name="" placeholder="备注园区号，如C401">
+							</li>
+						</ul>
     				</div>
+
     				<input class="thissubmit" type="submit" name="" style="display: none;position: absolute;top: -9999px;">
     				<div class="lastsubmit">提交信息</div>
     			</form>	
@@ -203,17 +239,6 @@
 						</div>
 					</div>
 					<a href="" class="look_zome">查看园区主页</a>
-				</div>
-				
-				<div class="card">
-					<div style="display: flex;">
-						<img src="images/icon/logo_1.png"/>
-						<div style="margin-left: 12px;">
-							<p>企业通讯录</p>
-							<p style="margin-top: 14px;">最近联系人<span class="nnb">10</span>位</p>
-						</div>
-					</div>
-					<a href="" class="look_company">查看通讯列表</a>
 				</div>
 			</div>
 			</div>
@@ -276,4 +301,39 @@
 	        </div>
 	</footer>
 </body>
+<script type="text/javascript" src="js/layui.js"></script>
+<script type="text/javascript">
+    
+    layui.use('upload', function () {
+        var $ = layui.jquery, upload = layui.upload;
+
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#test1'
+            , url: '{:U("Release/upload_pic1/")}'
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#demo1').attr('src', result); //图片链接（base64）
+                    $('#demo1').css({'border': '1px solid rgba(0,0,0,.25)'});
+                });
+            }
+            , done: function (res) {
+                //如果上传失败
+                $(".slt").html(res['k']);
+                // alert(res['k']);
+                if (res.code > 0) {
+                    return layer.msg(res);
+                }
+                //上传成功
+            }
+            , error: function () {
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span>');
+            }
+        });
+    });
+
+</script>
 </html>

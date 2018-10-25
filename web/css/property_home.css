@@ -16,7 +16,7 @@ main{
 	box-sizing: border-box;
 	background: #fff;
 }
-.fbox_1,.fbox_2,.fbox_3{
+.fbox_1,.fbox_2{
 	margin-bottom: 12px;
 }
 .fbox_span{
@@ -35,71 +35,8 @@ main{
 	border-top: 2px solid #198cff;
 }
 .fbox_div{
+	position: relative;
 	padding-top: 24px;
-}
-.fbox_div>ul{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-.fbox_div>ul>li{
-	width: 50%;
-	float: left;
-	margin-bottom: 24px;
-}
-.fbox_div>ul>li>span{
-	color: rgba(0,0,0,.65);
-	font-size: 18px;
-	width: 100%;
-	display: inline-block;
-	margin-bottom: 5px;
-}
-.fbox_div>ul>li>input{
-	padding-left: 10px;
-	width: 350px;
-	height: 40px;
-	border-radius: 2px;
-	border: 1px solid rgba(0,0,0,.09);
-}
-.fbox_div>ul>li>input:hover{
-	border: 1px solid #198cff;
-}
-/*input type=number 去掉右边箭头*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-input[type="number"]{
-    -moz-appearance: textfield;
-}
-.SFZzm>span,.SFZfm>span{
-	font-size: 18px;
-	color: rgba(0,0,0,.65);
-}
-.SFZzm>ul,.SFZfm>ul{
-	margin: 12px 0;
-}
-.SFZzm>p,.SFZfm>p{
-	font-size: 12px;
-	color: rgba(0,0,0,.45);
-}
-.SFZzm ul li,.SFZfm ul li{
-	width: 130px;
-	height: 104px;
-	float: left;
-}
-.SFZzm ul li:nth-of-type(1),.SFZfm ul li:nth-of-type(1){
-	cursor: pointer;
-}
-.SFZzm ul li:nth-of-type(1) img,.SFZfm ul li:nth-of-type(1) img{
-	width: 130px;
-	height: 104px;
-}
-.SFZzm ul li:nth-of-type(2),.SFZfm ul li:nth-of-type(2){
-	margin-left: 12px;
-}
-.SFZfm{
-	margin-top: 24px;
 }
 .lastsubmit{
 	width: 120px;
@@ -111,6 +48,61 @@ input[type="number"]{
 	line-height: 40px;
 	margin-top: 40px;
 	cursor: pointer;
+}
+.fbox_div_text1{
+	color: rgba(0,0,0,.65);
+	font-size: 18px;
+}
+.fbox_div_text2{
+	color: rgba(0,0,0,.45);
+	font-size: 14px;
+}
+.fbox_div_text3{
+	color: rgba(0,0,0,.65);
+	font-size: 18px;
+	margin: 12px 0;
+}
+.property_text{
+	width: 360px;
+	height: 40px;
+	border:1px solid rgba(0,0,0,.09);
+	border-radius: 2px;
+	padding-left: 12px;
+}
+.property_text:hover{
+	border: 1px solid #198cff;
+}
+.layui-upload{
+	margin: 12px 0;
+}
+.layui-upload-img{
+	border:none!important;
+	cursor: pointer;
+}
+.layui-upload-file{
+	display: none!important;
+	position: absolute!important;
+	top: -99999px!important;
+}
+.propert_textarea{
+	width:816px;
+	height:336px;
+	resize: none;
+	border-radius: 2px;
+	padding: 12px;
+	border:1px solid rgba(0,0,0,.09);
+	margin-top: 12px;
+}
+.numberbox{
+	width: 108px;
+	height: 28px;
+	text-align: right;
+	position: absolute;
+	right: 30px;
+	bottom: 5px;
+}
+.numberbox span{
+	display: inline-block;
 }
 /*左边盒子结束*/
 /*右边盒子开始*/
