@@ -20,9 +20,25 @@ $(function(){
     $('.shangchuan1').click(function(){
         $('.filesfz1').click();
     })
+    $('.shangchuan2').click(function(){
+        $('.filesfz2').click();
+    })
+    $('.shangchuan3').click(function(){
+        $('.filesfz3').click();
+    })
     $(".filesfz1").change(function () {
         run(this,'.sfzbase1', function (data) {
             $('.shangchuan1').attr('src', data);
+        });
+    });
+    $(".filesfz2").change(function () {
+        run(this,'.sfzbase2', function (data) {
+            $('.shangchuan2').attr('src', data);
+        });
+    });
+    $(".filesfz3").change(function () {
+        run(this,'.sfzbase3', function (data) {
+            $('.shangchuan3').attr('src', data);
         });
         // $('.firstform').click();
     });

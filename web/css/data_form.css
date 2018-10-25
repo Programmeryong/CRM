@@ -72,35 +72,6 @@ input::-webkit-inner-spin-button {
 input[type="number"]{
     -moz-appearance: textfield;
 }
-.SFZzm>span,.SFZfm>span{
-	font-size: 18px;
-	color: rgba(0,0,0,.65);
-}
-.SFZzm>ul,.SFZfm>ul{
-	margin: 12px 0;
-}
-.SFZzm>p,.SFZfm>p{
-	font-size: 12px;
-	color: rgba(0,0,0,.45);
-}
-.SFZzm ul li,.SFZfm ul li{
-	width: 130px;
-	height: 104px;
-	float: left;
-}
-.SFZzm ul li:nth-of-type(1),.SFZfm ul li:nth-of-type(1){
-	cursor: pointer;
-}
-.SFZzm ul li:nth-of-type(1) img,.SFZfm ul li:nth-of-type(1) img{
-	width: 130px;
-	height: 104px;
-}
-.SFZzm ul li:nth-of-type(2),.SFZfm ul li:nth-of-type(2){
-	margin-left: 12px;
-}
-.SFZfm{
-	margin-top: 24px;
-}
 .lastsubmit{
 	width: 120px;
 	height: 40px;

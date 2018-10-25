@@ -95,7 +95,7 @@
     		乙租>写字楼出租>三号线>天河客运站</p>
     	<div class="form_box">
     		<div class="form_box_l">
-    			<form>
+    			<form id="thisform">
 					<!-- 基本资料 -->
     				<div class="fbox_1">
     					<span class="fbox_span">基本资料</span>
@@ -103,11 +103,11 @@
     						<ul class="clear">
     							<li>
     								<span>姓名</span>
-    								<input type="text" name="">
+    								<input class="dataform1" type="text" name="">
     							</li>
     							<li>
     								<span>职位</span>
-    								<input type="text" name="">
+    								<input class="dataform2" type="text" name="">
     							</li>
     						</ul>
     					</div>
@@ -119,49 +119,21 @@
     						<ul class="clear">
 								<li>
 									<span>手机号码</span>
-									<input type="tel" name="">
+									<input class="dataform3" type="tel" name="">
 								</li>
 								<li>
 									<span>电话</span>
-									<input type="tel" name="">
+									<input class="dataform4" type="tel" name="">
 								</li>
 								<li>
 									<span>邮箱</span>
-									<input type="email" name="">
+									<input class="dataform5" type="email" name="">
 								</li>
 								<li>
 									<span>QQ</span>
-									<input type="number" name="">
+									<input class="dataform6" type="number" name="">
 								</li>
     						</ul>
-    					</div>
-    				</div>
-					<!-- 身份认证 -->
-    				<div class="fbox_3">
-    					<span class="fbox_span">身份认证</span>
-    					<div class="fbox_div">
-    						<!-- 身份证正面 -->
-    						<div class="SFZzm">
-    							<span>上传身份证正面</span>
-    							<ul class="clear">
-    								<input class="filesfz1" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-    								<textarea class="sfzbase1" style="display: none;position: absolute;top: -9999px;"></textarea>
-    								<li><img class="shangchuan1" src="images/icon/Group.png"></li>
-    								<li><img src="images/icon/ID_positive.png"></li>
-    							</ul>
-    							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
-    						</div>
-    						<!-- 身份证反面 -->
-    						<div class="SFZfm">
-    							<span>上传身份证反面</span>
-    							<ul class="clear">
-    								<input class="filesfz2" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-    								<textarea class="sfzbase2" style="display: none;position: absolute;top: -9999px;"></textarea>
-    								<li><img class="shangchuan2" src="images/icon/Group.png"></li>
-    								<li><img src="images/icon/ID_opposite.png"></li>
-    							</ul>
-    							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
-    						</div>
     					</div>
     				</div>
     				<input class="thissubmit" type="submit" name="" style="display: none;position: absolute;top: -9999px;">
