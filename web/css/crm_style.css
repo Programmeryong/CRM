@@ -20,6 +20,13 @@ a{
 ul,ol,li{
   list-style: none;
 }
+
+/*去掉谷歌，火狐下的type="number"中的右边箭头*/
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+   -webkit-appearance: none !important;
+}
+input[type="number"]{-moz-appearance:textfield;}
+
 input,select,textarea{outline:none;}
 select:focus,textarea:focus{outline: none;}
 a:hover{
@@ -42,6 +49,15 @@ a:hover{
 }
 .cursor{
   cursor:pointer;
+}
+/*蒙层*/
+.temp{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 9999;
 }
 /*导入数字字体包*/
 @font-face {
