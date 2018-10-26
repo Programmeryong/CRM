@@ -43,6 +43,15 @@ a:hover{
 .cursor{
   cursor:pointer;
 }
+/*蒙层*/
+.temp{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 9999;
+}
 /*导入数字字体包*/
 @font-face {
     font-family: 'newnumebr';   /*字体名称*/

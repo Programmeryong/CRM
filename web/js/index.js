@@ -131,6 +131,14 @@ $(function(){
     });
     /*获取验证码 60s后重试结束*/
    
+    /*选择账号*/
+    var  seleUser = 0;
+  	$('.sele_user ul li').click(function(){
+  		seleUser = $(this).index();
+  		$(this).addClass("active").siblings().removeClass("active");
+  	})
+  	$('.sele_user ul li').eq(0).click();
+    
    	/*提交表单*/
    	$('.noLogin form').submit(function(){
    		
@@ -138,7 +146,9 @@ $(function(){
    			Phone();
    			Yzm();
    			if (aa) {
-   			
+   				$('.temp').show();
+   				$('.sele_user').show();
+   				return false;
 	   		} else{
 	   			return false;
 	   		}
@@ -153,6 +163,14 @@ $(function(){
    		}
    	})
    	/*提交表单结束*/
+   	
+   	/*确定账号按钮*/
+   	$(".sele_user_ok").click(function(){
+   		$('.temp').hide();
+   		$('.sele_user').hide();
+   		console.log(seleUser);
+   	})
+   	
    	
    	$('.login-btn').click(function(){//模拟点击提交表单
    		$(".noLogin input[type='submit']").click();

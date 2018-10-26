@@ -1,4 +1,46 @@
 /*中部开始*/
+/*选择账号*/
+.sele_user{
+	display: none;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 99991;
+	left: 50%;
+	top: 30%;
+	margin-left: -150px;
+	width: 300px;
+	height: 240px;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+	text-align: center;	
+	padding-top: 30px;
+}
+.sele_user ul{
+	margin-top: 18px;
+}
+.sele_user ul li{
+	cursor: pointer;
+	height: 36px;
+	line-height: 36px;
+}
+.sele_user ul li:hover,.sele_user ul .active{
+	color: #198CFF;
+}
+.sele_user_ok{
+	display: inline-block;
+	margin-top: 10px;
+	background: #198CFF;
+	color: #fff;
+	width: 80px;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+/*选择账号结束*/
+
 .main-index{
 	width: 1200px;
 	height: auto;
