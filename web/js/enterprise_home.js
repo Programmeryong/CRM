@@ -68,4 +68,22 @@ $(function(){
             }
         }
     }
+
+    function textnull(thisclass){   //不为空判断
+        let Unull = $(thisclass).val();
+        if(Unull == ''){
+            $(thisclass).css({'border':'1px solid #F52230'});
+            return false;
+        }else{
+            $(thisclass).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
+    $('#enterpriseform').submit(function(){
+        if(textnull('.property_text') == true && textnull('.propert_textarea') == true && textnull('.homeBZ') == true){
+            return true;
+        }else{
+            return false;
+        }
+    })
 })
