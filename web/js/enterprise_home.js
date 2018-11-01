@@ -71,7 +71,7 @@ $(function(){
 
     function textnull(thisclass){   //不为空判断
         let Unull = $(thisclass).val();
-        if(Unull == ''){
+        if(Unull.length==0){
             $(thisclass).css({'border':'1px solid #F52230'});
             return false;
         }else{

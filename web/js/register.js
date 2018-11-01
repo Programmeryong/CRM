@@ -256,8 +256,7 @@ $(function(){
         }
     })
     $('.clickthisbtn1').click(function(){
-        if(textEnglish('.logintext4') == true && textpow('.logintext5','.logintext6') == true &&
-            textphone('.logintext7') == true && textYZM('.oneYZM1') == true && && $('.thisbox').is(':checked') == true){
+        if(textEnglish('.logintext4') == true && textpow('.logintext5','.logintext6') == true && textphone('.logintext7') == true && textYZM('.oneYZM1') == true && ($('.thisbox').is(':checked') == true) ){
             $('.formp5').hide();
             $('.formp6').hide();
             $('.formp7').hide();

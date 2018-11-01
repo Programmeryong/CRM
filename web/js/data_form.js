@@ -46,15 +46,16 @@ $(function(){
     }
 
     // 正则判断  职位和电话号码只判断了不为空~~
-    function textchines(thisdiv){  //中文判断 
+    function textchines(thisdiv){   // 正则表达式——中文名字
         let Utext = $(thisdiv).val();
-        let Thisterm = /[\u4e00-\u9fa5]{2,30}/;
-        if(Thisterm.test(Utext)==false || Utext==''){
-            $(thisdiv).css({'border':'1px solid #F52230'});
-            return false;
-        }else if(Thisterm.test(Utext)==true){
+        let oldtext = $(thisdiv).val().replace(/\s/g, '');
+        let Thisterm = /^[\u4e00-\u9fa5]{2,5}$/;
+        if(Thisterm.test(Utext)==true && Utext.length == oldtext.length){
             $(thisdiv).css({'border':'1px solid #5FCC29'});
             return true;
+        }else{
+            $(thisdiv).css({'border':'1px solid #F52230'});
+            return false;
         }
     }
     function textphone(thisclass){  //电话号码判断
@@ -90,6 +91,17 @@ $(function(){
             return true;
         }
     }
+    function textFixed(thisclass){
+        let Ufixed = $(thisclass).val();
+        let Tfixed = /((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/;
+        if(Tfixed.test(Ufixed) == false ){
+            $(thisclass).css({'border':'1px solid #F52230'});
+            return false;
+        }else if(Tfixed.test(Ufixed) == true){
+            $(thisclass).css({'border':'1px solid #5FCC29'});
+            return true;
+        }
+    }
     function textnull(thisclass){   //不为空判断
         let Unull = $(thisclass).val();
         if(Unull == ''){
@@ -103,7 +115,7 @@ $(function(){
 
     $('#thisform').submit(function(){
         if(textchines('.dataform1') == true && textnull('.dataform2') == true &&
-           textphone('.dataform3') == true && textnull('.dataform4') == true &&
+           textphone('.dataform3') == true && textFixed('.dataform4') == true &&
            textemail('.dataform5') == true && textqq('.dataform6')){
             return true;
         }else{
