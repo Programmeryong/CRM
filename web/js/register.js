@@ -18,12 +18,14 @@ $(function(){
             $('.thischeckbox').addClass('icon-icon-');
             $('.thischeckbox').css({'color':'rgba(0,0,0,.45)'});
             $('.thisbox').click();
+            // console.log('1'+$('.thisbox').is(':checked'));
         }else{
             // 变蓝色
             $('.thischeckbox').removeClass('icon-icon-');
             $('.thischeckbox').addClass('icon-duoxuankuang1');
             $('.thischeckbox').css({'color':'#1A8CFF'});
             $('.thisbox').click();
+            // console.log('2'+$('.thisbox').is(':checked'));
         }
     })
     $('.thischeckbox1').click(function(){
@@ -34,12 +36,14 @@ $(function(){
             $('.thischeckbox1').addClass('icon-icon-');
             $('.thischeckbox1').css({'color':'rgba(0,0,0,.45)'});
             $('.thisbox1').click();
+            // console.log('3'+$('.thisbox1').is(':checked'));
         }else{
             // 变蓝色
             $('.thischeckbox1').removeClass('icon-icon-');
             $('.thischeckbox1').addClass('icon-duoxuankuang1');
             $('.thischeckbox1').css({'color':'#1A8CFF'});
             $('.thisbox1').click();
+            // console.log('4'+$('.thisbox1').is(':checked'));
         }
     })
     /*获取验证码 60s后重试*/
@@ -89,11 +93,8 @@ $(function(){
     function textchines(thisdiv){   // 正则表达式——中文名字
         let Utext = $(thisdiv).val();
         let oldtext = $(thisdiv).val().replace(/\s/g, '');
-        let Thisterm = /[\u4e00-\u9fa5]{2,30}/;
-        if( Utext=='' || Thisterm.test(Utext)==false){
-            $(thisdiv).css({'border':'1px solid #F52230'});
-            return false;
-        }else if(Thisterm.test(Utext)==true && Utext.length == oldtext.length){
+        let Thisterm = /^[\u4e00-\u9fa5]{2,5}$/;
+        if(Thisterm.test(Utext)==true && Utext.length == oldtext.length){
             $(thisdiv).css({'border':'1px solid #5FCC29'});
             return true;
         }else{
@@ -123,16 +124,6 @@ $(function(){
             $(thisclass).css({'border':'1px solid #F52230'});
             return false;
         }else if(Tphone.test(Uphone)==true){
-            $(thisclass).css({'border':'1px solid #5FCC29'});
-            return true;
-        }
-    }
-    function textnull(thisclass){   //不为空判断
-        let Unull = $(thisclass).val();
-        if(Unull == ''){
-            $(thisclass).css({'border':'1px solid #F52230'});
-            return false;
-        }else{
             $(thisclass).css({'border':'1px solid #5FCC29'});
             return true;
         }
@@ -173,7 +164,7 @@ $(function(){
             return true;
         }
     }
-    function textpow(class1,class2){
+    function textpow(class1,class2){  //密码判断
         let Upow1 = $(class1).val();
         let Upow2 = $(class2).val();
         let Tpow = /^[a-zA-Z]\w{6,16}$/;
@@ -184,81 +175,93 @@ $(function(){
         }else{
             $(class1).css({'border':'1px solid #5FCC29'});
             $(class2).css({'border':'1px solid #5FCC29'});
-            return true;
+            return true; 
         }
     }
     $('.clickthisbtn').click(function(){
-        if(textnumbernull('.logintext1') == true && textchines('.logintext2') == true &&
-            textphone('.logintext3') == true && textYZM('.oneYZM') == true){
-            $('.formp4').hide();
-            return true;
-        }else{
-            if(textnumbernull('.logintext1') == false){
-                let thistext = $('.logintext1').val();
-                let Unull = $('.logintext1').val().replace(/\s/g, '');
-                if(thistext == ''){
-                    $('.formp1').text('不能为空').show();
-                    return false;
-                }else if(thistext.length >=30){
-                    $('.formp1').text('字数不能超过30字').show();
-                    return false;
-                }else if(thistext.length <=3){
-                    $('.formp1').text('字数不能小于3个字').show();
-                    return false;
-                }else if(thistext.length != Unull.length){
-                    $('.formp1').text('字段中不能有空格').show();
-                    return false;
-                }
-            }else{
-                $('.formp1').hide();
-            }
-            if(textchines('.logintext2') == false){
-                let thistext = $('.logintext2').val();
-                let Unull = $('.logintext2').val().replace(/\s/g, '');
-                if(thistext == ''){
-                    $('.formp2').text('不能为空').show();
-                    return false;
-                }else if(thistext.length != Unull.length){
-                    $('.formp2').text('字段中不能有空格').show();
-                    return false;
-                }else if(thistext.length <=2){
-                    $('.formp2').text('字数不能小于2个字').show();
-                    return false;
-                }else if(thistext.length >=4){
-                    $('.formp2').text('字数不能超过4个字').show();
-                    return false;
-                }
-
-            }else{
-                $('.formp2').hide();
-            }
-            if(textphone('.logintext3') == false){
-                let thistext = $('.logintext3').val();
-                if(thistext == ''){
-                    $('.formp3').text('不能为空').show();
-                }else{
-                    $('.formp3').text('请输入正确的电话号码').show();
-                }
-            }else{
-                $('.formp3').hide();
-            }
-            if(textYZM('.oneYZM') == false){
-                let thistext = $('.oneYZM').val();
-                if(thistext.length == 0){
-                    $('.formp4').text('验证码错误').show();
-                }else{
-                    $('.formp4').text('验证码错误').show();
-                }
-            }else{
-                console.log(1);
-                $('.formp4').hide();
-            }
+        if($('.thisbox').is(':checked') == false){
+            $('.formp4').text('请勾选用户协议').show();
+            $('.thischeckbox').css({'color':'#F52230'});
             return false;
+        }else{
+            if(textnumbernull('.logintext1') == true && textchines('.logintext2') == true && 
+                textphone('.logintext3') == true && textYZM('.oneYZM') == true && $('.thisbox').is(':checked') == true){
+                $('.formp1').hide();
+                $('.formp2').hide();
+                $('.formp3').hide();
+                $('.formp4').hide();
+                return true;
+            }else{
+                if(textnumbernull('.logintext1') == false){
+                    let thistext = $('.logintext1').val();
+                    let Unull = $('.logintext1').val().replace(/\s/g, '');
+                    if(thistext == ''){
+                        $('.formp1').text('不能为空').show();
+                        return false;
+                    }else if(thistext.length >=30){
+                        $('.formp1').text('字数不能超过30字').show();
+                        return false;
+                    }else if(thistext.length <=3){
+                        $('.formp1').text('字数不能小于3个字').show();
+                        return false;
+                    }else if(thistext.length != Unull.length){
+                        $('.formp1').text('字段中不能有空格').show();
+                        return false;
+                    }
+                }else{
+                   $('.formp1').hide();
+                }
+                if(textchines('.logintext2') == false){
+                    let thistext = $('.logintext2').val();
+                    let Unull = $('.logintext2').val().replace(/\s/g, '');
+                    if(textchines('.logintext2') == false){
+                        $('.formp2').text('输入错误,请输入4位以内的中文').show();
+                        return false;
+                    }else if(thistext.length != Unull.length){
+                        $('.formp2').text('字段中不能有空格').show();
+                        return false;
+                    }else if(thistext.length <=2){
+                        $('.formp2').text('字数不能小于2个字').show();
+                        return false;
+                    }else if(thistext.length >=4){
+                        $('.formp2').text('字数不能超过4个字').show();
+                        return false;
+                    }
+                }else{
+                    $('.formp2').hide();
+                }
+                if(textphone('.logintext3') == false){
+                    let thistext = $('.logintext3').val();
+                    if(thistext == ''){
+                        $('.formp3').text('不能为空').show();
+                    }else{
+                        $('.formp3').text('请输入正确的电话号码').show();
+                    }
+                }else{
+                    $('.formp3').hide();
+                }
+                if(textYZM('.oneYZM') == false){
+                    let thistext = $('.oneYZM').val();
+                    if(thistext.length == 0){
+                        $('.formp4').text('验证码错误').show();
+                    }else{
+                        $('.formp4').text('验证码错误').show();
+                    }
+                }else{
+                    console.log(1);
+                    $('.formp4').hide();
+                }
+                return false;
+            }
         }
     })
     $('.clickthisbtn1').click(function(){
         if(textEnglish('.logintext4') == true && textpow('.logintext5','.logintext6') == true &&
-            textphone('.logintext7') == true && textYZM('.oneYZM1') == true){
+            textphone('.logintext7') == true && textYZM('.oneYZM1') == true && && $('.thisbox').is(':checked') == true){
+            $('.formp5').hide();
+            $('.formp6').hide();
+            $('.formp7').hide();
+            $('.formp8').hide();
             $('.formp9').hide();
             return true;
         }else{
