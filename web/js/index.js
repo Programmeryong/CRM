@@ -141,7 +141,6 @@ $(function(){
     
    	/*提交表单*/
    	$('.noLogin form').submit(function(){
-   		
    		if (loginType == 0) {//手机登录
    			Phone();
    			Yzm();
