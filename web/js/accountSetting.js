@@ -116,7 +116,7 @@ $(function(){
     	if(textYZM('.thisyzm1') == false){
             let thistext = $('.thisyzm1').val();
             if(thistext.length == 0){
-                $('.thisp1').text('验证码错误').show();
+                $('.thisp1').text('验证码为空').show();
                 return false;
             }else{
                 $('.thisp1').text('验证码错误').show();
