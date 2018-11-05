@@ -1,7 +1,4 @@
 $(function(){
-	$('.thispowsubmit').click(function(){
-		$('.powsubmit').click();
-	})
 	$('.cleartext').click(function(){
 		$('.powliinput input').val('');
 	})
@@ -38,6 +35,22 @@ $(function(){
     })
     /*获取验证码 60s后重试结束*/
 
+    function textpow(class1,class2){  //密码判断
+        let Upow1 = $(class1).val();
+        let Upow2 = $(class2).val();
+        let oldpow = $('.oldpow').val();
+        let Tpow = /^[a-zA-Z]\w{6,16}$/;
+        if(Tpow.test(Upow1) == false || Upow1 == '' || Upow1 != Upow2 || Upow1 == oldpow){
+            $(class1).css({'border':'1px solid #F52230'});
+            $(class2).css({'border':'1px solid #F52230'});
+            return false;
+        }else{
+            $(class1).css({'border':'1px solid #5FCC29'});
+            $(class2).css({'border':'1px solid #5FCC29'});
+            return true; 
+        }
+    }
+
 	function textphone(thisclass){  //电话号码判断
         let Uphone = $(thisclass).val();
         let Tphone = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
@@ -60,6 +73,32 @@ $(function(){
             return true;
         }
     }
+
+    $('.thispowsubmit').click(function(){
+    	if(textpow('.newpow1','.newpow2') == false){
+            let txt1 = $('.newpow1').val();
+            let txt2 = $('.newpow2').val();
+            let oldtxt1 = $('.newpow1').val().replace(/\s/g, '');
+            let oldtxt2 = $('.newpow2').val().replace(/\s/g, '');
+            if(txt1.length != oldtxt1.length){
+                $('.thisp3').text('密码不能有空格').show();
+                return false;
+            }else if(txt1 != txt2){
+                $('.thisp4').text('重复密码出错').show();
+                return false;
+            }else if(txt1 == $('.oldpow').val()){
+            	$('.thisp4').text('新密码与旧密码重复').show();
+                return false;
+            }else{
+                $('.thisp3').text('密码格式为6到16位字母和数字组合密码').show();
+                 $('.thisp4').text('密码格式为6到16位字母和数字组合密码').show();
+                return false;
+            }
+        }else{
+            $('.thisp3').hide();
+            $('.thisp4').hide();
+        }
+    })
 
     $('.thanphonesubmit').click(function(){
     	if(textphone('.thisphone') == false){
