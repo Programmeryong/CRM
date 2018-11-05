@@ -14,25 +14,29 @@ $(function(){
 	})
 
 	/*获取验证码 60s后重试结束*/
-    var ding1 = null;
-    var ifclick1 = true;
-    $(".YZM").click(function(){
-        var time1 = 10;
-        if (ifclick1==true) {
-            ding1 = setInterval(function(){
-                ifclick1 = false;
-                $(".YZM").text(time1+"s 重试");
-                $(".YZM").css({"cursor":"not-allowed","color":"rgba(0,0,0,0.65)"});
-                time1--;
-                if(time1==-2){
-                    ifclick1 = true;
-                    clearInterval(ding1);
-                    $(".YZM").text("重新获取");
-                    $(".YZM").css({"cursor":"pointer","color":"#198cff"});
-                }
-            },1000);
-        } 
-    })
+	function yzm(classname){
+		var ding1 = null;
+	    var ifclick1 = true;
+	    $(classname).click(function(){
+	        var time1 = 10;
+	        if (ifclick1==true) {
+	            ding1 = setInterval(function(){
+	                ifclick1 = false;
+	                $(classname).text(time1+"s 重试");
+	                $(classname).css({"cursor":"not-allowed","color":"rgba(0,0,0,0.65)"});
+	                time1--;
+	                if(time1==-2){
+	                    ifclick1 = true;
+	                    clearInterval(ding1);
+	                    $(classname).text("重新获取");
+	                    $(classname).css({"cursor":"pointer","color":"#198cff"});
+	                }
+	            },1000);
+	        } 
+	    })
+	}
+   	yzm('.YZM');
+   	yzm('.YZM1');
     /*获取验证码 60s后重试结束*/
 
     function textpow(class1,class2){  //密码判断
@@ -100,21 +104,9 @@ $(function(){
         }
     })
 
-    $('.thanphonesubmit').click(function(){
-    	if(textphone('.thisphone') == false){
-            let thistext = $('.thisphone').val();
-            if(thistext == ''){
-                $('.thisp2').text('不能为空').show();
-                return false;
-            }else{
-                $('.thisp2').text('请输入正确的电话号码').show();
-                return false;
-            }
-        }else{
-            $('.thisp2').hide();
-        }
-        if(textYZM('.thisyzm') == false){
-            let thistext = $('.thisyzm').val();
+    $('.thanphonesubmit1').click(function(){
+    	if(textYZM('.thisyzm1') == false){
+            let thistext = $('.thisyzm1').val();
             if(thistext.length == 0){
                 $('.thisp1').text('验证码错误').show();
                 return false;
@@ -124,6 +116,33 @@ $(function(){
             }
         }else{
             $('.thisp1').hide();
+        }
+    })
+
+    $('.thanphonesubmit2').click(function(){
+    	if(textphone('.thisphone1') == false){
+            let thistext = $('.thisphone1').val();
+            if(thistext == ''){
+                $('.thisp5').text('不能为空').show();
+                return false;
+            }else{
+                $('.thisp5').text('请输入正确的电话号码').show();
+                return false;
+            }
+        }else{
+            $('.thisp5').hide();
+        }
+        if(textYZM('.thisyzm') == false){
+            let thistext = $('.thisyzm').val();
+            if(thistext.length == 0){
+                $('.thisp6').text('验证码错误').show();
+                return false;
+            }else{
+                $('.thisp6').text('验证码错误').show();
+                return false;
+            }
+        }else{
+            $('.thisp6').hide();
         }
     })
 

@@ -92,7 +92,7 @@ main{
 	margin-left: 100px;
 	cursor: pointer;
 }
-.phonebox form ul li{
+.phoneform li{
 	margin-top: 12px;
 }
 .phonelitext{
@@ -114,7 +114,7 @@ main{
 	padding-left: 12px;
 	border: 1px solid rgba(0,0,0,0.09);
 }
-.phonebox form ul li>span{
+.phoneform li>span{
 	display: inline-block;
 	width: 	104px;
 	height: 40px;
