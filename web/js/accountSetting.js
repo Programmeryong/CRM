@@ -1,4 +1,9 @@
 $(function(){
+	$.ajaxSetup({
+	    headers: {
+	        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    }
+	});
 	$('.cleartext').click(function(){
 		$('.powliinput input').val('');
 	})
@@ -79,6 +84,9 @@ $(function(){
     }
 
     $('.thispowsubmit').click(function(){
+    	let password = $('.newpow1').val()
+    	let password_confirmation = $('.newpow2').val();
+    	let old_paddword = $('.oldpow').val();
     	if($('.oldpow').val()==0){
     		$('.oldpow').css({'border':'1px solid #F52230'});
     		$('.thisp2').text('密码不能为空').show();
@@ -106,43 +114,114 @@ $(function(){
                  $('.thisp4').text('密码格式为6到16位字母和数字组合密码').show();
                 return false;
             }
-        }else{
+        }else if(textpow('.newpow1','.newpow2') == true && $('.oldpow').val() != 0){
             $('.thisp3').hide();
             $('.thisp4').hide();
+            $.ajax({
+	    		type:"POST",
+	    		url:"/passReset",
+	    		data:{
+	    			password:password,
+	    			password_confirmation:password_confirmation,
+	    			old_password:old_paddword
+	    		},
+	    		dataType:"json",
+	    		success:function(res){
+	    			if(res.error == 1){
+	    				$('.oldpow').css({'border':'1px solid #F52230'});
+	    				$('.thisp2').text('密码错误').show();
+	    				alert('密码错误');
+	    			}else if(res.error == 2){
+	    				alert('密码修改失败');
+	    			}else if(res.error == 0){
+	    				return true;
+	    			}
+	    		},
+	    		error:function(msg){
+	    			 if (msg.status == 422) {
+					     var json = JSON.parse(msg.responseText);
+					     json = json.errors;
+					     if (json.password) {
+					          $('.newpow1').css({ "border": "1px solid #F52230" });
+					          $('.thisp2').text(json.password).show();
+					     }
+					     if (json.password_confirmation) {
+					     	 $('.newpow2').css({ "border": "1px solid #F52230" });
+					         $(".thisp3").text(json.password_confirmation).show();
+					     }
+					     if(json.old_paddword){
+					     	 $('.oldpow').css({ "border": "1px solid #F52230" });
+					         $(".thisp4").text(json.old_paddword).show();
+					     }	
+					 } else {
+					     alert('服务器连接失败');
+					     return;
+					 }
+ 				}
+	    	})
         }
     })
 
     $('.thanphonesubmit1').click(function(){
+    	let v_code = $('.thisyzm1').val();
+    	let phone = $('.phoneliinput').text();
     	if(textYZM('.thisyzm1') == false){
-            let thistext = $('.thisyzm1').val();
-            if(thistext.length == 0){
+            if(v_code.length == 0){
                 $('.thisp1').text('验证码为空').show();
                 return false;
             }else{
                 $('.thisp1').text('验证码错误').show();
                 return false;
             }
-        }else{
+        }else if(textYZM('.thisyzm1') == true){
             $('.thisp1').hide();
+            $.ajax({
+	    		type:"POST",
+	    		url:"/checkPhone1",
+	    		data:{
+	    			v_code:v_code
+	    		},
+	    		dataType:"json",
+	    		success:function(res){
+	    			if(res.error == 0){
+	    				return true;
+	    			}else{
+	    				alert('验证错误')
+	    			}
+	    		},
+	    		error:function(msg){
+	    			 if (msg.status == 422) {
+					     var json = JSON.parse(msg.responseText);
+					     json = json.errors;
+					     if (json.v_code) {
+					          $('.YZM').css({ "border": "1px solid #F52230" });
+					          $('.thisp1').text(json.password).show();
+					     }
+					 } else {
+					     alert('服务器连接失败');
+					     return;
+					 }
+ 				}
+	    	})
         }
     })
 
     $('.thanphonesubmit2').click(function(){
+    	let phone = $('.thisphone1').val();
+    	let v_code = $('.thisyzm').val();
     	if(textphone('.thisphone1') == false){
-            let thistext = $('.thisphone1').val();
-            if(thistext == ''){
-                $('.thisp5').text('不能为空').show();
-                return false;
-            }else{
-                $('.thisp5').text('请输入正确的电话号码').show();
-                return false;
-            }
+	        if(phone.length == 0){
+	            $('.thisp5').text('不能为空').show();
+	            return false;
+	        }else{
+	            $('.thisp5').text('请输入正确的电话号码').show();
+	            return false;
+	        }
         }else{
             $('.thisp5').hide();
         }
         if(textYZM('.thisyzm') == false){
-            let thistext = $('.thisyzm').val();
-            if(thistext.length == 0){
+            if(v_code.length == 0){
                 $('.thisp6').text('验证码错误').show();
                 return false;
             }else{
@@ -151,6 +230,41 @@ $(function(){
             }
         }else{
             $('.thisp6').hide();
+        }
+        if(textphone('.thisphone1') == true && textYZM('.thisyzm') == true){
+        	$.ajax({
+	    		type:"POST",
+	    		url:"/checkPhone2'",
+	    		data:{
+	    			v_code:v_code,
+	    			phone:phone
+	    		},
+	    		dataType:"json",
+	    		success:function(res){
+	    			if(res.error == 0){
+	    				return true;
+	    			}else{
+	    				alert('验证错误')
+	    			}
+	    		},
+	    		error:function(msg){
+	    			 if (msg.status == 422) {
+					     var json = JSON.parse(msg.responseText);
+					     json = json.errors;
+					     if (json.v_code) {
+					          $('.YZM1').css({ "border": "1px solid #F52230" });
+					          $('.thisp6').text(json.password).show();
+					     }
+					     if (json.v_code) {
+					          $('.YZM1').css({ "border": "1px solid #F52230" });
+					          $('.thisp6').text(json.password).show();
+					     }
+					 } else {
+					     alert('服务器连接失败');
+					     return;
+					 }
+ 				}
+	    	})
         }
     })
 
