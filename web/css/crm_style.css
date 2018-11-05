@@ -229,6 +229,7 @@ a:hover{
   color:rgba(255,255,255,1);
   margin-right: 22px;
   min-width: 45px;
+  cursor: pointer;
   text-align: center;
 }
 .header-2-l>ul li a{

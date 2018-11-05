@@ -142,3 +142,7 @@ main{
 	cursor: pointer;
 	display: inline-block;
 }
+
+#phoneform{
+	display: none;
+}
