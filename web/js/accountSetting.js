@@ -83,7 +83,11 @@ $(function(){
     		$('.oldpow').css({'border':'1px solid #F52230'});
     		$('.thisp2').text('密码不能为空').show();
     		return false;
-    	}else if(textpow('.newpow1','.newpow2') == false){
+    	}else{
+    		$('.oldpow').css({'border':'1px solid #5FCC29'});
+    		$('.thisp2').hide();
+		}
+    	if(textpow('.newpow1','.newpow2') == false){
             let txt1 = $('.newpow1').val();
             let txt2 = $('.newpow2').val();
             let oldtxt1 = $('.newpow1').val().replace(/\s/g, '');
@@ -103,7 +107,6 @@ $(function(){
                 return false;
             }
         }else{
-        	$('.thisp2').hide();
             $('.thisp3').hide();
             $('.thisp4').hide();
         }
