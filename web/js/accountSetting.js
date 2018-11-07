@@ -184,6 +184,8 @@ $(function(){
 	    		dataType:"json",
 	    		success:function(res){
 	    			if(res.error == 0){
+	    				$('#phoneform').hide();
+	    				$('#phoneform2').show();
 	    				return true;
 	    			}else{
 	    				alert('验证错误')

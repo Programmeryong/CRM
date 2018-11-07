@@ -5,10 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/crm_style.css">
+	<link rel="stylesheet" type="text/css" href="simditor/styles/simditor.css">
 	<link rel="stylesheet" type="text/css" href="css/crm_form.css">
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/crm_form.js"></script>
 </head>
 <body style="background: rgba(0,0,0,.04);">
 	<!-- 弹窗框 -->
@@ -202,41 +201,46 @@
 					<div>选择标签</div>
 					<input type="text" name="" placeholder="请选择标签" style="display: none;position: absolute;">
 					<span class="simulationtext">请选择标签</span>
+					<p class="thisp1" style="color:red"></p>
 				</li>
 			</ul>
 			<div class="form_box2">
 				<div>输入标题</div>
-				<input type="text" name="" placeholder="">
-				<input type="text" name="" placeholder="请输入标题">
+				<span>【广州乙租】</span>
+				<input class="crmformtitle" type="text" name="" maxlength="26" placeholder="请输入标题">
+				<p class="thisp2" style="color:red;padding-left: 100px;"></p>
 			</div>
 			<div class="form_box3">
 				<div>补充描述</div>
-				<textarea placeholder="需求详情描述"></textarea>
-				<span><i>0</i>/300</span>
+				<textarea id="editor" placeholder="需求详情描述" autofocus></textarea>
+				<p class="thisp3" style="color:red"></p>
 			</div>
 			<ul class="form_box1 mar clear">
 				<li>
 					<div>手机号码</div>
-					<input type="text" name="" placeholder="请输入手机号码">
+					<input class="phone" type="number" name="" placeholder="请输入手机号码">
+					<p class="thisp4" style="color:red"></p>
 				</li>
 				<li>
 					<div>电话</div>
-					<input type="text" name="" placeholder="请输入电话">
+					<input class="telnumber" type="number" name="" placeholder="请输入电话">
+					<p class="thisp5" style="color:red"></p>
 				</li>
 			</ul>
 			<ul class="form_box1 mar clear">
 				<li>
 					<div>邮箱</div>
-					<input type="text" name="" placeholder="请输入邮箱">
+					<input class="thisemail" type="email" name="" placeholder="请输入邮箱">
+					<p class="thisp6" style="color:red"></p>
 				</li>
 				<li>
 					<div>QQ</div>
-					<input type="text" name="" placeholder="请输入QQ">
+					<input class="thisqq" type="number" name="" placeholder="请输入QQ">
+					<p class="thisp7" style="color:red"></p>
 				</li>
 			</ul>
 			<div class="form_box4">
-				<input type="submit" name="">
-				<span>发布信息</span>
+				<span class="clickformbox4">发布信息</span>
 			</div>
 		</form>
 	</main>
@@ -297,6 +301,12 @@
         </div>
 	</footer>
 </body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="simditor/scripts/module.js"></script>
+<script type="text/javascript" src="simditor/scripts/uploader.js"></script>
+<script type="text/javascript" src="simditor/scripts/hotkeys.js"></script>
+<script type="text/javascript" src="simditor/scripts/simditor.js"></script>
+<script type="text/javascript" src="js/crm_form.js"></script>
 <script type="text/javascript">
 	$(function(){
 		var ii=0;
@@ -312,9 +322,8 @@
     	})
 		$('.tijiao').click(function(){
 			// 弹窗顶部的搜索框 点击提交的时候 这里写ajax方法
-
+			
 		})
-
 		// 动态添加和删除标签
 		// 输入框输入结束回车提交和失去焦点提交方法
 		$('.add-lable-btn').keydown(function(e) {
@@ -352,7 +361,6 @@
 				typearr.push({'thistext':i,'thisid':j});
 				ergodicarr();
 				oldtypearr = typearr;
-				console.log(oldtypearr);
 			}
 		})
 		//遍历数组并打印到页面上  还要加上一个新旧数组比对的方法 
@@ -387,8 +395,13 @@
 			// 点击确定之后关闭页面
 			$('.curtain').hide();
 			$('.navbigbox').hide();
+			for(let iii = 0 ; iii<typearr.length;iii++){
+				$('.simulationtext').append('<i>'+typearr[iii].thistext+'  </i>')
+			}
+		})
 
-			console.log(oldtypearr.thistext);
+		$('#div2').keydown(function(){
+			console.log($('#div2 p').text().length);
 		})
 
 	})

@@ -27,8 +27,8 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
 }
 input[type="number"]{-moz-appearance:textfield;}
 
-input,select,textarea{outline:none;}
-select:focus,textarea:focus{outline: none;}
+input,select,textarea{outline:none!important;}
+select:focus,textarea:focus{outline: none!important;}
 a:hover{
   color: #198CFF;
 }
