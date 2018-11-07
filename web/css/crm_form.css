@@ -1,312 +1,391 @@
 /*表单发布需求样式表*/
-main{
-	width: 1160px;
-	margin: 20px auto 40px;
-	padding: 0 20px;
-	background: #fff;
+main {
+    width: 1160px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+    background: #fff;
 }
-.form_box1,.form_box2,.form_box3,.form_box4{
-	width: 100%;
-	padding: 24px 0 0 0;
+
+.form_box1,
+.form_box2,
+.form_box3,
+.form_box4 {
+    width: 100%;
+    padding: 24px 0 0 0;
 }
-.form_box4{
-	padding-bottom: 20px;
+
+.form_box4 {
+    padding-bottom: 20px;
 }
-.form_box1 li{
-	float: left;
-	width: 400px;
-	height: 100%;
+
+.form_box1 li {
+    float: left;
+    width: 400px;
+    height: 100%;
 }
-.form_box1 li div{
-	font-size: 18px;
-	color: rgba(0,0,0,.65);
+
+.form_box1 li div {
+    font-size: 18px;
+    color: rgba(0, 0, 0, .65);
 }
-.form_box1 li select,.form_box1 li input,.simulationtext{
-	width: 360px;
-	height: 40px;
-	border: 1px solid rgba(0,0,0,.15);
-	margin-top: 4px;
-	padding-left: 12px;
-	border-radius: 2px;
+
+.form_box1 li select,
+.form_box1 li input,
+.simulationtext {
+    width: 360px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    margin-top: 4px;
+    padding-left: 12px;
+    border-radius: 2px;
 }
-.simulationtext{
-	width: 450px;
+
+.simulationtext {
+    width: 450px;
 }
-.form_box1 li select:hover,.form_box1 li input:hover,.form_box2 input:hover,.form_box3 textarea:hover,.simulationtext:hover{
-	border: 1px solid #198cff;
+
+.form_box1 li select:hover,
+.form_box1 li input:hover,
+.form_box2 input:hover,
+.form_box3 textarea:hover,
+.simulationtext:hover {
+    border: 1px solid #198cff;
 }
-.form_box2 div,.form_box3 div{
-	font-size: 18px;
-	color: rgba(0,0,0,.65);
+
+.form_box2 div,
+.form_box3 div {
+    font-size: 18px;
+    color: rgba(0, 0, 0, .65);
 }
-.form_box2 input{
-	height: 24px;
-	border: 1px solid rgba(0,0,0,.15);
-	padding: 8px 12px;
-	margin-top: 4px;
+
+.form_box2 input {
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    padding: 8px 12px;
+    margin-top: 4px;
 }
-.form_box2 input:nth-of-type(1){
-	width: 738px;
-	margin-left: 12px;
+
+.form_box2 input:nth-of-type(1) {
+    width: 738px;
+    margin-left: 12px;
 }
-.form_box3 textarea{
-	margin-top: 4px;
-	width: 1136px;
-	height: 328px;
-	border: 1px solid rgba(0,0,0,0.15);
-	padding: 16px 12px;
-	resize:none;	
+
+.form_box3 textarea {
+    margin-top: 4px;
+    width: 1136px;
+    height: 328px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 16px 12px;
+    resize: none;
 }
-.form_box3{
-	position: relative;
+
+.form_box3 {
+    position: relative;
 }
-.form_box3>span{
-	width: 108px;
-	height: 28px;
-	text-align: right;
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
+
+.form_box3>span {
+    width: 108px;
+    height: 28px;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
-.form_box4 input{
-	display: none;
-	position: absolute;
+
+.form_box4 input {
+    display: none;
+    position: absolute;
 }
-.form_box4>span{
-	display: inline-block;
-	width: 120px;
-	height: 40px;
-	color: #fff;
-	background: #198cff;
-	text-align: center;
-	line-height: 40px;
+
+.form_box4>span {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background: #198cff;
+    text-align: center;
+    line-height: 40px;
 }
 
 /*弹出窗口*/
-.curtain{
-	display: none;
-	width: 100%; 
-	height: 100%; 
-	background: rgba(0,0,0,0.5); 
-	z-index: 999;  
-	position: fixed;
-}
-.curtainfff{
-	display: none;
-	width: 1080px; 
-	height: 810px; 
-	z-index: 99998;  
-	position: fixed;
-}
-.navbigbox{
-	display: none;
-	width: 1080px;
-	height: 810px;
-	background: #fff;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin:-405px 0 0 -540px;
-	z-index: 9999;
-}
-.thisclose{
-	width: 24px;
-	height: 24px;
-	position: absolute;
-	top: 1%;
-	right: 1%;
-}
-.thisclose img{
-	width: 24px;
-	height: 24px;
-}
-.simulationtext{
-	display: inline-block;
-	line-height: 40px;
-}
-.biaoqian{
-	width: 550px;
-	height: 38px;
-	line-height: 38px;
-	padding-left: 24px;
-	margin-top: 18px;
-}
-.biaoqian>span{
-	font-size: 18px;
-	color: #000;
-	font-weight: 400;
-}
-.clickthisbiaoqian{
-	position: relative;
-	display: inline-block;
-}
-.clickthisbiaoqian input{
-	width: 358px;
-	height: 38px;
-	margin-left: 40px;
-	border-radius: 2px;
-	padding-left: 12px;
-	border: 1px solid rgba(0,0,0,.15);
-}
-.clickthisbiaoqian .tijiao{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 38px;
-	height: 38px;
-	font-size: 20px;
-	line-height: 38px;
-	text-align: center;
-	color: rgba(0,0,0,.25);
-}
-.searchnav{
-	display: none;
-	position: absolute;
-	z-index: 99999;
-	width: 372px;
-	height: 400px;
-	top: 48px;
-	left: 40px;
-	background: #fff;
-	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
-}
-.searchnav li{
-	color: rgba(0,0,0,.85);
-	font-weight:400;
-	height: 40px;
-	padding-left: 10px;
-	line-height: 40px;
-	cursor:pointer;
-}
-.searchnav li:hover{
-	background:rgba(245,247,250,1);
-}
-.selected{
-	width: 100%;
-	padding: 24px 24px;
-	margin-top: 2px;
-	position: relative;
-	border-bottom: 1px solid rgba(0,0,0,0.09);
+.curtain {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    position: fixed;
 }
 
-.selected ul li{
-	float: left;
-	border-radius: 2px;
-	padding: 1px 5px;
-	border: 1px solid #198CFF;
-	color: #198CFF;
-	margin-right: 12px;
-	padding-right: 25px;
-	background: url(../images/icon/close.png) right 5px center no-repeat;
-	background-size: 14px 14px;
-	cursor: pointer;
-}
-.ok-navbigbox{
-	position: absolute;
-	right: 76px;
-	bottom: 22px;
-	display: inline-block;
-	width:76px;
-	height:28px;
-	line-height: 28px;
-	text-align: center;
-	background:rgba(25,140,255,1);
-	border-radius:2px;
-	color: #fff;
-	cursor: pointer;
+.curtainfff {
+    display: none;
+    width: 1080px;
+    height: 810px;
+    z-index: 99998;
+    position: fixed;
 }
 
-.hy{
-	display: flex;
+.navbigbox {
+    display: none;
+    width: 1080px;
+    height: 810px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -405px 0 0 -540px;
+    z-index: 9999;
 }
-.hy-title{
-	width: 200px;
-	padding-top: 8px;
-	height: 670px;
-	background: #F5F7FA;
-	overflow-x: hidden;
-	overflow-y: auto; 
+
+.thisclose {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 1%;
+    right: 1%;
 }
-.hy-title::-webkit-scrollbar,#txt::-webkit-scrollbar {
-			width:4px; height:10px; background-color:#fff;} /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-.hy-title::-webkit-scrollbar-track,#txt::-webkit-scrollbar-track {
-			background-color:#fff; border-radius:3px; /*-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);*/} /*定义滚动条轨道 内阴影+圆角*/
-.hy-title::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
-			background-color:rgba(0,0,0,0.15); border-radius:3px; -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.15);} /*定义滑块 内阴影+圆角*/
-		
-.hy-title ul li{
-	font-size: 18px;
-	color: rgba(0,0,0,0.85);
-	width: 200px;
-	height: 60px;
-	line-height: 60px;
-	padding-left: 24px;
-	cursor: pointer;
+
+.thisclose img {
+    width: 24px;
+    height: 24px;
 }
-.hy-title .active{
-	position: relative;
-	background: #fff;
+
+.simulationtext {
+    display: inline-block;
+    line-height: 40px;
 }
-.hy-title .active:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 60px;
-	border-left:6px solid #198cff;
+
+.biaoqian {
+    width: 550px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 24px;
+    margin-top: 18px;
 }
-.hy-lable{
-	position: relative;
-	background: #fff;
-	width: 880px;
-	height: 678px;
-	overflow: hidden;
+
+.biaoqian>span {
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
 }
-.hy-lable>ul>li{
-	box-sizing: border-box;
-	width: 880px;
-	height: 678px;
-	padding: 24px 80px;
+
+.clickthisbiaoqian {
+    position: relative;
+    display: inline-block;
 }
-.hy-lable-box ul{
-	content: "";
-	display: block;
-	clear: both;
+
+.clickthisbiaoqian input {
+    width: 358px;
+    height: 38px;
+    margin-left: 40px;
+    border-radius: 2px;
+    padding-left: 12px;
+    border: 1px solid rgba(0, 0, 0, .15);
 }
-.hy-lable-box ul li{
-	cursor: pointer;
-	margin-bottom: 15px;
-	color:rgba(0,0,0,0.85);
-	font-size: 18px;
-	width: 33.3%;
-	float: left;
+
+.clickthisbiaoqian .tijiao {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+    color: rgba(0, 0, 0, .25);
 }
-.hy-lable-box ul li:hover{
-	color: #198CFF;
+
+.searchnav {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 372px;
+    height: 400px;
+    top: 48px;
+    left: 40px;
+    background: #fff;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
 }
-.add-lable-btn{
-	cursor: pointer;
-	display: inline-block;
-	font-size: 18px;
-	width:178px;
-	height:38px;
-	line-height: 40px;
-	color: rgba(0,0,0,0.65);
-	padding-left: 12px;
-	border:1px solid rgba(0,0,0,0.15);
+
+.searchnav li {
+    color: rgba(0, 0, 0, .85);
+    font-weight: 400;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    cursor: pointer;
 }
-#editor{
-	border:1px solid rgba(0,0,0,.09);
+
+.searchnav li:hover {
+    background: rgba(245, 247, 250, 1);
 }
-#editor:hover{
-	border: 1px solid #198cff;
+
+.selected {
+    width: 100%;
+    padding: 24px 24px;
+    margin-top: 2px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 }
-.simditor-toolbar{
-	display: none;
+
+.selected ul li {
+    float: left;
+    border-radius: 2px;
+    padding: 1px 5px;
+    border: 1px solid #198CFF;
+    color: #198CFF;
+    margin-right: 12px;
+    padding-right: 25px;
+    background: url(../images/icon/close.png) right 5px center no-repeat;
+    background-size: 14px 14px;
+    cursor: pointer;
 }
-.thisp1,.thisp2,.thisp3,.thisp4,.thisp5,.thisp6,.thisp7{
-	display: none;
+
+.ok-navbigbox {
+    position: absolute;
+    right: 76px;
+    bottom: 22px;
+    display: inline-block;
+    width: 76px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: rgba(25, 140, 255, 1);
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
 }
-.clickformbox4{
-	cursor: pointer;
+
+.hy {
+    display: flex;
+}
+
+.hy-title {
+    width: 200px;
+    padding-top: 8px;
+    height: 670px;
+    background: #F5F7FA;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.hy-title::-webkit-scrollbar,
+#txt::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+    background-color: #fff;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.hy-title::-webkit-scrollbar-track,
+#txt::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 3px;
+    /*-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);*/
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+.hy-title::-webkit-scrollbar-thumb,
+#txt::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .15);
+}
+
+/*定义滑块 内阴影+圆角*/
+
+.hy-title ul li {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.85);
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.hy-title .active {
+    position: relative;
+    background: #fff;
+}
+
+.hy-title .active:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    border-left: 6px solid #198cff;
+}
+
+.hy-lable {
+    position: relative;
+    background: #fff;
+    width: 880px;
+    height: 678px;
+    overflow: hidden;
+}
+
+.hy-lable>ul>li {
+    box-sizing: border-box;
+    width: 880px;
+    height: 678px;
+    padding: 24px 80px;
+}
+
+.hy-lable-box ul {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hy-lable-box ul li {
+    cursor: pointer;
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 18px;
+    width: 33.3%;
+    float: left;
+}
+
+.hy-lable-box ul li:hover {
+    color: #198CFF;
+}
+
+.add-lable-btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    width: 178px;
+    height: 38px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.65);
+    padding-left: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#editor {
+    border: 1px solid rgba(0, 0, 0, .09);
+}
+
+#editor:hover {
+    border: 1px solid #198cff;
+}
+
+.simditor-toolbar {
+    display: none;
+}
+
+.thisp1,
+.thisp2,
+.thisp3,
+.thisp4,
+.thisp5,
+.thisp6,
+.thisp7 {
+    display: none;
+}
+
+.clickformbox4 {
+    cursor: pointer;
 }
