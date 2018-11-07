@@ -1,7 +1,6 @@
 /*表单发布需求样式表*/
 main{
 	width: 1160px;
-	height: 920px;
 	margin: 20px auto 40px;
 	padding: 0 20px;
 	background: #fff;
@@ -9,6 +8,9 @@ main{
 .form_box1,.form_box2,.form_box3,.form_box4{
 	width: 100%;
 	padding: 24px 0 0 0;
+}
+.form_box4{
+	padding-bottom: 20px;
 }
 .form_box1 li{
 	float: left;
@@ -27,6 +29,9 @@ main{
 	padding-left: 12px;
 	border-radius: 2px;
 }
+.simulationtext{
+	width: 450px;
+}
 .form_box1 li select:hover,.form_box1 li input:hover,.form_box2 input:hover,.form_box3 textarea:hover,.simulationtext:hover{
 	border: 1px solid #198cff;
 }
@@ -41,16 +46,13 @@ main{
 	margin-top: 4px;
 }
 .form_box2 input:nth-of-type(1){
-	width: 108px;
-}
-.form_box2 input:nth-of-type(2){
-	width: 660px;
+	width: 738px;
 	margin-left: 12px;
 }
 .form_box3 textarea{
 	margin-top: 4px;
 	width: 1136px;
-	height: 360px;
+	height: 328px;
 	border: 1px solid rgba(0,0,0,0.15);
 	padding: 16px 12px;
 	resize:none;	
@@ -58,7 +60,7 @@ main{
 .form_box3{
 	position: relative;
 }
-.form_box3 span{
+.form_box3>span{
 	width: 108px;
 	height: 28px;
 	text-align: right;
@@ -70,7 +72,7 @@ main{
 	display: none;
 	position: absolute;
 }
-.form_box4 span{
+.form_box4>span{
 	display: inline-block;
 	width: 120px;
 	height: 40px;
@@ -129,7 +131,7 @@ main{
 	padding-left: 24px;
 	margin-top: 18px;
 }
-.biaoqian span{
+.biaoqian>span{
 	font-size: 18px;
 	color: #000;
 	font-weight: 400;
@@ -292,4 +294,19 @@ main{
 	color: rgba(0,0,0,0.65);
 	padding-left: 12px;
 	border:1px solid rgba(0,0,0,0.15);
+}
+#editor{
+	border:1px solid rgba(0,0,0,.09);
+}
+#editor:hover{
+	border: 1px solid #198cff;
+}
+.simditor-toolbar{
+	display: none;
+}
+.thisp1,.thisp2,.thisp3,.thisp4,.thisp5,.thisp6,.thisp7{
+	display: none;
+}
+.clickformbox4{
+	cursor: pointer;
 }

@@ -27,8 +27,8 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
 }
 input[type="number"]{-moz-appearance:textfield;}
 
-input,select,textarea{outline:none;}
-select:focus,textarea:focus{outline: none;}
+input,select,textarea{outline:none!important;}
+select:focus,textarea:focus{outline: none!important;}
 a:hover{
   color: #198CFF;
 }
@@ -229,6 +229,7 @@ a:hover{
   color:rgba(255,255,255,1);
   margin-right: 22px;
   min-width: 45px;
+  cursor: pointer;
   text-align: center;
 }
 .header-2-l>ul li a{
