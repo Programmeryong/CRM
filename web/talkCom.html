@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>放声社区</title>
+		<link rel="stylesheet" href="css/crm_style.css" />
+		<link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
+		<link rel="stylesheet" href="css/talkCom.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_865677_o3z3ehiyomc.css">
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/crm-style.js" ></script>
+		<script type="text/javascript" src="js/talkCom.js" ></script>
+		<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
+	</head>
+	
+	<body style="background: #F5F7FA;">
+		<header>
+			<!--蒙层-->
+			<div class="temp"></div>
+			
+			<div class="header-1">
+				<div class="header-1-ct">
+					<div class="header-1-l" style="display: flex;">
+						<span>广州</span>
+						<div class="gzyz">
+							<p style="text-align: center;">广州乙租 
+								<i class="iconfont icon-Group-" style="position: relative; top: 2px; left: 3px;"></i>
+							</p>
+							<div>
+								<ul>
+									<li><a href="">账号设置</a></li>
+									<li><a href="">系统通知</a></li>
+									<li><a href="">用户信息</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<ul class="user_inform clear">
+							<li><a href="">企业信息</a><i>56</i></li>
+							<li><a href="">系统通知</a><i>1</i></li>
+							<li><a href="">账号设置</a><i>99+</i></li>
+						</ul>
+					</div>
+					
+					<div class="header-1-r">
+						<a href="about.html">关于我们</a>
+						<a href="index.html" style="margin-left: 30px;">登录</a>
+						<i class="block45"> |</i>
+						<a href="login.html">注册</a>
+						<a href="" style="margin-left: 30px;">注销</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="header-2">
+				<div class="header-2-ct">
+					<div class="header-2-l">
+						<div style="float: left; height: 100%; overflow: hidden;">
+							<img src="images/icon/logo_1.png" />
+						</div>
+						<ul style="float: left; margin-left: 50px;">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="">需求大厅</a></li>
+							<li><a href="">物业社区</a></li>
+						</ul>
+					</div>
+					
+					<div class="header-2-r">
+						<input type="" name="" id="" value="" placeholder="请输入商圈、名称、区域" />
+						<span class="sousuo iconfont icon-fangdajing"></span>
+						<button class="fabu-bt">发布房源</button>
+					</div>
+				</div>
+			</div>
+			
+			<!--/*右边固定导航栏*/-->
+			<div class="right_box">
+			    <ul class="right_icon">
+			        <li class="clickKF">
+			            <p><img src="images/icon/custom.png"></p>
+			            <p class="fsize18">客服</p>
+			        </li>
+			        <li class="clickSM">
+			            <img class="thisSM" style="display: none;position: absolute;top:80px;left:-120px;z-index: 999999;" src="images/qrcode/qrcode.png">
+			            <p><img src="images/icon/scan.png"></p>
+			            <p class="fsize18">扫码</p>
+			        </li>
+			        <li class="fankui">
+			            <p><img src="images/icon/feedback.png"></p>
+			            <p class="fsize18">反馈</p>
+			        </li>
+			        <li class="gototop" title="回到顶部">
+			            <p><img src="images/icon/arrow_top.png"></p>
+			        </li>
+			    </ul>
+			</div>
+		</header>
+		
+		<main class="main_talkCom">
+			<!--转发需求-->
+			<div class="forwDem">
+				<span class="forwDem_close"><i class="iconfont icon-cuo1"></i></span>
+				<p class="fsize18" style="height: 36px; border-bottom: 1px solid rgba(0,0,0,0.15);">转发需求</p>
+				<div class="fromWho">
+					<div class="fromWhoImg">
+						<img src="images/icon/logo_1.png"/>
+					</div>
+					<div class="fromWhoInfo">
+						<p class="fsize18 fromName">哈哈哈</p>
+						<p class="fromWhoCont">外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。
+							外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做
+							不完啊，还有四组产品和插画要做，求支援！在C...还有四组产品和插画要做，求支援！在C...
+						</p>
+					</div>
+				</div>
+				<div class="zfzConten" style="position: relative; margin-top: 12px;">
+					<textarea name="" rows="" cols="" id="content1" placeholder="" maxlength="500"></textarea>
+					<span class="fsize14 block45" style="position: absolute; bottom: 8px; right: 10px; background: #fff;">
+	                    <span class="textNum fsize14 black45">0</span>/500
+	                </span>
+				</div>
+				
+				<div style="text-align: right; margin-top: 20px;">
+					<select name="">
+						<option value="">匿名</option>
+						<option value="">哈哈</option>
+					</select>
+					<span class="forwDem_btn">转发</span>
+				</div>
+			</div>
+			
+			<!--左-->
+			<div class="main_l">
+				<div>
+					<img src="images/talkCom1.png" width="100%"/>
+				</div>
+				<!--发布放声-->
+				<div class="sendAloud_box">
+					<div style="position: relative;">
+						<span class="sendAloud_null">发布内容不能为空哦，写点东西吧。</span>
+						<textarea name="" rows="" cols="" id="content" placeholder="放个屁，放轻松。" maxlength="500"></textarea>
+						<span class="fsize14 block45" style="position: absolute; bottom: 8px; right: 10px; background: #fff;">
+		                    <span class="textNum fsize14 black45">0</span>/500
+		                </span>
+					</div>
+					<div style="margin-top: 12px; display: flex; justify-content: space-between;">
+						<span class="block65" style="cursor: pointer;"><i class="iconfont icon-zhaopian" style="margin-right: 5px;"></i>照片</span>
+						<div>
+							<select name="">
+								<option value="">匿名</option>
+								<option value="">哈哈</option>
+							</select>
+							<span class="sendAloud_btn">发布</span>
+						</div>
+					</div>
+				</div>
+				<!--发布放声结束-->
+				
+				<!--放声列表-->
+				<div class="aloudBox">
+					<ul>
+						<li>
+							<div class="aloud">
+								<!--头像-->
+								<div class="aloud_tx">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								
+								<div class="aloud_right">
+									<!--放声信息-->
+									<div class="aloud_info">
+										<div style="position: relative;">
+											<p class="aloud_username fsize18">匿名发言</p>
+											<p class="block45" style="margin-top: 6px;">互联网IT | 小米之家 | CEO</p>
+											<span class="block45" style="position: absolute; bottom: 0; right: 0;">
+												10月21日 13:46
+											</span>
+										</div>
+										<p class="aloud_content">还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的的外包的的外包的的求支援！在C栋401。外包的的外包的的外包的的</p>
+										<span class="readAll">
+											<span class="read">阅读全文</span><span class="shouqi">收起全文</span>
+											<i class="iconfont icon-Group-"></i>
+										</span>
+									</div>
+									
+									<!--放声图片-->
+									<div class="aloud_img1">
+										<ul class="clear">
+											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/about/about_yz1.png"/></li>
+											<li><img src="images/about/swhz1.png"/></li>
+											<li><img src="images/banner/banner_1.jpg"/></li>
+											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/about/about_yz1.png"/></li>
+											<li><img src="images/about/swhz1.png"/></li>
+										</ul>
+									</div>
+									
+									<div class="aloud_img2">
+										<p style="margin: 8px 0;"><span class="packUp">收起</span></p>
+								    
+										<!--放大图-->
+						                <div class="tabs_img" id="lunbo_box">
+						                    <div class="tabs_img_big">
+						                    	<div class="pre_small"></div>
+						                    	<div class="next_small"></div>
+						                    	<ul>
+						                            <li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/about/about_yz1.png"/></li>
+													<li><img src="images/about/swhz1.png"/></li>
+													<li><img src="images/banner/banner_1.jpg"/></li>
+													<li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/about/about_yz1.png"/></li>
+													<li><img src="images/about/swhz1.png"/></li>
+												</ul>
+						                    </div>
+						
+						                    <div class="tabs_img_small">
+						                        <!--小图片-->
+						                        <ul class="img_small">
+						                            <li>
+						                            	<div></div>
+						                            	<img src="images/about/about_yz2.png"/>
+						                            </li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/swhz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/banner/banner_1.jpg"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz2.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/swhz1.png"/>
+													</li>
+						                        </ul>
+						                    </div>
+						                </div>
+						                <!--放大图结束-->
+									</div>
+									<!--放声图片结束-->
+									
+									<p class="szpBox">
+										<span class="collect" title="关注"><i class="iconfont icon-shoucang"></i></span>
+										<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>
+										<span class="commentLogo" title="评论"><i class="iconfont icon-pinglun"></i>1</span>
+									</p>
+									
+									<div class="commentBox">
+										<div style="position: relative;">
+											<span class="comm_null1">评论内容不能为空哦，写点东西吧。</span>
+											<textarea name="" rows="" cols="" class="comment_cont" placeholder="写下您的精彩评论吧..." maxlength="150"></textarea>
+											<span class="fsize14 block45" style="position: absolute; bottom: 8px; right: 10px; background: #fff;">
+							                    <span class="textNum fsize14 black45">0</span>/150
+							                </span>
+										</div>
+										<p style="text-align: right;"><span class="comment_btn fsize18">留言</span></p>
+										
+										<div style="border-top: 1px solid rgba(0,0,0,0.09);">
+											<div class="comment">
+												<div class="comment_img">
+													<img src="images/about/about_yz2.png"/>
+												</div>
+												<div class="comment_info">
+													<p class="comm_first"><span class="userName">益力多多</span><i class="iconfont"></i>：已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。的的的得的的</p>
+													<p class="haha">
+														<span class="block45">10月21日 16:41</span>
+														<span class="block65"><span class="huifu">回复</span><span class="dianzan" style="margin-left: 24px;"><i class="iconfont icon-iconfontzhizuobiaozhun023148" style="margin-right: 5px;"></i>点赞</span></span>
+													</p>
+													<div style="background: #F5F7FA; padding: 8px 12px 12px 12px; box-sizing: border-box; margin-top: 12px;">
+														<ul class="comincom">
+															
+														</ul>
+														<div class="commInputBox" style="margin-top: 12px;">
+															<span class="comm_null">评论内容不能为空哦，写点东西吧。</span>
+															<textarea name="" rows="" cols="" id="" maxlength="150"></textarea>
+															<p style="text-align: right; margin-top: 10px;"><span class="comment_btn1">评论</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comment">
+												<div class="comment_img">
+													<img src="images/about/about_yz2.png"/>
+												</div>
+												<div class="comment_info">
+													<p class="comm_first"><span class="userName">益力多多</span><i class="iconfont"></i>：已关注，期待与你们的合作。</p>
+													<p class="haha">
+														<span class="block45">10月21日 16:41</span>
+														<span class="block65"><span class="huifu">回复</span><span class="dianzan" style="margin-left: 24px;"><i class="iconfont icon-iconfontzhizuobiaozhun023148" style="margin-right: 5px;"></i>点赞</span></span>
+													</p>
+													<div style="background: #F5F7FA; padding: 8px 12px 12px 12px; box-sizing: border-box; margin-top: 12px;">
+														<ul class="comincom">
+															<li>
+																<p>
+																	<span class="userName">包谋事</span>：买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买 左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就买左包谋事，就包你谋
+																</p>
+																<p class="haha">
+																	<span class="block45">10月21日 16:41</span>
+																	<span class="block65"><span class="huifu">回复</span><span class="dianzan"><i class="iconfont icon-iconfontzhizuobiaozhun023148"></i>点赞</span></span>
+																</p>
+															</li>
+															<li>
+																<p>
+																	<span class="userName">啦啦啦</span> 回复 <span style="color: #198CFF;">包谋事</span>：买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。
+																</p>
+																<p class="haha">
+																	<span class="block45">10月21日 16:41</span>
+																	<span class="block65"><span class="huifu">回复</span><span class="dianzan"><i class="iconfont icon-iconfontzhizuobiaozhun023148"></i>点赞</span></span>
+																</p>
+															</li>
+														</ul>
+														<div class="commInputBox" style="margin-top: 12px;">
+															<span class="comm_null">评论内容不能为空哦，写点东西吧。</span>
+															<textarea name="" rows="" cols="" id="" maxlength="150"></textarea>
+															<p style="text-align: right; margin-top: 10px;"><span class="comment_btn1">评论</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p style="text-align: center; margin-top: 12px;"><a href="">查看更多</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="aloud">
+								<!--头像-->
+								<div class="aloud_tx">
+									<img src="images/test/adf.jpg"/>
+								</div>
+								
+								<div class="aloud_right">
+									<!--放声信息-->
+									<div class="aloud_info">
+										<div style="position: relative;">
+											<p class="fsize18 aloud_username">匿名发言</p>
+											<p class="block45" style="margin-top: 6px;">互联网IT | 小米之家 | CEO</p>
+											<span class="block45" style="position: absolute; bottom: 0; right: 0;">
+												10月21日 13:46
+											</span>
+										</div>
+										<p class="aloud_content">四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的的外包的的外包的的求支援！在C栋401。外包的的外包的的外包的的</p>
+										<span class="readAll">
+											<span class="read">阅读全文</span><span class="shouqi">收起全文</span>
+											<i class="iconfont icon-Group-"></i>
+										</span>
+									</div>
+									
+									<!--放声图片-->
+									<div class="aloud_img1">
+										<ul class="clear">
+											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/about/about_yz1.png"/></li>
+											<li><img src="images/about/swhz1.png"/></li>
+											<li><img src="images/banner/banner_1.jpg"/></li>
+											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/about/about_yz1.png"/></li>
+											<li><img src="images/about/swhz1.png"/></li>
+											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/banner/lADPDgQ9qUu6RrbNBQDNAlA_592_1280.jpg"/></li>
+										</ul>
+									</div>
+									
+									<div class="aloud_img2">
+										<p style="margin: 8px 0;"><span class="packUp">收起</span></p>
+								    
+										<!--轮播-->
+						                <div class="tabs_img" id="lunbo_box">
+						                    <div class="tabs_img_big">
+						                    	<div class="pre_small"></div>
+						                    	<div class="next_small"></div>
+						                    	<ul>
+						                            <li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/about/about_yz1.png"/></li>
+													<li><img src="images/about/swhz1.png"/></li>
+													<li><img src="images/banner/banner_1.jpg"/></li>
+													<li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/about/about_yz1.png"/></li>
+													<li><img src="images/about/swhz1.png"/></li>
+													<li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/banner/lADPDgQ9qUu6RrbNBQDNAlA_592_1280.jpg"/></li>
+												</ul>
+						                    </div>
+						
+						                    <div class="tabs_img_small">
+						                        <!--小图片-->
+						                        <ul class="img_small">
+						                            <li>
+						                            	<div></div>
+						                            	<img src="images/about/about_yz2.png"/>
+						                            </li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/swhz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/banner/banner_1.jpg"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz2.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/swhz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz2.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/banner/lADPDgQ9qUu6RrbNBQDNAlA_592_1280.jpg"/>
+													</li>
+						                        </ul>
+						                    </div>
+						                </div>
+						                <!--轮播结束-->
+									</div>
+									<p class="szpBox">
+										<span class="collect" title="收藏"><i class="iconfont icon-shoucang"></i></span>
+										<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>
+										<span class="commentLogo" title="评论"><i class="iconfont icon-pinglun"></i>1</span>
+									</p>
+									
+									<div class="commentBox">
+										<div style="position: relative;">
+											<span class="comm_null1">评论内容不能为空哦，写点东西吧。</span>
+											<textarea name="" rows="" cols="" class="comment_cont" placeholder="写下您的精彩评论吧..." maxlength="150"></textarea>
+											<span class="fsize14 block45" style="position: absolute; bottom: 8px; right: 10px; background: #fff;">
+							                    <span class="textNum fsize14 black45">0</span>/150
+							                </span>
+										</div>
+										<p style="text-align: right;"><span class="comment_btn fsize18">留言</span></p>
+										
+										<div style="border-top: 1px solid rgba(0,0,0,0.09);">
+											<div class="comment">
+												<div class="comment_img">
+													<img src="images/about/about_yz2.png"/>
+												</div>
+												<div class="comment_info">
+													<p class="comm_first"><span class="userName">益力多多</span><i class="iconfont"></i>：已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。的的的得的的</p>
+													<p class="haha">
+														<span class="block45">10月21日 16:41</span>
+														<span class="block65"><span class="huifu">回复</span><span class="dianzan" style="margin-left: 24px;"><i class="iconfont icon-iconfontzhizuobiaozhun023148" style="margin-right: 5px;"></i>点赞</span></span>
+													</p>
+													<div style="background: #F5F7FA; padding: 8px 12px 12px 12px; box-sizing: border-box; margin-top: 12px;">
+														<ul class="comincom">
+															
+														</ul>
+														<div class="commInputBox" style="margin-top: 12px;">
+															<span class="comm_null">评论内容不能为空哦，写点东西吧。</span>
+															<textarea name="" rows="" cols="" id="" maxlength="150"></textarea>
+															<p style="text-align: right; margin-top: 10px;"><span class="comment_btn1">评论</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comment">
+												<div class="comment_img">
+													<img src="images/about/about_yz2.png"/>
+												</div>
+												<div class="comment_info">
+													<p class="comm_first"><span class="userName">益力多多</span><i class="iconfont"></i>：已关注，期待与你们的合作。</p>
+													<p class="haha">
+														<span class="block45">10月21日 16:41</span>
+														<span class="block65"><span class="huifu">回复</span><span class="dianzan" style="margin-left: 24px;"><i class="iconfont icon-iconfontzhizuobiaozhun023148" style="margin-right: 5px;"></i>点赞</span></span>
+													</p>
+													<div style="background: #F5F7FA; padding: 8px 12px 12px 12px; box-sizing: border-box; margin-top: 12px;">
+														<ul class="comincom">
+															<li>
+																<p>
+																	<span class="userName">包谋事</span>：买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买 左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就买左包谋事，就包你谋
+																</p>
+																<p class="haha">
+																	<span class="block45">10月21日 16:41</span>
+																	<span class="block65"><span class="huifu">回复</span><span class="dianzan"><i class="iconfont icon-iconfontzhizuobiaozhun023148"></i>点赞</span></span>
+																</p>
+															</li>
+															<li>
+																<p>
+																	<span class="userName">啦啦啦</span> 回复 <span style="color: #198CFF;">包谋事</span>：买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。
+																</p>
+																<p class="haha">
+																	<span class="block45">10月21日 16:41</span>
+																	<span class="block65"><span class="huifu">回复</span><span class="dianzan"><i class="iconfont icon-iconfontzhizuobiaozhun023148"></i>点赞</span></span>
+																</p>
+															</li>
+														</ul>
+														<div class="commInputBox" style="margin-top: 12px;">
+															<span class="comm_null">评论内容不能为空哦，写点东西吧。</span>
+															<textarea name="" rows="" cols="" id="" maxlength="150"></textarea>
+															<p style="text-align: right; margin-top: 10px;"><span class="comment_btn1">评论</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p style="text-align: center; margin-top: 12px;"><a href="">查看更多</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="aloud">
+								<!--头像-->
+								<div class="aloud_tx">
+									<img src="images/about/about_yz1.png"/>
+								</div>
+								
+								<div class="aloud_right">
+									<!--放声信息-->
+									<div class="aloud_info">
+										<div style="position: relative;">
+											<p class="aloud_username fsize18">啦啦啦</p>
+											<p class="block45" style="margin-top: 6px;">互联网IT | 小米之家 | CEO</p>
+											<span class="block45" style="position: absolute; bottom: 0; right: 0;">
+												10月21日 13:46
+											</span>
+										</div>
+										<p class="aloud_content">外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的项目做不完啊，还有四组产品和插画要做，求支援！在C栋401。外包的的外包的的外包的的求支援！在C栋401。外包的的外包的的外包的的</p>
+										<span class="readAll">
+											<span class="read">阅读全文</span><span class="shouqi">收起全文</span>
+											<i class="iconfont icon-Group-"></i>
+										</span>
+									</div>
+									
+									<!--放声图片-->
+									<div class="aloud_img1">
+										<ul class="clear">
+											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/about/about_yz1.png"/></li>
+											<li><img src="images/about/swhz1.png"/></li>
+											<li><img src="images/banner/banner_1.jpg"/></li>
+											<li><img src="images/about/about_yz2.png"/></li>
+										</ul>
+									</div>
+									
+									<div class="aloud_img2">
+										<p style="margin: 8px 0;"><span class="packUp">收起</span></p>
+								    
+										<!--轮播-->
+						                <div class="tabs_img" id="lunbo_box">
+						                    <div class="tabs_img_big">
+						                    	<div class="pre_small"></div>
+						                    	<div class="next_small"></div>
+						                    	<ul>
+						                            <li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/about/about_yz1.png"/></li>
+													<li><img src="images/about/swhz1.png"/></li>
+													<li><img src="images/banner/banner_1.jpg"/></li>
+													<li><img src="images/about/about_yz2.png"/></li>
+												</ul>
+						                    </div>
+						
+						                    <div class="tabs_img_small">
+						                        <!--小图片-->
+						                        <ul class="img_small">
+						                            <li>
+						                            	<div></div>
+						                            	<img src="images/about/about_yz2.png"/>
+						                            </li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/swhz1.png"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/banner/banner_1.jpg"/>
+													</li>
+													<li>
+														<div></div>
+														<img src="images/about/about_yz2.png"/>
+													</li>
+						                        </ul>
+						                    </div>
+						                </div>
+						                <!--轮播结束-->
+									</div>
+									<p class="szpBox">
+										<span class="collect" title="收藏"><i class="iconfont icon-shoucang"></i></span>
+										<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>
+										<span class="commentLogo" title="评论"><i class="iconfont icon-pinglun"></i>1</span>
+									</p>
+									<div class="commentBox">
+										<div style="position: relative;">
+											<span class="comm_null1">评论内容不能为空哦，写点东西吧。</span>
+											<textarea name="" rows="" cols="" class="comment_cont" placeholder="写下您的精彩评论吧..." maxlength="150"></textarea>
+											<span class="fsize14 block45" style="position: absolute; bottom: 8px; right: 10px; background: #fff;">
+							                    <span class="textNum fsize14 black45">0</span>/150
+							                </span>
+										</div>
+										<p style="text-align: right;"><span class="comment_btn fsize18">留言</span></p>
+										
+										<div style="border-top: 1px solid rgba(0,0,0,0.09);">
+											<div class="comment">
+												<div class="comment_img">
+													<img src="images/about/about_yz2.png"/>
+												</div>
+												<div class="comment_info">
+													<p class="comm_first"><span class="userName">益力多多</span><i class="iconfont"></i>：已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。已关注，期待与你们的合作。的的的得的的</p>
+													<p class="haha">
+														<span class="block45">10月21日 16:41</span>
+														<span class="block65"><span class="huifu">回复</span><span class="dianzan" style="margin-left: 24px;"><i class="iconfont icon-iconfontzhizuobiaozhun023148" style="margin-right: 5px;"></i>点赞</span></span>
+													</p>
+													<div style="background: #F5F7FA; padding: 8px 12px 12px 12px; box-sizing: border-box; margin-top: 12px;">
+														<ul class="comincom">
+															
+														</ul>
+														<div class="commInputBox" style="margin-top: 12px;">
+															<span class="comm_null">评论内容不能为空哦，写点东西吧。</span>
+															<textarea name="" rows="" cols="" id="" maxlength="150"></textarea>
+															<p style="text-align: right; margin-top: 10px;"><span class="comment_btn1">评论</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comment">
+												<div class="comment_img">
+													<img src="images/about/about_yz2.png"/>
+												</div>
+												<div class="comment_info">
+													<p class="comm_first"><span class="userName">益力多多</span><i class="iconfont"></i>：已关注，期待与你们的合作。</p>
+													<p class="haha">
+														<span class="block45">10月21日 16:41</span>
+														<span class="block65"><span class="huifu">回复</span><span class="dianzan" style="margin-left: 24px;"><i class="iconfont icon-iconfontzhizuobiaozhun023148" style="margin-right: 5px;"></i>点赞</span></span>
+													</p>
+													<div style="background: #F5F7FA; padding: 8px 12px 12px 12px; box-sizing: border-box; margin-top: 12px;">
+														<ul class="comincom">
+															<li>
+																<p>
+																	<span class="userName">包谋事</span>：买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买 左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就买左包谋事，就包你谋
+																</p>
+																<p class="haha">
+																	<span class="block45">10月21日 16:41</span>
+																	<span class="block65"><span class="huifu">回复</span><span class="dianzan"><i class="iconfont icon-iconfontzhizuobiaozhun023148"></i>点赞</span></span>
+																</p>
+															</li>
+															<li>
+																<p>
+																	<span class="userName">啦啦啦</span> 回复 <span style="color: #198CFF;">包谋事</span>：买左包谋事，就包你谋事。就算有事，都系喜事。买左包谋事，就包你谋事。就算有事，都系喜事。
+																</p>
+																<p class="haha">
+																	<span class="block45">10月21日 16:41</span>
+																	<span class="block65"><span class="huifu">回复</span><span class="dianzan"><i class="iconfont icon-iconfontzhizuobiaozhun023148"></i>点赞</span></span>
+																</p>
+															</li>
+														</ul>
+														<div class="commInputBox" style="margin-top: 12px;">
+															<span class="comm_null">评论内容不能为空哦，写点东西吧。</span>
+															<textarea name="" rows="" cols="" id="" maxlength="150"></textarea>
+															<p style="text-align: right; margin-top: 10px;"><span class="comment_btn1">评论</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p style="text-align: center; margin-top: 12px;"><a href="">查看更多</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--右-->
+			<div class="main_r">
+				<div class="saoma-box">
+        			<img src="images/qrcode/qrcode.png" width="160px" height="160px"/>
+        			<p class="fsize18" style="text-align: center; margin-top: 8px;">扫码进入小程序</p>
+        		</div>
+        		<div class="img-box">
+        			<img src="images/banner/banner_3.jpg"/>
+        			<img src="images/banner/banner_3.jpg"/>
+        		</div>
+			</div>
+		</main>
+		
+		<footer class="pc">
+	        <div style="width: 1200px; margin: 0 auto;">
+	           <div class="footer_title">广州乙租信息科技有限公司</div>
+	           <div class="footer_conter">
+	               <div class="footer_conter1">
+	                   <span>关于乙租</span>
+	                   <ul class="pad">
+	                       <li><a href="{:U('AboutUs/index')}?tag=1">联系我们</a></li>
+	                       <li><a href="{:U('AboutUs/index')}?tag=2">商务合作</a></li>
+	                        <!--<li><a href="{:U('AboutUs/index')}?tag=3">网站地图</a></li>-->
+	                        <li><a href="{:U('AboutUs/index')}?tag=3">常见问题</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=4">用户协议</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=5">隐私条款</a></li>
+	                   </ul>
+	               </div>
+	               <div class="footer_conter2">
+	                   <span>友情链接</span>
+	                   <ul class="pad">
+	                       <li><a href="{$vo.link_url}">今日头条</a></li>
+	                       <li><a href="{$vo.link_url}">知乎</a></li>
+	                       <li><a href="{$vo.link_url}">腾讯网</a></li>
+	                       <li><a href="{$vo.link_url}">搜狐</a></li>
+	                       <li><a href="{$vo.link_url}">UC头条</a></li>
+	                       <li><a href="{$vo.link_url}">网易</a></li>
+	                       <li><a href="{$vo.link_url}">新浪网</a></li>
+	                       <li><a href="{$vo.link_url}">南方财富网</a></li>
+	                   </ul>
+	               </div>
+	               <div class="footer_conter3">
+	                   <span>电话</span>
+	                   <h2 class="conter3_h2">400-886-6391</h2>
+	                   <span>地址</span>
+	                   <p style="color: rgba(255,255,255,.65);font-size: 14px;margin-bottom: 24px;">广州市白云大道北广贸商务中心C栋401</p>
+	                   <span>邮箱</span>
+	                   <p style="color:rgba(255,255,255,.65);font-size: 14px;">epassrent@163.com</p>
+	               </div>
+	               <div class="footer_conter4">
+	                    <span><img src="images/qrcode/qrcode_1.jpg"></span>
+	                    <span class="gzgzh">关注公众号</span>
+	               </div>
+	           </div>
+	        </div>
+	        <!-- 最底下 备案 -->
+	        <div class="foot_t_box">
+	            <div class="foot_t">
+	                <span>
+	                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102002056">
+	                        <img src="images/GABA.png" />
+	                        粤公网安备 44011102002056号
+	                    </a>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                </span>
+	                <span>&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/"style="color:#fff">Copyright &#169 2017 广州乙租信息科技有限公司 粤ICP备18097655号</a></span>
+	            </div>
+	        </div>
+		</footer>
+	</body>
+	
+</html>
