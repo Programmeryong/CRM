@@ -561,6 +561,7 @@ textarea::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
 	height: 90px;
 	margin:12px 2px 0;
 	float: left;
+	cursor: pointer;
 }
 .showpicture li img{
 	width: 100%;
