@@ -1,6 +1,15 @@
 $(function(){
-	
-
+	$('.clickpicture').click(function(){
+		$('.pictureupload').show();
+		$('.pictureupload').animate({opacity:1}, 500);
+	})
+	$('.closethisbox').click(function(){
+		$('.pictureupload').hide();
+		$('.pictureupload').animate({opacity:0}, 500);
+	})
+	$('.floatbox').click(function(){
+		$('#testList').click();
+	})
 
 	/*文本域的字数控制*/
 	$('#content').on("keyup", function () {
