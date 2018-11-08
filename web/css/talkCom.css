@@ -303,7 +303,7 @@
 .szpBox{
 	text-align: right; 
 	color: rgba(0,0,0,0.65);
-	margin-top: 6px;
+	margin-top: 12px;
 }
 .szpBox span{
 	margin-left: 20px;
@@ -460,6 +460,12 @@ textarea::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
 }
 .dianzan i{
 	margin-right: 5px;
+}
+.dianzan:hover{
+	color: #F52230;
+}
+.dianzan:hover i{
+	color: rgba(0,0,0,0.65);
 }
 /*放声列表结束*/
 

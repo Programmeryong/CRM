@@ -1,4 +1,8 @@
 $(function(){
+
+	
+	$('.dianzan').attr('title',"赞");
+
 	$('.clickpicture').click(function(){
 		$('.pictureupload').show();
 		$('.pictureupload').animate({opacity:1}, 500);
@@ -10,6 +14,7 @@ $(function(){
 	$('.floatbox').click(function(){
 		$('#testList').click();
 	})
+
 
 	/*文本域的字数控制*/
 	$('#content').on("keyup", function () {
@@ -103,7 +108,9 @@ $(function(){
 		//定义长宽
 		var sideLength = 650/imgSum;
 		$(who+' .img_small li').width(sideLength);
-		if(imgSum>=7){
+		if (imgSum==1) {
+			$(who+' .tabs_img_small').hide();
+		}else if(imgSum>=7){
 			$(who+' .img_small li').height(sideLength-16);
 		}else{
 			$(who+' .img_small li').height(80);
@@ -197,11 +204,13 @@ $(function(){
 			$('.fromWhoImg img').attr("src",imgSrc);
 			$('.fromName').text(userName);
 			$('.fromWhoCont').text(content);
+			disabledMouseWheel();
 		})
 		
 		$('.forwDem_close').click(function(){
 			$('.forwDem').fadeOut();
 			$('.temp').hide();
+			cancelDisMouseWheel();
 		})
 	}
 	
@@ -252,11 +261,27 @@ $(function(){
 					comment_name = $(who+' .comment:eq('+i+') .userName:eq('+j+')').text();
 					$(who+' .comment:eq('+i+') .commInputBox textarea').attr("placeholder","回复 "+comment_name);
 				})
+				
+				/*点赞*/
+				$(who+' .comment:eq('+i+') .dianzan:eq('+j+')').click(function(){
+					var color = $(who+' .comment:eq('+i+') .dianzan:eq('+j+') i').css('color');
+					if (color == 'rgba(0, 0, 0, 0.65)') {
+						/*已点赞*/
+						$(who+' .comment:eq('+i+') .dianzan:eq('+j+') i').css({"color":"#F52230"});
+					} else{
+						/*未点赞*/
+						$(who+' .comment:eq('+i+') .dianzan:eq('+j+') i').css({"color":"rgba(0,0,0,0.65)"});
+					}
+				})
 			}
 			
 			$(who+' .comment:eq('+i+') .comment_btn1').click(function(){
 				var mydate = new Date();  
- 				var thisTime = mydate.toLocaleString('chinese', { hour12: false });
+				var month=mydate.getMonth()+1;
+				var dates=mydate.getDate(); 
+				var h=mydate.getHours();  
+				var m=mydate.getMinutes();
+				var thisTime = month+"月"+dates+"日  "+h+":"+m;
  				
 				var txt = $(who+' .comment:eq('+i+') .commInputBox textarea').val();
 				var nulls = /^[\s]*$/;
@@ -295,7 +320,32 @@ $(function(){
 	$('.commInputBox textarea').autoTextarea({
 		maxHeight:200
 	});
-
+	
+	
+	/*弹框禁止滚动条滚动*/
+    //阻止浏览器事件
+    function disabledMouseWheel() {  
+           document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+           document.addEventListener('mousewheel',scrollFunc,false);
+    }
+    //取消阻止浏览器事件
+    function cancelDisMouseWheel(){
+           document.removeEventListener('DOMMouseScroll',scrollFunc,false);
+           document.removeEventListener('mousewheel',scrollFunc,false);
+    }  
+    function scrollFunc(evt) {  
+           evt = evt || window.event;  
+            if(evt.preventDefault) {  
+                // Firefox  
+                evt.preventDefault();  
+                evt.stopPropagation();  
+                } else{  
+                // IE  
+                evt.cancelBubble=true;  
+                evt.returnValue = false;  
+        }  
+             return false;  
+    }
 	
 })
 
