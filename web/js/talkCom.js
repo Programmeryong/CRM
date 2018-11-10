@@ -1,5 +1,7 @@
 $(function(){
-
+	/*console.log("%c ", "background: url(http://p3i10hjs7.bkt.clouddn.com/console.jpeg) no-repeat center;padding-left:640px;padding-bottom: 242px;");
+	console.log("%c我%c就是这么%c屌...","color:green;font-weight:bold;font-size:48px;","color:orange;font-weight:bold;font-size:48px;","color:red;font-weight:bold;font-size:48px;");
+*/
 	
 	$('.dianzan').attr('title',"赞");
 
