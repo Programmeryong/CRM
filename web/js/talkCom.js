@@ -77,7 +77,7 @@ $(function(){
 		collect('.aloudBox>ul>li:eq('+i+')');
 		
 		/*转发*/
-		transmit('.aloudBox>ul>li:eq('+i+')');
+		//transmit('.aloudBox>ul>li:eq('+i+')');
 		
 		/*打开收起评论*/
 		showHideComment('.aloudBox>ul>li:eq('+i+')');
