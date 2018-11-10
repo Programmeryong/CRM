@@ -45,7 +45,8 @@ main{
 .fbox_div>ul>li{
 	width: 50%;
 	float: left;
-	margin-bottom: 24px;
+	margin-bottom: 5px;
+    height: 90px;
 }
 .fbox_div>ul>li>span{
 	color: rgba(0,0,0,.65);
@@ -167,3 +168,6 @@ input[type="number"]{
 }
 
 /*右边盒子结束*/
+.datap1,.datap2,.datap3,.datap4,.datap5,.datap6{
+	display: none;
+}

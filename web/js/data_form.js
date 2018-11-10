@@ -1,7 +1,4 @@
 $(function(){
-	$('.lastsubmit').click(function(){
-		$('.thissubmit').click();
-	});
 	$('.shangchuan1').click(function(){
 		$('.filesfz1').click();
 	})
@@ -113,13 +110,85 @@ $(function(){
         }
     }
 
-    $('#thisform').submit(function(){
-        if(textchines('.dataform1') == true && textnull('.dataform2') == true &&
-           textphone('.dataform3') == true && textFixed('.dataform4') == true &&
-           textemail('.dataform5') == true && textqq('.dataform6')){
-            return true;
-        }else{
+    $('.lastsubmit').click(function(){
+        if(textchines('.dataform1') == false || textnull('.dataform2') == false ||
+           textphone('.dataform3') == false || textFixed('.dataform4') == false ||
+           textemail('.dataform5') == false || textqq('.dataform6') == false){
+            if(textchines('.dataform1') == false){
+                let thistext = $('.dataform1').val();
+                if(thistext.length == 0){
+                    $('.datap1').show();
+                    $('.datap1').text('名字不能为空');
+                }else if(textchines('.dataform1') == false){
+                    $('.datap1').show();
+                    $('.datap1').text('请输入你的中文名字');
+                }
+            }else{
+                $('.datap1').hide();
+            }
+            if(textnull('.dataform2') == false){
+                let thistext = $('.dataform2').val();
+                if(thistext.length == 0){
+                    $('.datap2').show();
+                    $('.datap2').text('职位不能为空');
+                }
+            }else{
+                $('.datap2').hide();
+            }
+            if(textphone('.dataform3') == false){
+                let thistext = $('.dataform3').val();
+                if(thistext.length == 0){
+                    $('.datap3').show();
+                    $('.datap3').text('手机号码不能为空');
+                }else if(textphone('.dataform3') == false){
+                    $('.datap3').show();
+                    $('.datap3').text('手机号码格式错误');
+                }
+            }else{
+                $('.datap3').hide();
+            }
+            if(textFixed('.dataform4') == false){
+                let thistext = $('.dataform4').val();
+                if(thistext.length == 0){
+                    $('.datap4').show();
+                    $('.datap4').text('电话号码不能为空');
+                }else if(textFixed('.dataform4') == false){
+                    $('.datap4').show();
+                    $('.datap4').text('该电话号码格式不支持');
+                }
+            }else{
+                $('.datap4').hide();
+            }
+            if(textemail('.dataform5') == false){
+                let thistext = $('.dataform5').val();
+                if(thistext.length == 0){
+                    $('.datap5').show();
+                    $('.datap5').text('邮箱地址不能为空');
+                }else if(textemail('.dataform5') == false){
+                    $('.datap5').show();
+                    $('.datap5').text('邮箱地址错误');
+                }
+            }else{
+                $('.datap5').hide();
+            }
+            if(textqq('.dataform6') == false){
+                let thistext = $('.dataform6').val();
+                if(thistext.length == 0){
+                    $('.datap6').show();
+                    $('.datap6').text('QQ号码不能为空');
+                }else if(textemail('.dataform6') == false){
+                    $('.datap6').show();
+                    $('.datap6').text('QQ号码错误');
+                }
+            }else{
+                $('.datap6').hide();
+            }
             return false;
+        }else if(textchines('.dataform1') == true && textnull('.dataform2') == true &&
+           textphone('.dataform3') == true && textFixed('.dataform4') == true &&
+           textemail('.dataform5') == true && textqq('.dataform6') == true){
+            $('.datap1').hide();$('.datap2').hide();$('.datap3').hide();$('.datap4').hide();$('.datap5').hide();$('.datap6').hide();
+            return true;
         }
     })
 })
