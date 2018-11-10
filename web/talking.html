@@ -9,7 +9,9 @@
 		*{padding: 0; margin: 0;}
 		ul{margin: 0; list-style: none; }
 		p{margin: 0; padding: 0;}
-		
+		a{
+			text-decoration: none;
+		}
 		/*右部*/
 		.talk-left{
 			width: 320px;
@@ -85,6 +87,7 @@
 			float: right;
 			background-color: #198CFF;
 			border-radius: 6px 0 6px 5px;
+			position: relative;
 		}
 		
 		.talk-text .mine{
@@ -292,6 +295,35 @@
 			right: 20px;
 			top: 2px;
 		}
+		.yidu,.weidu,.error{
+			position: absolute;
+			display: inline-block;
+			left: -36px;
+			top: 1px;
+			color: #fff;
+			font-size: 12px!important;
+			height: 16px;
+			line-height: 16px;
+			padding: 1px 3px;
+			border-radius: 2px;
+		}
+		.yidu{
+			background: #00d7c6;
+		}
+		.weidu{
+			background:linear-gradient(270deg,rgba(255,201,25,1) 0%,rgba(255,179,26,1) 100%);
+		}
+		.error{
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			padding: 0;
+			cursor: pointer;
+			background: #E31C19;
+			border-radius: 100%;
+			left: -30px;
+		}
 	</style>
 	
 	<body style="background: #f2ecf2;">
@@ -332,7 +364,16 @@
 			<div class="talk-right">
 				<div id="talk-box">
 					<ul class="talk-text clearfix">
-						
+						<li class='mine'>
+							<p class='time-mine'></p>
+							<div class='mine-img'><img src='images/test/adf.jpg'/></div>
+							<div class='text'>
+							<p>"+dataInt.data[i].tex+"</p>
+							<!--<span class="yidu">已读</span>
+							<span class="weidu">送达</span>-->
+							<span class="error">!</span>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="write">
@@ -363,6 +404,43 @@
 	
 	
 	<script type="text/javascript">
+		
+		$('#talk-box').scroll(function(){
+	
+			var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高度
+			if(scrollTop<=5){ 
+				var dataInt = {"data":[{"tex":"1"},{"tex":"2"}]};
+			    //滚动条到达顶部
+			    console.log(scrollTop);
+			    var mydate = new Date(); 
+				var thisTime = mydate.toLocaleString('chinese', { hour12: false });
+				for (var i=0; i<dataInt.data.length;i++) {
+					if (i%2==0) {
+						$('.talk-text').prepend("<li class='mine'>"+
+											"<p class='time-mine'>"+thisTime+"</p>"+
+											"<div class='mine-img'><img src='images/test/adf.jpg'/></div>"+
+											"<div class='text'>"+
+												"<p>"+dataInt.data[i].tex+"</p>"+
+											"</div>"+
+										"</li>");
+					} 
+					else{
+						$('.talk-text').prepend("<li class='other'>"+
+											"<p class='time-other'>"+thisTime+"</p>"+
+											"<div class='other-img'><img src='images/test/minhead.png'/></div>"+
+											"<div class='text'>"+
+												"<p>"+dataInt.data[i].tex+"</p>"+
+											"</div>"+
+										"</li>");
+					}
+				}	
+				
+				$('#talk-box').scrollTop($('#talk-box').scrollTop());
+			}
+		});
+
+		
+		
 		$('.user-list>ul>li').click(function(){
 			var index = $(this).index();
 			$('.user-list>ul>li').removeClass("active");
@@ -400,8 +478,10 @@
 			
 			$('.ex_phone_btn span').text("交换手机 (已发送,可再次发送)");
 			
-			var div = document.getElementById('talk-box');
-			div.scrollTop = div.scrollHeight;
+			/*var div = document.getElementById('talk-box');
+			div.scrollTop = div.scrollHeight;*/
+			$('#talk-box').scrollTop($('#talk-box')[0].scrollHeight);
+
 		})
 		
 		$('#send').click(function(){
@@ -434,8 +514,9 @@
 											"</div>"+
 										"</li>");
 				}
-				var div = document.getElementById('talk-box');
-				div.scrollTop = div.scrollHeight;
+				
+				$('#talk-box').scrollTop($('#talk-box')[0].scrollHeight);
+				
 			}
 			$('#send').css({"background-color": "#fff","cursor": "not-allowed"});
 		})
