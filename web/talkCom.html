@@ -10,10 +10,30 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript" src="js/crm-style.js" ></script>
 		<script type="text/javascript" src="js/talkCom.js" ></script>
+		<script type="text/javascript" src="js/layui.js"></script>
 		<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
 	</head>
 	
 	<body style="background: #F5F7FA;">
+		<div style="position: absolute;display: none;top: -999999px;">
+			<div class="layui-upload">
+			      <button type="button" class="layui-btn layui-btn-normal" id="testList">选择多文件</button> 
+			      <div class="layui-upload-list">
+			        <table class="layui-table" style="">
+			            <thead>
+			                <tr>
+			                    <th>文件名</th>
+			                    <th>大小</th>
+			                    <th>状态</th>
+			                    <th>操作</th>
+			                </tr>
+			            </thead>
+			          <tbody id="demoList"></tbody>
+			        </table>
+			      </div>
+	    	</div> 
+		</div>
+		
 		<header>
 			<!--蒙层-->
 			<div class="temp"></div>
@@ -98,7 +118,7 @@
 		
 		<main class="main_talkCom">
 			<!--转发需求-->
-			<div class="forwDem">
+			<!--<div class="forwDem">
 				<span class="forwDem_close"><i class="iconfont icon-cuo1"></i></span>
 				<p class="fsize18" style="height: 36px; border-bottom: 1px solid rgba(0,0,0,0.15);">转发需求</p>
 				<div class="fromWho">
@@ -127,7 +147,7 @@
 					</select>
 					<span class="forwDem_btn">转发</span>
 				</div>
-			</div>
+			</div>-->
 			
 			<!--左-->
 			<div class="main_l">
@@ -143,8 +163,8 @@
 		                    <span class="textNum fsize14 black45">0</span>/500
 		                </span>
 					</div>
-					<div style="margin-top: 12px; display: flex; justify-content: space-between;">
-						<span class="block65" style="cursor: pointer;"><i class="iconfont icon-zhaopian" style="margin-right: 5px;"></i>照片</span>
+					<div style="margin-top: 12px; display: flex; justify-content: space-between; position: relative;">
+						<span class="block65 clickpicture" style="cursor: pointer;"><i class="iconfont icon-zhaopian" style="margin-right: 5px;"></i>照片</span>
 						<div>
 							<select name="">
 								<option value="">匿名</option>
@@ -152,6 +172,19 @@
 							</select>
 							<span class="sendAloud_btn">发布</span>
 						</div>
+						<!-- 图片上传 -->
+						 <div class="pictureupload" style="position: absolute; top: 100%; left: 0;">
+					        <div class="uploadtext">本地上传</div>
+					        <span class="closethisbox iconfont icon-cuo1"></span>
+					        <p class="uploadp1">共<i>0</i>张，还能上传<i>9</i>张</p>
+					        <p class="uploadp2">只能上传不大于1M的jpg/png格式的图片</p>
+					        <ul class="showpicture">
+					        	
+					        </ul>
+					        <div class="floatbox">
+					        	<img src="images/icon/Group.png">
+					        </div>
+					    </div>
 					</div>
 				</div>
 				<!--发布放声结束-->
@@ -255,7 +288,7 @@
 									
 									<p class="szpBox">
 										<span class="collect" title="关注"><i class="iconfont icon-shoucang"></i></span>
-										<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>
+										<!--<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>-->
 										<span class="commentLogo" title="评论"><i class="iconfont icon-pinglun"></i>1</span>
 									</p>
 									
@@ -443,7 +476,7 @@
 									</div>
 									<p class="szpBox">
 										<span class="collect" title="收藏"><i class="iconfont icon-shoucang"></i></span>
-										<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>
+										<!--<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>-->
 										<span class="commentLogo" title="评论"><i class="iconfont icon-pinglun"></i>1</span>
 									</p>
 									
@@ -553,10 +586,10 @@
 									<div class="aloud_img1">
 										<ul class="clear">
 											<li><img src="images/about/about_yz2.png"/></li>
-											<li><img src="images/about/about_yz1.png"/></li>
+											<!--<li><img src="images/about/about_yz1.png"/></li>
 											<li><img src="images/about/swhz1.png"/></li>
 											<li><img src="images/banner/banner_1.jpg"/></li>
-											<li><img src="images/about/about_yz2.png"/></li>
+											<li><img src="images/about/about_yz2.png"/></li>-->
 										</ul>
 									</div>
 									
@@ -570,10 +603,10 @@
 						                    	<div class="next_small"></div>
 						                    	<ul>
 						                            <li><img src="images/about/about_yz2.png"/></li>
-													<li><img src="images/about/about_yz1.png"/></li>
+													<!--<li><img src="images/about/about_yz1.png"/></li>
 													<li><img src="images/about/swhz1.png"/></li>
 													<li><img src="images/banner/banner_1.jpg"/></li>
-													<li><img src="images/about/about_yz2.png"/></li>
+													<li><img src="images/about/about_yz2.png"/></li>-->
 												</ul>
 						                    </div>
 						
@@ -584,7 +617,7 @@
 						                            	<div></div>
 						                            	<img src="images/about/about_yz2.png"/>
 						                            </li>
-													<li>
+													<!--<li>
 														<div></div>
 														<img src="images/about/about_yz1.png"/>
 													</li>
@@ -599,7 +632,7 @@
 													<li>
 														<div></div>
 														<img src="images/about/about_yz2.png"/>
-													</li>
+													</li>-->
 						                        </ul>
 						                    </div>
 						                </div>
@@ -607,7 +640,7 @@
 									</div>
 									<p class="szpBox">
 										<span class="collect" title="收藏"><i class="iconfont icon-shoucang"></i></span>
-										<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>
+										<!--<span class="transmit" title="转发"><i class="iconfont icon-icon--"></i>12</span>-->
 										<span class="commentLogo" title="评论"><i class="iconfont icon-pinglun"></i>1</span>
 									</p>
 									<div class="commentBox">
@@ -762,5 +795,78 @@
 	        </div>
 		</footer>
 	</body>
-	
+	<script type="text/javascript">
+    layui.use('upload', function(){
+  	  var $ = layui.jquery,
+	  upload = layui.upload;
+	  //多文件列表示例
+	  var demoListView = $('#demoList')
+	  var uploadpicture = $('.showpicture')
+	  ,uploadListIns = upload.render({
+	    elem: '#testList'
+	    ,url: '/upload/'
+	    ,accept: 'file'
+	    ,multiple: true
+	    ,auto: true
+	    ,bindAction: '#testListAction'
+	    ,choose: function(obj){   
+	      var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
+	      //读取本地文件
+	      obj.preview(function(index, file, result){
+	        var tr = $(['<tr id="upload-'+ index +'">'
+	          ,'<td>'+ file.name +'</td>'
+	          ,'<td>'+ (file.size/1014).toFixed(1) +'kb</td>'
+	          ,'<td>等待上传</td>'
+	          ,'<td>'
+	            ,'<button class="layui-btn layui-btn-xs demo-reload layui-hide">重传</button>'
+	            ,'<button class="layui-btn layui-btn-xs layui-btn-danger demo-delete">删除</button>'
+	          ,'</td>'
+	        ,'</tr>'].join(''));
+	        var trr = $(['<li><img src="'+result+'"><i class="minishanchu"><img src="images/icon/icon_dele.png"></i></li>'].join(''));
+	        //单个重传
+	        tr.find('.demo-reload').on('click', function(){
+	          obj.upload(index, file);
+	        });
+	        
+	        //删除
+	        tr.find('.demo-delete').on('click', function(){
+	          delete files[index]; //删除对应的文件
+	          tr.remove();
+	          uploadListIns.config.elem.next()[0].value = ''; //清空 input file 值，以免删除后出现同名文件不可选
+	        });
+	        if($('.showpicture li').length >= 8){
+	        	$('.floatbox').hide();
+	        }else{
+	        	$('.floatbox').show();
+	        }
+	        uploadpicture.append(trr);
+	        demoListView.append(tr);
+	      });
+	      $('.showpicture').on('click','li',function(){
+	        	let thisli = $(this).index();
+	        	$('.showpicture li:eq('+thisli+')').hide();
+	        	if($('.showpicture li').length < 8){
+	        		$('.floatbox').show();
+		        }
+	        })
+	    }
+	    ,done: function(res, index, upload){
+	      if(res.code == 0){ //上传成功
+	        var tr = demoListView.find('tr#upload-'+ index)
+	        ,tds = tr.children();
+	        tds.eq(2).html('<span style="color: #5FB878;">上传成功</span>');
+	        tds.eq(3).html(''); //清空操作
+	        return delete this.files[index]; //删除文件队列已经上传成功的文件
+	      }
+	      this.error(index, upload);
+	    }
+	    ,error: function(index, upload){
+	      var tr = demoListView.find('tr#upload-'+ index)
+	      ,tds = tr.children();
+	      tds.eq(2).html('<span style="color: #FF5722;">上传失败</span>');
+	      tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
+	    }
+	  });
+	});
+</script>
 </html>
