@@ -33,13 +33,7 @@ $(function(){
 	})
 	
 	
-	$('.hy-title li').hover(function(){
-		$(this).addClass('active').siblings().removeClass('active');
-		$('.hy-lable>ul').stop();
-		var i = $(this).index();
-		var height = i*-678;
-		$('.hy-lable>ul').animate({"top":height+"px"},100);
-	})
+
 
 	// 监控搜索框 关键字变色
 	$('.tijiao').click(function(){
@@ -49,6 +43,7 @@ $(function(){
 		var thisli = $('.searchnav li').length;
 		for(let a = 0;a<thisli;a++){
 			var thistext = $('.searchnav li:eq('+a+')').text();
+			// console.log(thistext);
 			var newtext = thistext.split(tijiaotext);
 			var alsdkfj =  newtext.join('<i style="color:#198cff;">'+tijiaotext+'</i>');
 			$('.searchnav li:eq('+a+')').html(alsdkfj);
