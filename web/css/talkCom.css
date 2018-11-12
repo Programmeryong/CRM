@@ -357,7 +357,7 @@ textarea::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
 .comment{
 	display: flex;
 	justify-content: space-between;
-	padding: 12px 0;
+	padding: 12px 0 8px 0;
 	border-bottom: 1px solid rgba(0,0,0,0.09);
 }
 .comment_img{
@@ -375,7 +375,7 @@ textarea::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
 .comm_first{
 	line-height: 24px;
 }
-.haha{
+.haha,.haha1{
 	margin-top: 6px;
 	display: flex;
 	justify-content: space-between;
@@ -389,6 +389,7 @@ textarea::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
 .commInputBox{
 	display: none;
 	position: relative;
+	padding-bottom: 12px;
 }
 .commInputBox textarea{
 	width: 100%;
@@ -448,9 +449,18 @@ textarea::-webkit-scrollbar-thumb,#txt::-webkit-scrollbar-thumb {
 	text-align: center;
 	cursor: pointer;
 }
+.comincom{
+	overflow: hidden;
+}
 .comincom li{
 	border-bottom: 1px solid rgba(0,0,0,0.09);
 	padding: 2px 0;
+}
+.comincom li:first-child{
+	margin-top: 8px;
+}
+.comincom li:last-child{
+	margin-bottom: 12px;
 }
 .comincom li p{
 	line-height: 22px;
