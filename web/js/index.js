@@ -140,7 +140,7 @@ $(function(){
   	$('.sele_user ul li').eq(0).click();
     
    	/*提交表单*/
-   	$('.noLogin form').submit(function(){
+   	$('.noLogin demand').submit(function(){
    		if (loginType == 0) {//手机登录
    			Phone();
    			Yzm();

@@ -2268,7 +2268,7 @@ Table.prototype = {
                         var colNum = parseInt($('#' + textColNum).val());
 
                         if (rowNum && colNum && rowNum > 0 && colNum > 0) {
-                            // form 数据有效
+                            // demand 数据有效
                             _this._insert(rowNum, colNum);
                         }
 
