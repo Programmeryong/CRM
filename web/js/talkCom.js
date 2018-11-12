@@ -282,7 +282,7 @@ $(function(){
 	
 	/*评论别人的评论*/
 	function commentIncomment(who){
-		var comment_name = '';
+		var comment_name = '',comment_name1;
 		var comms = $(who+' .comment').length;
 		for (let i=0;i<comms;i++) {
 		
@@ -293,11 +293,33 @@ $(function(){
 				$(who+' .comment:eq('+i+') .commInputBox textarea').attr("placeholder","回复 "+comment_name);
 			});
 			
-			$('body').on('click',who+' .haha:eq('+i+') .huifu',function(){
+			$('body').on('click',who+' .haha1:eq('+i+') .huifu',function(){
 				$(who+' .comment:eq('+i+') .commInputBox').slideDown();
 				comment_name = $(who+' .comment:eq('+i+') .userName:eq(0)').html();
 				$(who+' .comment:eq('+i+') .commInputBox textarea').attr("placeholder","回复 "+comment_name);
 			});	
+			
+			
+			$('body').on('click',who+' .comincom:eq('+i+') .dianzan',function(){
+				let index = $(this).parent().parent().parent().index();
+				comment_name1 = $(who+' .comincom:eq('+i+') li:eq('+index+') .userName').html();
+				let color = $(this).children("i").css('color')
+				if (color == 'rgba(0, 0, 0, 0.65)') {
+					$(this).children("i").css('color',"#F52230");
+				} else{
+					$(this).children("i").css('color',"rgba(0, 0, 0, 0.65)");
+				}
+			})
+			
+			$('body').on('click',who+' .haha1:eq('+i+') .dianzan',function(){
+				comment_name1 = $(who+' .comment:eq('+i+') .userName:eq(0)').html();
+				let color = $(this).children("i").css('color')
+				if (color == 'rgba(0, 0, 0, 0.65)') {
+					$(this).children("i").css('color',"#F52230");
+				} else{
+					$(this).children("i").css('color',"rgba(0, 0, 0, 0.65)");
+				}
+			})
 			
 			$('body').on('click',who+' .comment:eq('+i+') .comment_btn1',function(){
 				var mydate = new Date();  
@@ -327,14 +349,6 @@ $(function(){
 		}
 	}
 	
-	$('body').on('click','.dianzan',function(){
-		let color = $(this).children("i").css('color')
-		if (color == 'rgba(0, 0, 0, 0.65)') {
-			$(this).children("i").css('color',"#F52230");
-		} else{
-			$(this).children("i").css('color',"rgba(0, 0, 0, 0.65)");
-		}
-	})
 	
 	
 	$('.sendAloud_btn').click(function(){
