@@ -74,7 +74,7 @@ $(function(){
 		showImg('.aloudBox>ul>li:eq('+i+')');
 		
 		/*遍历每个收藏*/
-		collect('.aloudBox>ul>li:eq('+i+')');
+		//collect('.aloudBox>ul>li:eq('+i+')');
 		
 		/*转发*/
 		//transmit('.aloudBox>ul>li:eq('+i+')');
@@ -246,38 +246,60 @@ $(function(){
 			if(txt1=='' || nulls.test(txt1)){
 				$(who+' .commentBox .comm_null1').fadeIn(500).delay(1000).fadeOut(500);
 			} else{
-				
+				var mydate = new Date();  
+				var month=mydate.getMonth()+1;
+				var dates=mydate.getDate(); 
+				var h=mydate.getHours();  
+				var m=mydate.getMinutes();
+				var thisTime = month+"月"+dates+"日  "+h+":"+m;
+				$(who+' .commentss').append("<div class='comment'>"+
+												"<div class='comment_img'>"+
+													"<img src='images/about/about_yz2.png'/>"+
+												"</div>"+
+												"<div class='comment_info'>"+
+													"<p class='comm_first'><span class='userName'>益力多多</span><i class='iconfont'></i>："+txt1+"</p>"+
+													"<p class='haha'>"+
+														"<span class='block45'>"+thisTime+"</span>"+
+														"<span class='block65'><span class='huifu'>回复</span><span class='dianzan' style='margin-left: 24px;'><i class='iconfont icon-iconfontzhizuobiaozhun023148' style='margin-right: 5px;'></i>点赞</span></span>"+
+													"</p>"+
+													"<div style='background: #F5F7FA; padding: 0px 12px; box-sizing: border-box; margin-top: 12px;'>"+
+														"<ul class='comincom'>"+
+															
+														"</ul>"+
+														"<div class='commInputBox' style='margin-top: 12px;'>"+
+															"<span class='comm_null'>评论内容不能为空哦，写点东西吧。</span>"+
+															"<textarea name='' rows='' cols='' id='' maxlength='150'></textarea>"+
+															"<p style='text-align: right; margin-top: 10px;'><span class='comment_btn1'>评论</span></p>"+
+														"</div>"+
+													"</div>"+
+												"</div>"+
+											"</div>");
+											
+				$(who+' .commentBox .comment_cont').val('');
 			}
 		})
 	}
 	
 	/*评论别人的评论*/
 	function commentIncomment(who){
-		var comment_name;
+		var comment_name = '';
 		var comms = $(who+' .comment').length;
 		for (let i=0;i<comms;i++) {
-			let a = $(who+' .comment:eq('+i+') .huifu').length;
-			for (let j=0; j<a; j++) {
-				$(who+' .comment:eq('+i+') .huifu:eq('+j+')').click(function(){
-					$(who+' .comment:eq('+i+') .commInputBox').slideDown();
-					comment_name = $(who+' .comment:eq('+i+') .userName:eq('+j+')').text();
-					$(who+' .comment:eq('+i+') .commInputBox textarea').attr("placeholder","回复 "+comment_name);
-				})
-				
-				/*点赞*/
-				$(who+' .comment:eq('+i+') .dianzan:eq('+j+')').click(function(){
-					var color = $(who+' .comment:eq('+i+') .dianzan:eq('+j+') i').css('color');
-					if (color == 'rgba(0, 0, 0, 0.65)') {
-						/*已点赞*/
-						$(who+' .comment:eq('+i+') .dianzan:eq('+j+') i').css({"color":"#F52230"});
-					} else{
-						/*未点赞*/
-						$(who+' .comment:eq('+i+') .dianzan:eq('+j+') i').css({"color":"rgba(0,0,0,0.65)"});
-					}
-				})
-			}
+		
+			$('body').on('click',who+' .comincom:eq('+i+') .huifu',function(){
+				$(who+' .comment:eq('+i+') .commInputBox').slideDown();
+				let index = $(this).parent().parent().parent().index();
+				comment_name = $(who+' .comincom:eq('+i+') li:eq('+index+') .userName').html();
+				$(who+' .comment:eq('+i+') .commInputBox textarea').attr("placeholder","回复 "+comment_name);
+			});
 			
-			$(who+' .comment:eq('+i+') .comment_btn1').click(function(){
+			$('body').on('click',who+' .haha:eq('+i+') .huifu',function(){
+				$(who+' .comment:eq('+i+') .commInputBox').slideDown();
+				comment_name = $(who+' .comment:eq('+i+') .userName:eq(0)').html();
+				$(who+' .comment:eq('+i+') .commInputBox textarea').attr("placeholder","回复 "+comment_name);
+			});	
+			
+			$('body').on('click',who+' .comment:eq('+i+') .comment_btn1',function(){
 				var mydate = new Date();  
 				var month=mydate.getMonth()+1;
 				var dates=mydate.getDate(); 
@@ -300,12 +322,19 @@ $(function(){
 																"</p>"+
 															"</li>");
 				}
-				
 			})
 			
 		}
 	}
 	
+	$('body').on('click','.dianzan',function(){
+		let color = $(this).children("i").css('color')
+		if (color == 'rgba(0, 0, 0, 0.65)') {
+			$(this).children("i").css('color',"#F52230");
+		} else{
+			$(this).children("i").css('color',"rgba(0, 0, 0, 0.65)");
+		}
+	})
 	
 	
 	$('.sendAloud_btn').click(function(){
