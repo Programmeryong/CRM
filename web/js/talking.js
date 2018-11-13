@@ -4,8 +4,9 @@ $(function(){
 		index = $(this).index();
 		$('.user-list>ul>li').removeClass("active");
 		$('.user-list>ul>li').eq(index).addClass("active");
-		
-		if (index==2) {
+		if ($('.talk-box:eq('+index+')').length>0) {
+			$('.talk-box').eq(index).show().siblings().hide();
+		} else{
 			$('.talk-box').hide();
 			$('.talk_boxss').append("<div class='talk-box'>"+
 										"<ul class='talk-text clearfix'>"+
@@ -18,14 +19,12 @@ $(function(){
 											"</li>"+
 										"</ul>"+
 									"</div>");
-		} else{
-			$('.talk-box').eq(index).show().siblings().hide();
 		}
+		
 	})
 	$('.user-list>ul>li').eq(0).click();
 	
 	$('.talk-box').eq(index).scroll(function(){
-
 		var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高度
 		if(scrollTop<=5){ 
 			var dataInt = {"data":[{"tex":"1"},{"tex":"2"}]};
