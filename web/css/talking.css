@@ -4,6 +4,31 @@ p{margin: 0; padding: 0;}
 a{
 	text-decoration: none;
 }
+.talking_top{
+	box-sizing: border-box;
+	padding-top: 20px;
+	padding-left: 24px;
+	margin: 0 auto;
+	width:1100px;
+	height:78px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+}
+.talking_top .search_user{
+	width:300px;
+	height:38px;
+	border-radius:2px;
+	border:1px solid rgba(0,0,0,0.15);
+	padding-left: 12px;
+}
+.sousuo_user{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+	color: rgba(0,0,0,0.35);
+	font-size: 24px!important;
+}
 /*右部*/
 .talk-left{
 	width: 320px;
@@ -19,7 +44,7 @@ a{
 #talk-box{
 	box-sizing: border-box;
 	width: 100%; 
-	height: 600px;   
+	max-height: 600px;   
 	overflow-x: hidden;
     overflow-y: auto; 
     padding: 15px 15px 5px; 
@@ -278,7 +303,7 @@ a{
 .user-list>ul>li:hover{
 	background-color: #f2f5fa;
 }
-.active{
+.user-list>ul .active{
 	background-color: #f2f5fa;
 }
 .touxiang{
