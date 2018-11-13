@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/crm_style.css">
-	<link rel="stylesheet" type="text/css" href="css/enterprise_home.css">
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/bootpage.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/enterprise_home.js"></script>
+	<script type="text/javascript" src="js/bootpage.js"></script>
+	<script type="text/javascript" src="js/crm-style.js" ></script>
 </head>
-<!-- 这个是企业公司认证 公司logo那里需要补充url接收地址 -->
 <body style="background: rgba(0,0,0,.04)">
 	<header>
+		<!--蒙层-->
+		<div class="temp"></div>
+		
 		<div class="header-1">
 			<div class="header-1-ct">
 				<div class="header-1-l" style="display: flex;">
@@ -54,9 +57,9 @@
 						<img src="images/icon/logo_1.png" />
 					</div>
 					<ul style="float: left; margin-left: 50px;">
-						<li>首页</li>
-						<li>需求大厅</li>
-						<li>物业社区</li>
+						<li class="active"><a href="">首页</a></li>
+						<li><a href="need-off.html">需求大厅</a></li>
+						<li><a href="company_property.html">物业社区</a></li>
 					</ul>
 				</div>
 				
@@ -84,22 +87,100 @@
 		            <p><img src="images/icon/feedback.png"></p>
 		            <p class="fsize18">反馈</p>
 		        </li>
-		        <li class="gototop">
+		        <li class="gototop" title="回到顶部">
 		            <p><img src="images/icon/arrow_top.png"></p>
 		        </li>
 		    </ul>
 		</div>
 	</header>
-
 	<main>
-		<p style="height: 3rem; line-height: 3rem; width: 100rem; margin: 0 auto; color: rgba(0,0,0,0.65);">
-    		乙租>写字楼出租>三号线>天河客运站</p>
-    	<div class="form_box">
-    		<div class="form_box_l">
-    			<!-- 身份认证 -->
+		<p class="toptitle">需求大厅 > 资料填写</p>
+		<div class="bigboxpage">
+			<div class="boxpagetop">
+				<ul class="pagetopul clear">
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan thispage">1</span>
+							<span>步骤一</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan">2</span>
+							<span>步骤二</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan">3</span>
+							<span>步骤三</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p class="line"></p>
+			<!-- 步骤一 -->
+			<div class="boxpage1">
+				<form>
+					<!-- 基本资料 -->
+    				<div class="fbox_1">
+    					<span class="fbox_span">基本资料</span>
+    					<div class="fbox_div">
+    						<ul class="clear">
+    							<li>
+    								<span>姓名</span>
+    								<input class="dataform1" maxlength="5" type="text" name="">
+    								<p class="datap1" style="color: red;">1</p>
+    							</li>
+    							<li>
+    								<span>职位</span>
+    								<input class="dataform2" type="text" name="">
+    								<p class="datap2" style="color: red;">2</p>
+    							</li>
+    						</ul>
+    					</div>
+    				</div>
+					<!-- 合作联系方式 -->
+    				<div class="fbox_2">
+    					<span class="fbox_span">合作联系方式</span>
+    					<div class="fbox_div">
+    						<ul class="clear">
+								<li>
+									<span>手机号码</span>
+									<input class="dataform3" maxlength="11" type="tel" name="">
+									<p class="datap3" style="color: red;">3</p>
+								</li>
+								<li>
+									<span>电话</span>
+									<input class="dataform4" type="tel" name="" placeholder="推荐电话格式XXX-XXXXXXX">
+									<p class="datap4" style="color: red;">4</p>
+								</li>
+								<li>
+									<span>邮箱</span>
+									<input class="dataform5" type="email" name="">
+									<p class="datap5" style="color: red;">5</p>
+								</li>
+								<li>
+									<span>QQ</span>
+									<input class="dataform6" type="number" name="">
+									<p class="datap6" style="color: red;">6</p>
+								</li>
+    						</ul>
+    					</div>
+    				</div>
+    				<span class="lastsubmit">下一步</span>
+    				<a class="skip" href="index.html">跳过</a>
+				</form>
+			</div>
+			<!-- 步骤二 -->
+			<div class="boxpage2">
+				<!-- 身份认证 -->
 				<div class="fbox_3">
 					<span class="fbox_span">法人身份认证</span>
-					<div class="fbox_div">
+					<div class="fbox_div clear">
 						<!-- 身份证正面 -->
 						<div class="SFZzm">
 							<span>上传身份证正面</span>
@@ -138,11 +219,18 @@
 						<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
 					</div>
 				</div>
-					<!-- 基本资料 -->
-				<form id="enterpriseform">	
-					<div class="fbox_3_txt">公司全称</div>
-					<input class="fbox_3_int" type="text" name="" placeholder="不需要填写，上传证件后显示">
-    				<div class="fbox_1">
+				<div class="fbox_3_txt">公司全称</div>
+				<input class="fbox_3_int" type="text" name="" placeholder="不需要填写，上传证件后显示">
+				<div>
+					<span class="nextpage2">下一步</span>
+					<a class="skip2" href="index.html">跳过</a>
+				</div>
+				
+			</div>
+			<!-- 步骤三 -->
+			<div class="boxpage3">
+				<form>
+					<div class="fbox_1">
     					<span class="fbox_span">基本信息</span>
     					<div class="fbox_div">
     						<span class="fbox_div_text1">公司LOGO</span>
@@ -197,144 +285,12 @@
 			                <p class="fbox_div_text3">公司简称</p>
 			                <input class="property_text" type="text" name="" maxlength="10" placeholder="建议在四个字内，创建后不可修改">
     					</div>
+    					<span class="nextpage3">完成</span><span class="skip3">跳过</span>
     				</div>
-					<!-- 合作联系方式 -->
-    				<div class="fbox_2">
-    					<span class="fbox_span">基本信息</span>
-    					<div class="fbox_div">
-    						<div class="fbox_div_text1">园区简介</div>
-    						<textarea class="propert_textarea" maxlength="300" placeholder="请输入园区简介"></textarea>
-    						<div class="numberbox">
-    							<span class="newnumber"></span><span>/300</span>
-    						</div>
-    					</div>
-    					<ul class="fbox_2_ul clear">
-							<li>
-								<p>所在园区</p>
-								<select name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-								</select>
-							</li>
-							<li>
-								<p>添加备注</p>
-								<input class="homeBZ" type="text" name="" maxlength="18" placeholder="备注园区号，如C401">
-							</li>
-						</ul>
-    				</div>
-
-    				<input class="thissubmit" type="submit" name="" style="display: none;position: absolute;top: -9999px;">
-    				<div class="lastsubmit">提交信息</div>
-    			</form>	
-    		</div>
-			<div class="form_box_r">
-				<!--个人信息-->
-				<div class="per_info">
-					<a href="" class="compile block85">编辑</a>
-					<div class="head-img">
-						<img src="images/icon/logo_1.png"/>
-					</div>
-					<p style="text-align: center;">
-						<span>早上好</span>
-						<!--<span>下午好</span>
-						<span>晚上好</span>-->
-						&nbsp;&nbsp;李先生
-					</p>
-					
-					<div class="approve">
-						<img src="images/icon/logo_1.png"/>
-						<a href="">已入驻平台</a>
-					</div>
-					
-					<div style="display: flex; margin-top: 20px; justify-content: space-between; padding: 0 34px;">
-						<div class="post-xq">
-							<p class="fsize32 nnb" style="color: #FFB31A;">23</p>
-							<p class="block45">发布需求</p>
-						</div>
-						<div class="myFocus">
-							<p class="fsize32 nnb" style="color: #FFB31A;">49</p>
-							<p class="block45">我的关注</p>
-						</div>
-						<div class="myCollect">
-							<p class="fsize32 nnb" style="color: #FFB31A;">49</p>
-							<p class="block45">我的收藏</p>
-						</div>
-					</div>
-				</div>
-				<!--个人信息结束-->
-				
-				<div class="card">
-					<div style="display: flex;">
-						<img src="images/icon/logo_1.png"/>
-						<div style="margin-left: 12px;">
-							<p>广贸商务中心</p>
-							<p style="margin-top: 14px;">已入驻<span class=".nnb">200</span>家企业</p>
-						</div>
-					</div>
-					<a href="" class="look_zome">查看园区主页</a>
-				</div>
+				</form>
 			</div>
-			</div>
-    	</div>
+		</div>
 	</main>
-
-	<footer class="pc">
-	        <div style="width: 1200px; margin: 0 auto;">
-	           <div class="footer_title">广州乙租信息科技有限公司</div>
-	           <div class="footer_conter">
-	               <div class="footer_conter1">
-	                   <span>关于乙租</span>
-	                   <ul class="pad">
-	                       <li><a href="{:U('AboutUs/index')}?tag=1">联系我们</a></li>
-	                       <li><a href="{:U('AboutUs/index')}?tag=2">商务合作</a></li>
-	                        <li><a href="{:U('AboutUs/index')}?tag=3">常见问题</a></li>
-	                        <li><a href="{:U('AboutUs/index')}?tag=4">用户协议</a></li>
-	                        <li><a href="{:U('AboutUs/index')}?tag=5">隐私条款</a></li>
-	                   </ul>
-	               </div>
-	               <div class="footer_conter2">
-	                   <span>友情链接</span>
-	                   <ul class="pad">
-	                       <li><a href="{$vo.link_url}">今日头条</a></li>
-	                       <li><a href="{$vo.link_url}">知乎</a></li>
-	                       <li><a href="{$vo.link_url}">腾讯网</a></li>
-	                       <li><a href="{$vo.link_url}">搜狐</a></li>
-	                       <li><a href="{$vo.link_url}">UC头条</a></li>
-	                       <li><a href="{$vo.link_url}">网易</a></li>
-	                       <li><a href="{$vo.link_url}">新浪网</a></li>
-	                       <li><a href="{$vo.link_url}">南方财富网</a></li>
-	                   </ul>
-	               </div>
-	               <div class="footer_conter3">
-	                   <span>电话</span>
-	                   <h2 class="conter3_h2">400-886-6391</h2>
-	                   <span>地址</span>
-	                   <p style="color: rgba(255,255,255,.65);font-size: 14px;margin-bottom: 24px;">广州市白云大道北广贸商务中心C栋401</p>
-	                   <span>邮箱</span>
-	                   <p style="color:rgba(255,255,255,.65);font-size: 14px;">epassrent@163.com</p>
-	               </div>
-	               <div class="footer_conter4">
-	                    <span><img src="images/qrcode/qrcode_1.jpg"></span>
-	                    <span class="gzgzh">关注公众号</span>
-	               </div>
-	           </div>
-	        </div>
-	        <!-- 最底下 备案 -->
-	        <div class="foot_t_box">
-	            <div class="foot_t">
-	                <span>
-	                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102002056">
-	                        <img src="images/GABA.png" />
-	                        粤公网安备 44011102002056号
-	                    </a>
-	                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	                </span>
-	                <span>&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/"style="color:#fff">Copyright &#169 2017 广州乙租信息科技有限公司 粤ICP备18097655号</a></span>
-	            </div>
-	        </div>
-	</footer>
 </body>
 <script type="text/javascript" src="js/layui.js"></script>
 <script type="text/javascript">
