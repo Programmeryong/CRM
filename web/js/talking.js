@@ -1,6 +1,30 @@
-$(function(){		
-	$('#talk-box').scroll(function(){
-
+$(function(){	
+	var index=0;
+	$('.user-list>ul>li').click(function(){
+		index = $(this).index();
+		$('.user-list>ul>li').removeClass("active");
+		$('.user-list>ul>li').eq(index).addClass("active");
+		if ($('.talk-box:eq('+index+')').length>0) {
+			$('.talk-box').eq(index).show().siblings().hide();
+		} else{
+			$('.talk-box').hide();
+			$('.talk_boxss').append("<div class='talk-box'>"+
+										"<ul class='talk-text clearfix'>"+
+											"<li class='mine'>"+
+												"<p class='time-mine'>14:12</p>"+
+												"<div class='mine-img'><img src='images/test/adf.jpg'/></div>"+
+												"<div class='text'>"+
+													"<p>dsf dsfdsf</p>"+
+												"</div>"+
+											"</li>"+
+										"</ul>"+
+									"</div>");
+		}
+		
+	})
+	$('.user-list>ul>li').eq(0).click();
+	
+	$('.talk-box').eq(index).scroll(function(){
 		var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高度
 		if(scrollTop<=5){ 
 			var dataInt = {"data":[{"tex":"1"},{"tex":"2"}]};
@@ -10,7 +34,7 @@ $(function(){
 			var thisTime = mydate.toLocaleString('chinese', { hour12: false });
 			for (var i=0; i<dataInt.data.length;i++) {
 				if (i%2==0) {
-					$('.talk-text').prepend("<li class='mine'>"+
+					$('.talk-box:eq('+index+') .talk-text').prepend("<li class='mine'>"+
 										"<p class='time-mine'>"+thisTime+"</p>"+
 										"<div class='mine-img'><img src='images/test/adf.jpg'/></div>"+
 										"<div class='text'>"+
@@ -19,7 +43,7 @@ $(function(){
 									"</li>");
 				} 
 				else{
-					$('.talk-text').prepend("<li class='other'>"+
+					$('.talk-box:eq('+index+') .talk-text').prepend("<li class='other'>"+
 										"<p class='time-other'>"+thisTime+"</p>"+
 										"<div class='other-img'><img src='images/test/minhead.png'/></div>"+
 										"<div class='text'>"+
@@ -29,17 +53,9 @@ $(function(){
 				}
 			}	
 			
-			$('#talk-box').scrollTop($('#talk-box').scrollTop());
+			$('.talk-box').eq(index).scrollTop($('.talk-box').eq(index).scrollTop());
 		}
 	});
-
-	
-	
-	$('.user-list>ul>li').click(function(){
-		var index = $(this).index();
-		$('.user-list>ul>li').removeClass("active");
-		$('.user-list>ul>li').eq(index).addClass("active");
-	})
 	
 	var txt='';
 	var i = 0;
@@ -58,14 +74,14 @@ $(function(){
 	$('.ex_phone_btn').click(function(){
 		var mydate = new Date(); 
 		var thisTime = mydate.toLocaleString('chinese', { hour12: false });
-		$('.talk-text').append("<li class='ex_phone'>"+
+		$('.talk-box:eq('+index+') .talk-text').append("<li class='ex_phone'>"+
 						"<div>"+
 							"<p>您的交换电话号码请求已送达</p>"+
 						"</div>"+
 						"<p class='time'>15:41</p>"+
 					"</li>");
 					
-		$('.talk-text').append("<li class='other'>"+
+		$('.talk-box:eq('+index+') .talk-text').append("<li class='other'>"+
 						"<p class='time-other'>"+thisTime+"</p>"+
 						"<div class='other-img'><img src='images/test/minhead.png'/></div>"+
 						"<div class='ec_phone_box'>"+
@@ -81,7 +97,7 @@ $(function(){
 		
 		/*var div = document.getElementById('talk-box');
 		div.scrollTop = div.scrollHeight;*/
-		$('#talk-box').scrollTop($('#talk-box')[0].scrollHeight);
+		$('.talk-box').eq(index).scrollTop($('.talk-box').eq(index)[0].scrollHeight);
 
 	})
 	
@@ -99,7 +115,7 @@ $(function(){
 			i++;
 			$('#txt').html("");
 			if (i%2==1) {
-				$('.talk-text').append("<li class='mine'>"+
+				$('.talk-box:eq('+index+') .talk-text').append("<li class='mine'>"+
 										"<p class='time-mine'>"+thisTime+"</p>"+
 										"<div class='mine-img'><img src='images/test/adf.jpg'/></div>"+
 										"<div class='text'>"+
@@ -107,7 +123,7 @@ $(function(){
 										"</div>"+
 									"</li>");
 			} else{
-				$('.talk-text').append("<li class='other'>"+
+				$('.talk-box:eq('+index+') .talk-text').append("<li class='other'>"+
 										"<p class='time-other'>"+thisTime+"</p>"+
 										"<div class='other-img'><img src='images/test/minhead.png'/></div>"+
 										"<div class='text'>"+
@@ -116,7 +132,7 @@ $(function(){
 									"</li>");
 			}
 			
-			$('#talk-box').scrollTop($('#talk-box')[0].scrollHeight);
+			$('.talk-box').eq(index).scrollTop($('.talk-box').eq(index)[0].scrollHeight);
 			
 		}
 		$('#send').css({"background-color": "#fff","cursor": "not-allowed"});
