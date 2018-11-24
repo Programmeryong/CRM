@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="css/company.css">
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/qrjs2.js"></script>
 	<script type="text/javascript" src="js/crm-style.js" ></script>
 	<script type="text/javascript" src="js/company.js"></script>
 </head>
@@ -98,20 +97,9 @@
     	<div class="main_content">
     		<!-- 中部内容左边 -->
     		<div class="main_content_l">
-				<div class="QRcodebox" style="display: none;">
-					<p>
-						<span class="QRtoptext">分享到微信朋友圈</span>
-						<span class="QRtopcuo"><i class="iconfont icon-cuo1"></i></span>
-					</p>
-					<!-- 二维码插入这里 -->
-					<div id="qr3"></div>
-					<p class="QRp">打开微信，点击底部的“发现”</p>
-					<p class="QRp">使用“扫一扫”即可将网页分享至朋友圈。</p>
-				</div>
     			<div class="settledbox">
-    				<p>企业所在的园区未入驻平台</p>
-    				<p>赶快分享给园区负责人吧，加入平台建立我的园区，与企业近距离合作</p>
-    				<p><span class="openRQ">微信扫码分享</span></p>
+    				<p>您还没有登录哦，请先登录再来吧。</p>
+    				<p>返回<a href="index.html" style="color:#198cff;">首页登录</a></p>
     			</div>
     		</div>
     		<!-- 中部内容右边 -->
@@ -188,22 +176,4 @@
 	        </div>
 	</footer>
 </body>
-<script type="text/javascript">
-	QR("https://yizufw.com")
-	function QR(url){
-		var container3 = document.getElementById('qr3');
-		var dataUriPngImage = document.createElement("img"),
-		u = url,
-		s = QRCode.generatePNG(u, {
-				ecclevel: "M",
-				format: "html",
-				fillcolor: "#FFFFFF",
-				textcolor: "#000000",
-				margin: 4,
-				modulesize: 8
-			});
-		dataUriPngImage.src = s;
-		container3.appendChild(dataUriPngImage);
-	}
-	</script>
 </html>
