@@ -233,6 +233,7 @@
 									<li>不想改需求</li>
 									<span class="miniulspan" style="color:#198cff;text-align: center;">没有你想要的园区？</span>
 								</ul>
+								<p class="tips" style="margin:0;color: #198cff;font-size: 14px;cursor: pointer;">需要解除禁用吗？</p>
 							</li>
 							<li>
 								<p>添加备注</p>
@@ -391,6 +392,7 @@
 <script type="text/javascript">
 	$(function(){
 		$('.miniul').hide();
+		$('.tips').hide();
 		//当输入时miniul显示
 		$('.yuanqu').keyup(function(){
 			$('.miniul').show();
@@ -432,8 +434,13 @@
 		$('.miniulspan').click(function(){
 			$('.yuanqu').val('');
 			$('.miniul').hide();
+			$('.tips').show();
 			$('.yuanqu').attr("disabled","disabled");//禁用输入框
 			$('.yuanqu').attr("placeholder","没有所属的园区");
+		})
+		$('.tips').click(function(){
+			$('.tips').hide();
+			$('.yuanqu').removeAttr("disabled");
 		})
 	})
 </script>
