@@ -198,6 +198,8 @@ main {
 .searchnav {
     display: none;
     position: absolute;
+    overflow: hidden;
+    overflow-y: auto;
     z-index: 99999;
     width: 372px;
     height: 400px;
