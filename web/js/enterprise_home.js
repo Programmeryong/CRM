@@ -79,10 +79,36 @@ $(function(){
             return true;
         }
     }
-    $('#enterpriseform').submit(function(){
+    $('.lastsubmit').click(function(){
         if(textnull('.property_text') == true && textnull('.propert_textarea') == true && textnull('.homeBZ') == true){
+            $('.home_p1').hide();$('.home_p2').hide();$('.home_p3').hide();
             return true;
         }else{
+            console.log(132);
+            if(textnull('.property_text') == false){
+                if($('.property_text').val().length == 0){
+                    $('.home_p1').show();
+                    $('.home_p1').text('不能为空')
+                }
+            }else{
+                 $('.home_p1').hide();
+            }
+            if(textnull('.propert_textarea') == false){
+                 if($('.propert_textarea').val().length == 0){
+                    $('.home_p2').show();
+                    $('.home_p2').text('不能为空')
+                }
+            }else{
+                $('.home_p2').hide();
+            }
+            if(textnull('.homeBZ') == false){
+                 if($('.homeBZ').val().length == 0){
+                    $('.home_p3v').show();
+                    $('.home_p3').text('不能为空')
+                }
+            }else{
+                $('.home_p3').hide();
+            }
             return false;
         }
     })
