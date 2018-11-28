@@ -9,7 +9,7 @@ main{
 }
 .bigboxpage{
 	width: 1160px;
-	height: 869px;
+	/*height: 869px;*/
 	background: #fff;
 	padding:24px 20px;
 }
@@ -253,6 +253,32 @@ input[type="number"]{
 }
 .fbox_2_ul>li>input:hover,.fbox_2_ul>li>select:hover,.fbox_1_ul>li>select:hover{
 	border:1px solid #198cff;
+}
+.qimingzizhennan{
+	position: relative;
+}
+.miniul{
+	position: absolute;
+	width: 360px;
+	height: 400px;
+	overflow: hidden;
+	overflow-y: auto;
+	border:1px solid rgba(0,0,0,.1);
+	background: #fff;
+	z-index: 99999;
+	display: hidden;
+}
+.miniul li,.miniul span{
+	float: left;
+	display: inline-block;
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.miniul li:hover,.miniul span:hover{
+	background: #F5F7FA;	
 }
 .SFZzm,.SFZfm{
 	width: 50%;

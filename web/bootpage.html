@@ -284,6 +284,46 @@
 			                </ul>
 			                <p class="fbox_div_text3">公司简称</p>
 			                <input class="property_text" type="text" name="" maxlength="10" placeholder="建议在四个字内，创建后不可修改">
+			                <!-- 合作联系方式 -->
+		    				<div class="fbox_2">
+		    					<span class="fbox_span">基本信息</span>
+		    					<div class="fbox_div">
+		    						<div class="fbox_div_text1">园区简介</div>
+		    						<textarea class="propert_textarea" maxlength="300" placeholder="请输入园区简介"></textarea>
+		    						<p class="home_p2" style="color:red"></p>
+		    					</div>
+		    					<ul class="fbox_2_ul clear">
+									<li class="qimingzizhennan">
+										<p>所在园区</p>
+										<input class="yuanqu" type="text" name="yuanqu" placeholder="请输入园区名字" autocomplete="off">
+										<ul class="miniul">
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<li>不想改需求</li>
+											<span class="miniulspan" style="color:#198cff;text-align: center;">没有你想要的园区？</span>
+										</ul>
+										<p class="tips" style="margin:0;color: #198cff;font-size: 14px;cursor: pointer;">需要解除禁用吗？</p>
+									</li>
+									<li>
+										<p>添加备注</p>
+										<input class="homeBZ" type="text" name="" maxlength="18" placeholder="备注园区号，如C401" autocomplete="off">
+										<p class="home_p3" style="margin:0;font-size: 14px;color:red"></p>	
+									</li>
+								</ul>
+		    				</div>
     					</div>
     					<span class="nextpage3">完成</span><span class="skip3">跳过</span>
     				</div>
@@ -326,5 +366,60 @@
         });
     });
 
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('.miniul').hide();
+		$('.tips').hide();
+		//当输入时miniul显示
+		$('.yuanqu').keyup(function(){
+			$('.miniul').show();
+			var yuanqutext = $('.yuanqu').val();
+			$.ajax({
+				url: '',
+				type: 'POST',
+				dataType: 'json',
+				data: {param1: yuanqutext},
+			})
+			.done(function() {//正确
+				textcolor();
+			})
+			.fail(function() {//错误
+				
+			})
+			.always(function() {//对错都有返回结果
+				
+			});
+		})
+		function textcolor(){
+			// 搜索结果变色
+			let tijiao = $('.yuanqu').val();
+			let thisli = $('.miniul li').length;
+			for(let a = 0;a<thisli;a++){
+				var thistext = $('.miniul li:eq('+a+')').text();
+				var newtext = thistext.split(tijiao);
+				var alsdkfj =  newtext.join('<i style="color:#198cff;">'+tijiao+'</i>');
+				$('.miniul li:eq('+a+')').html(alsdkfj);
+			}
+		}
+		//点击li把值传到输入框内
+		$('.miniul').on('click','li',function(){
+			let i = $(this).text();
+			$('.yuanqu').val(i);
+			$('.miniul').hide();
+		})
+		//没有可选园区点击之后
+		$('.miniulspan').click(function(){
+			$('.yuanqu').val('');
+			$('.miniul').hide();
+			$('.tips').show();
+			$('.yuanqu').attr("disabled","disabled");//禁用输入框
+			$('.yuanqu').attr("placeholder","没有所属的园区");
+		})
+		$('.tips').click(function(){
+			$('.tips').hide();
+			$('.yuanqu').removeAttr("disabled");
+		})
+	})
 </script>
 </html>
