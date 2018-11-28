@@ -257,6 +257,19 @@ input[type="number"]{
 .qimingzizhennan{
 	position: relative;
 }
+.yuanqubtn{
+	position: absolute;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	left: 321px;
+	cursor: pointer;
+}
+.yuanqubtn i{
+	font-size: 18px;
+}
 .miniul{
 	position: absolute;
 	width: 360px;

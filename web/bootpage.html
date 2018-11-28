@@ -296,6 +296,7 @@
 									<li class="qimingzizhennan">
 										<p>所在园区</p>
 										<input class="yuanqu" type="text" name="yuanqu" placeholder="请输入园区名字" autocomplete="off">
+										<div class="yuanqubtn"><i class="iconfont icon-fangdajing"></i></div>
 										<ul class="miniul">
 											<li>不想改需求</li>
 											<li>不想改需求</li>
@@ -372,7 +373,7 @@
 		$('.miniul').hide();
 		$('.tips').hide();
 		//当输入时miniul显示
-		$('.yuanqu').keyup(function(){
+		$('.yuanqubtn').click(function(){
 			$('.miniul').show();
 			var yuanqutext = $('.yuanqu').val();
 			$.ajax({
