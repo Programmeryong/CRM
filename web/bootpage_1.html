@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/crm_style.css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/bootpage.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootpage.js"></script>
+	<script type="text/javascript" src="js/clamp.js" ></script>
+	<script type="text/javascript" src="js/crm-style.js" ></script>
+	<script type="text/javascript" src="js/qrjs2.js"></script>
+</head>
+<body style="background: rgba(0,0,0,.04)">
+	<header>
+		<!--蒙层 第四步-->
+		<div class="temp"></div>
+		
+		<div class="header-1">
+			<div class="header-1-ct">
+				<div class="header-1-l" style="display: flex;">
+					<span>广州</span>
+					<div class="gzyz">
+						<p style="text-align: center;">广州乙租 
+							<i class="iconfont icon-Group-" style="position: relative; top: 2px; left: 3px;"></i>
+						</p>
+						<div>
+							<ul>
+								<li><a href="">账号设置</a></li>
+								<li><a href="">系统通知</a></li>
+								<li><a href="">用户信息</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<ul class="user_inform clear">
+						<li><a href="">企业信息</a><i>56</i></li>
+						<li><a href="">系统通知</a><i>1</i></li>
+						<li><a href="">账号设置</a><i>99+</i></li>
+					</ul>
+				</div>
+				
+				<div class="header-1-r">
+					<a href="about.html">关于我们</a>
+					<a href="index.html" style="margin-left: 30px;">登录</a>
+					<i class="block45"> |</i>
+					<a href="login.html">注册</a>
+					<a href="" style="margin-left: 30px;">注销</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header-2">
+			<div class="header-2-ct">
+				<div class="header-2-l">
+					<div style="float: left; height: 100%; overflow: hidden;">
+						<img src="images/icon/logo_1.png" />
+					</div>
+					<ul style="float: left; margin-left: 50px;">
+						<li class="active"><a href="">首页</a></li>
+						<li><a href="need-off.html">需求大厅</a></li>
+						<li><a href="company_property.html">物业社区</a></li>
+					</ul>
+				</div>
+				
+				<div class="header-2-r">
+					<input type="" name="" id="" value="" placeholder="请输入商圈、名称、区域" />
+					<span class="sousuo iconfont icon-fangdajing"></span>
+					<button class="fabu-bt">发布房源</button>
+				</div>
+			</div>
+		</div>
+		
+		<!--/*右边固定导航栏*/-->
+		<div class="right_box">
+		    <ul class="right_icon">
+		        <li class="clickKF">
+		            <p><img src="images/icon/custom.png"></p>
+		            <p class="fsize18">客服</p>
+		        </li>
+		        <li class="clickSM">
+		            <img class="thisSM" style="display: none;position: absolute;top:80px;left:-120px;z-index: 999999;" src="images/qrcode/qrcode.png">
+		            <p><img src="images/icon/scan.png"></p>
+		            <p class="fsize18">扫码</p>
+		        </li>
+		        <li class="fankui">
+		            <p><img src="images/icon/feedback.png"></p>
+		            <p class="fsize18">反馈</p>
+		        </li>
+		        <li class="gototop" title="回到顶部">
+		            <p><img src="images/icon/arrow_top.png"></p>
+		        </li>
+		    </ul>
+		</div>
+	</header>
+	<main>
+		<p class="toptitle">需求大厅 > 资料填写</p>
+		<div class="bigboxpage">
+			<div class="boxpagetop">
+				<ul class="pagetopul clear">
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan">1</span>
+							<span>步骤一</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan">2</span>
+							<span>步骤二</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan">3</span>
+							<span>步骤三</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan thispage">4</span>
+							<span>步骤四</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p class="line"></p>
+			<!-- 第四步 -->
+			<div class="boxpage4">
+				<div class="fbox_div">
+					<ul class="clear">
+						<li>
+							<span>园区</span>
+							<input class="yuanquname" maxlength="5" type="text" name="" placeholder="请输入关键字">
+							<span class="querybtn iconfont icon-fangdajing"></span>
+							<p class="datap7" style="color: red;">7</p>
+						</li>
+						<li>
+							<span>添加备注</span>
+							<input class="beizu" type="text" name="" placeholder="备注园区号，如C401">
+							<p class="datap8" style="color: red;">8</p>
+						</li>
+					</ul>
+					<p class="lastp">没有找到园区？<span>联系物业</span>加入创客桥吧</p>
+				</div>
+				<!-- 这个是有搜索结果的情况  搜索的结果放九个-->
+				<div class="wysq">
+					<div class="zomes-box">
+						<div class="zome" id="a123">
+							<div class="zome-top">
+								<div class="zome-img">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								<div class="zome-info">
+									<p class="fsize18">广州乙租</p>
+									<p class="block65 zome-introduce">
+										富力地产与加州大学洛地方第三方杉矶分校医疗中心（
+										以下简称UCLA Health）携手打造的新型国际医院——广州富力国际医院•UCLA附
+									</p>
+								</div>
+							</div>
+							<p style="display: flex;justify-content: space-between; margin-top: 12px; color: #000000;">
+								<span>已入驻<span class="nnb">26</span>家</span>
+								<span>发布：<span class="nnb">334</span></span>
+							</p>
+						</div>
+						<div class="zome" id="b123">
+							<div class="zome-top">
+								<div class="zome-img">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								
+								<div class="zome-info">
+									<p class="fsize18">广州乙租</p>
+									<p class="block65 zome-introduce">
+										富力地产与加州大学洛地方第三方杉矶分校医疗中心（
+										以下简称UCLA Health）携手打造的新型国际医院——广州富力国际医院•UCLA附
+									</p>
+								</div>
+							</div>
+							<p style="display: flex;justify-content: space-between; margin-top: 12px; color: #000000;">
+								<span>已入驻<span class="nnb">26</span>家</span>
+								<span>发布：<span class="nnb">334</span></span>
+							</p>
+						</div>
+						<div class="zome" id="c123">
+							<div class="zome-top">
+								<div class="zome-img">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								
+								<div class="zome-info">
+									<p class="fsize18">广州乙租</p>
+									<p class="block65 zome-introduce">
+										富力地产与加州大学洛地方第三方杉矶分校医疗中心（
+										以下简称UCLA Health）携手打造的新型国际医院——广州富力国际医院•UCLA附
+									</p>
+								</div>
+							</div>
+							<p style="display: flex;justify-content: space-between; margin-top: 12px; color: #000000;">
+								<span>已入驻<span class="nnb">26</span>家</span>
+								<span>发布：<span class="nnb">334</span></span>
+							</p>
+						</div>
+						<div class="zome" id="d123">
+							<div class="zome-top">
+								<div class="zome-img">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								
+								<div class="zome-info">
+									<p class="fsize18">广州乙租</p>
+									<p class="block65 zome-introduce">
+										富力地产与加州大学洛地方第三方杉矶分校医疗中心（
+										以下简称UCLA Health）携手打造的新型国际医院——广州富力国际医院•UCLA附
+									</p>
+								</div>
+							</div>
+							<p style="display: flex;justify-content: space-between; margin-top: 12px; color: #000000;">
+								<span>已入驻<span class="nnb">26</span>家</span>
+								<span>发布：<span class="nnb">334</span></span>
+							</p>
+						</div>
+						<div class="zome" id="e123">
+							<div class="zome-top">
+								<div class="zome-img">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								
+								<div class="zome-info">
+									<p class="fsize18">广州乙租</p>
+									<p class="block65 zome-introduce">
+										富力地产与加州大学洛地方第三方杉矶分校医疗中心（
+										以下简称UCLA Health）携手打造的新型国际医院——广州富力国际医院•UCLA附
+									</p>
+								</div>
+							</div>
+							<p style="display: flex;justify-content: space-between; margin-top: 12px; color: #000000;">
+								<span>已入驻<span class="nnb">26</span>家</span>
+								<span>发布：<span class="nnb">334</span></span>
+							</p>
+						</div>
+						<div class="zome" id="f123">
+							<div class="zome-top">
+								<div class="zome-img">
+									<img src="images/icon/logo_1.png"/>
+								</div>
+								
+								<div class="zome-info">
+									<p class="fsize18">广州乙租</p>
+									<p class="block65 zome-introduce">
+										富力地产与加州大学洛地方第三方杉矶分校医疗中心（
+										以下简称UCLA Health）携手打造的新型国际医院——广州富力国际医院•UCLA附
+									</p>
+								</div>
+							</div>
+							<p style="display: flex;justify-content: space-between; margin-top: 12px; color: #000000;">
+								<span>已入驻<span class="nnb">26</span>家</span>
+								<span>发布：<span class="nnb">334</span></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- 这里加分页器 -->
+
+				<span class="nextpage4">完成</span>
+			</div>
+			<!-- 这个是没有搜索结果的情况 -->
+			<div class="myjg">
+				<div class="myjg_box">
+					<div id="qr3" style="text-align: center;"></div>
+					<p>企业所在的园区未入驻平台</p>
+					<p>赶快分享给园区负责人吧，加入平台建立我的园区，与企业近距离合作</p>
+				</div>
+				<a href="index.html" class="nextpage5">完成</a><span class="skip5">返回</span>
+			</div>
+		</div>
+	</main>
+</body>
+
+<script type="text/javascript">
+	$(function(){
+		var Selection = '';
+		$('.zomes-box').on('click','.zome',function(){
+			var ii = $(this).index();
+			Selection = $('.zomes-box .zome').eq(ii).attr('id');
+			$('.zome').css({'border':'1px solid rgba(0,0,0,.09)'});
+			$(this).css({'border':'1px solid #198cff'});
+		})
+		$('.nextpage4').click(function(){
+			var a = $('.beizu').val();
+			if(Selection == ''  || a.length == 0){
+				if(Selection == ''){
+					$('.datap7').show();
+					$('.datap7').text('请选择园区')
+				}
+				if(a.length == 0){
+					$('.datap8').show();
+					$('.datap8').text('请填写备注')
+				}
+			}else{
+				$('.datap7').hide();$('.datap8').hide();
+				console.log(123)
+			}
+		})
+		$('.lastp').click(function(){
+			$('.myjg').show();
+			$('.boxpage4').hide();
+		})
+		$('.skip5').click(function(){
+			$('.boxpage4').show();
+			$('.myjg').hide();
+		})
+
+
+
+
+
+	})
+	QR("https://yizufw.com");
+	function QR(url){
+		var container3 = document.getElementById('qr3');
+		var dataUriPngImage = document.createElement("img"),
+		u = url,
+		s = QRCode.generatePNG(u, {
+				ecclevel: "M",
+				format: "html",
+				fillcolor: "#FFFFFF",
+				textcolor: "#000000",
+				margin: 4,
+				modulesize: 8
+			});
+		dataUriPngImage.src = s;
+		container3.appendChild(dataUriPngImage);
+	}
+</script>
+</html>

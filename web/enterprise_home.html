@@ -96,52 +96,8 @@
     		乙租>写字楼出租>三号线>天河客运站</p>
     	<div class="form_box">
     		<div class="form_box_l">
-    			<!-- 身份认证 -->
-				<div class="fbox_3">
-					<span class="fbox_span">法人身份认证</span>
-					<div class="fbox_div">
-						<!-- 身份证正面 -->
-						<div class="SFZzm">
-							<span>上传身份证正面</span>
-							<ul class="clear">
-								<input class="filesfz1" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-								<textarea class="sfzbase1" style="display: none;position: absolute;top: -9999px;"></textarea>
-								<li><img class="shangchuan1" src="images/icon/Group.png"></li>
-								<li><img src="images/icon/ID_positive.png"></li>
-							</ul>
-							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
-						</div>
-						<!-- 身份证反面 -->
-						<div class="SFZfm">
-							<span>上传身份证反面</span>
-							<ul class="clear">
-								<input class="filesfz2" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-								<textarea class="sfzbase2" style="display: none;position: absolute;top: -9999px;"></textarea>
-								<li><img class="shangchuan2" src="images/icon/Group.png"></li>
-								<li><img src="images/icon/ID_opposite.png"></li>
-							</ul>
-							<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
-						</div>
-					</div>
-				</div>
-				<!-- 后添加新盒子  base64格式的图片在textarea里面-->
-				<div class="fbox_4">
-					<span class="fbox_span">企业认证</span>
-					<div class="fbox_4_box">
-						<span>上传营业执照</span>
-    					<ul class="clear">
-							<input class="filesfz3" type="file" accept="image/*" name="" style="display: none;position: absolute;top: -9999px;">
-							<textarea class="sfzbase3" style="display: none;position: absolute;top: -9999px;"></textarea>
-							<li><img class="shangchuan3" src="images/icon/Group.png"></li>
-							<li><img src="images/icon/ID_positive.png"></li>
-						</ul>
-						<p>最大文件不超过2Mb，只支持.jpg .png 格式。</p>
-					</div>
-				</div>
 					<!-- 基本资料 -->
 				<form id="enterpriseform">	
-					<div class="fbox_3_txt">公司全称</div>
-					<input class="fbox_3_int" type="text" name="" placeholder="不需要填写，上传证件后显示">
     				<div class="fbox_1">
     					<span class="fbox_span">基本信息</span>
     					<div class="fbox_div">
@@ -195,7 +151,8 @@
 			                	</li>
 			                </ul>
 			                <p class="fbox_div_text3">公司简称</p>
-			                <input class="property_text" type="text" name="" maxlength="10" placeholder="建议在四个字内，创建后不可修改">
+			                <input class="property_text" type="text" name="" maxlength="10" placeholder="建议在四个字内，创建后不可修改" autocomplete="off">
+			                <p class="home_p1" style="color:red"></p>
     					</div>
     				</div>
 					<!-- 合作联系方式 -->
@@ -204,28 +161,42 @@
     					<div class="fbox_div">
     						<div class="fbox_div_text1">园区简介</div>
     						<textarea class="propert_textarea" maxlength="300" placeholder="请输入园区简介"></textarea>
-    						<div class="numberbox">
-    							<span class="newnumber"></span><span>/300</span>
-    						</div>
+    						<p class="home_p2" style="color:red"></p>
     					</div>
-    					<ul class="fbox_2_ul clear">
-							<li>
+    					<!-- <ul class="fbox_2_ul clear">
+							<li class="qimingzizhennan">
 								<p>所在园区</p>
-								<select name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-								</select>
+								<input class="yuanqu" type="text" name="yuanqu" placeholder="请输入园区名字" autocomplete="off">
+								<ul class="miniul">
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<li>不想改需求</li>
+									<span class="miniulspan" style="color:#198cff;text-align: center;">没有你想要的园区？</span>
+								</ul>
+								<p class="tips" style="margin:0;color: #198cff;font-size: 14px;cursor: pointer;">需要解除禁用吗？</p>
 							</li>
 							<li>
 								<p>添加备注</p>
-								<input class="homeBZ" type="text" name="" maxlength="18" placeholder="备注园区号，如C401">
+								<input class="homeBZ" type="text" name="" maxlength="18" placeholder="备注园区号，如C401" autocomplete="off">
+								<p class="home_p3" style="margin:0;font-size: 14px;color:red"></p>	
 							</li>
-						</ul>
+						</ul> -->
     				</div>
 
-    				<input class="thissubmit" type="submit" name="" style="display: none;position: absolute;top: -9999px;">
+    				<!-- <input class="thissubmit" type="submit" name="" style="display: none;position: absolute;top: -9999px;"> -->
     				<div class="lastsubmit">提交信息</div>
     			</form>	
     		</div>
@@ -370,5 +341,60 @@
         });
     });
 
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('.miniul').hide();
+		$('.tips').hide();
+		//当输入时miniul显示
+		$('.yuanqu').keyup(function(){
+			$('.miniul').show();
+			var yuanqutext = $('.yuanqu').val();
+			$.ajax({
+				url: '',
+				type: 'POST',
+				dataType: 'json',
+				data: {param1: yuanqutext},
+			})
+			.done(function() {//正确
+				textcolor();
+			})
+			.fail(function() {//错误
+				
+			})
+			.always(function() {//对错都有返回结果
+				
+			});
+		})
+		function textcolor(){
+			// 搜索结果变色
+			let tijiao = $('.yuanqu').val();
+			let thisli = $('.miniul li').length;
+			for(let a = 0;a<thisli;a++){
+				var thistext = $('.miniul li:eq('+a+')').text();
+				var newtext = thistext.split(tijiao);
+				var alsdkfj =  newtext.join('<i style="color:#198cff;">'+tijiao+'</i>');
+				$('.miniul li:eq('+a+')').html(alsdkfj);
+			}
+		}
+		//点击li把值传到输入框内
+		$('.miniul').on('click','li',function(){
+			let i = $(this).text();
+			$('.yuanqu').val(i);
+			$('.miniul').hide();
+		})
+		//没有可选园区点击之后
+		$('.miniulspan').click(function(){
+			$('.yuanqu').val('');
+			$('.miniul').hide();
+			$('.tips').show();
+			$('.yuanqu').attr("disabled","disabled");//禁用输入框
+			$('.yuanqu').attr("placeholder","没有所属的园区");
+		})
+		$('.tips').click(function(){
+			$('.tips').hide();
+			$('.yuanqu').removeAttr("disabled");
+		})
+	})
 </script>
 </html>

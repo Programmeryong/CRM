@@ -108,32 +108,58 @@ main{
 .fbox_2_ul,.fbox_1_ul{
 	width: 100%;
 }
-.fbox_2_ul li,.fbox_1_ul li{
+.fbox_2_ul > li,.fbox_1_ul li{
 	width: 50%;
 	float: left;
 }
-.fbox_2_ul li p,.fbox_1_ul li p{
+.fbox_2_ul > li > p,.fbox_1_ul li >p{
 	color: rgba(0,0,0,.65);
 	font-size: 18px;
 	margin-top: 12px;
 	margin-bottom: 12px;
 }
-.fbox_2_ul li select,.fbox_1_ul li select{
-	width: 348px;
-	height: 40px;
-	padding-left: 12px;
-	border: 1px solid rgba(0,0,0,.09);
-	border-radius: 2px;
-}
-.fbox_2_ul li input{
+.fbox_2_ul > li > input{
 	width: 348px;
 	height: 40px;
 	border-radius: 2px;
 	padding-left: 12px;
 	border: 1px solid rgba(0,0,0,.09);
 }
-.fbox_2_ul li input:hover,.fbox_2_ul li select:hover,.fbox_1_ul li select:hover{
+.fbox_1_ul li select{
+	width: 348px;
+	height: 40px;
+	padding-left: 12px;
+	border: 1px solid rgba(0,0,0,.09);
+	border-radius: 2px;
+}
+.fbox_2_ul > li > input:hover,f.fbox_1_ul li select:hover{
 	border:1px solid #198cff;
+}
+.qimingzizhennan{
+	position: relative;
+}
+.miniul{
+	position: absolute;
+	width: 360px;
+	height: 400px;
+	overflow: hidden;
+	overflow-y: auto;
+	border:1px solid rgba(0,0,0,.1);
+	background: #fff;
+	z-index: 99999;
+	display: hidden;
+}
+.miniul li,.miniul span{
+	float: left;
+	display: inline-block;
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.miniul li:hover,.miniul span:hover{
+	background: #F5F7FA;	
 }
 .SFZzm>span,.SFZfm>span{
 	font-size: 18px;

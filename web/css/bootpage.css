@@ -9,7 +9,7 @@ main{
 }
 .bigboxpage{
 	width: 1160px;
-	height: 869px;
+	/*height: 869px;*/
 	background: #fff;
 	padding:24px 20px;
 }
@@ -20,7 +20,7 @@ main{
 	margin-bottom: 24px;
 }
 .line{
-	padding: 0;
+	padding: 0; 
 	margin: 0;
 	width: 100%;
 	height: 1px;
@@ -32,7 +32,7 @@ main{
 	width: 100%;
 }
 .pagetopul>li{
-	width: 33.333%;
+	width: 25%;
 	float: left;
 }
 .pagenumberbox{
@@ -73,7 +73,7 @@ main{
 	position: absolute;
 	top: 15px;
     left: 108px;
-    width: 270px;
+    width: 170px;
 	height: 1px;
 	background: #198cff;
 }
@@ -101,6 +101,7 @@ main{
 }
 .fbox_div{
 	padding-top: 24px;
+	position: relative;
 }
 .fbox_div>ul{
 	width: 100%;
@@ -130,6 +131,21 @@ main{
 .fbox_div>ul>li>input:hover{
 	border: 1px solid #198cff;
 }
+.fbox_div .querybtn{
+	color: #198cff;
+	font-size: 28px;
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 2px;
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: 54px;
+	left: 310px;
+	margin: 0;
+}
 /*input type=number 去掉右边箭头*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -138,7 +154,7 @@ input::-webkit-inner-spin-button {
 input[type="number"]{
     -moz-appearance: textfield;
 }
-.lastsubmit,.nextpage2,.nextpage3{
+.lastsubmit,.nextpage2,.nextpage3,.nextpage4,.nextpage5{
 	display: inline-block;
 	width: 120px;
 	height: 40px;
@@ -150,7 +166,7 @@ input[type="number"]{
 	margin-top: 40px;
 	cursor: pointer;
 }
-.skip,.skip2,.skip3{
+.skip,.skip2,.skip3,.skip5{
 	display: inline-block;
 	width: 120px;
 	height: 40px;
@@ -163,7 +179,7 @@ input[type="number"]{
 .skip:hover,.skip2:hover,.skip3:hover{
 	color: rgba(0,0,0,.45);
 }
-.datap1,.datap2,.datap3,.datap4,.datap5,.datap6{
+.datap1,.datap2,.datap3,.datap4,.datap5,.datap6,.datap7,.datap8{
 	display: none;
 }
 
@@ -254,6 +270,45 @@ input[type="number"]{
 .fbox_2_ul>li>input:hover,.fbox_2_ul>li>select:hover,.fbox_1_ul>li>select:hover{
 	border:1px solid #198cff;
 }
+.qimingzizhennan{
+	position: relative;
+}
+.yuanqubtn{
+	position: absolute;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	left: 321px;
+	cursor: pointer;
+}
+.yuanqubtn i{
+	font-size: 18px;
+}
+.miniul{
+	position: absolute;
+	width: 360px;
+	height: 400px;
+	overflow: hidden;
+	overflow-y: auto;
+	border:1px solid rgba(0,0,0,.1);
+	background: #fff;
+	z-index: 99999;
+	display: hidden;
+}
+.miniul li,.miniul span{
+	float: left;
+	display: inline-block;
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.miniul li:hover,.miniul span:hover{
+	background: #F5F7FA;	
+}
 .SFZzm,.SFZfm{
 	width: 50%;
 	float: left;
@@ -327,4 +382,73 @@ input[type="number"]{
 	border-radius: 2px;
 	padding-left: 12px;
 	border: 1px solid rgba(0,0,0,.09);
+}
+
+/*物业社区模块*/
+.wysq{
+	margin-top: 20px;
+}
+.zomes-box{
+	width: 1200px;
+	padding-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.zome{
+	width: 373px;
+	height: 190px;
+	background: #fff;
+	margin-bottom: 24px;
+	margin-right: 20px;
+	box-sizing: border-box;
+	padding: 20px;
+	transition: all 0.5s;
+	border:1px solid rgba(0,0,0,.09);
+	cursor: pointer;
+}
+
+.zome:hover{
+	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+}
+.zome-top{
+	display: flex;
+	width: 100%; height: 110px;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.zome-img{
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.zome-img img{
+	width: 100%;
+	height: 100%;
+}
+.zome-info{
+	width: 285px;
+	padding-left: 12px;
+}
+.zome-introduce{
+	margin-top: 10px; 
+	line-height: 22px;
+}
+.lastp{
+	color: rgba(0,0,0,.45);
+}
+.lastp span{
+	color: #198cff;
+	cursor: pointer;
+}
+/*结束*/
+
+/*没有结果*/
+.myjg{
+	display: none;
+	width: 1200px;
+}
+.myjg_box p{
+	text-align: center;
 }

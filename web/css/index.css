@@ -452,7 +452,7 @@
 	margin-top: 40px;
 }
 .zomes-box{
-	width: 1220px;
+	width: 1200px;
 	padding-top: 10px;
 	display: flex;
 	flex-wrap: wrap;
@@ -460,7 +460,7 @@
 }
 
 .zome{
-	width: 386px;
+	width: 376px;
 	height: 190px;
 	background: #fff;
 	margin-bottom: 24px;

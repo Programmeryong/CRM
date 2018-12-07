@@ -12,6 +12,7 @@ main{
 	width: 73.33%;
 	height: 100%;
 	background: #fff;
+	position: relative;
 }
 .main_content_l_1{
 	padding:24px;
@@ -240,3 +241,70 @@ footer{
 .content_3_ul li:hover .content_3_li ul li:nth-of-type(1){background: #FFF7E6; color: #FFB319;}
 .content_3_ul li:hover .content_3_li ul li:nth-of-type(2){background: #FFEEEB; color: #FF8066;}
 .content_3_ul li:hover .content_3_li ul li:nth-of-type(3){background:rgba(25,140,255,0.2); color: #4CA6FF;}
+
+
+/*没有入驻的园区*/
+.settledbox{
+	width: 100%;
+	height: 724px;
+}
+.settledbox p{
+	text-align: center;
+	margin-bottom: 6px;
+}
+.settledbox p:nth-of-type(1){
+	margin-top: 171px;
+}
+.settledbox p:nth-of-type(3){
+	padding-top: 21px;
+}
+.settledbox p:nth-of-type(3) span{
+	display: inline-block;
+	width: 168px;
+	height: 48px;
+	line-height: 48px;
+	border-radius: 2px;
+	background: #198cff;
+	color: #fff;
+	cursor: pointer;
+}
+
+/*二维码*/
+.QRcodebox{
+	position: absolute;
+	width: 240px;
+	height: 275px;
+	padding: 10px;
+	background: #fff;
+	z-index: 100011;
+	border:1px solid #979797;
+	border-radius: 2px;
+	top: 50%;
+	left: 50%;
+	margin: -147.5px 0 0 -130px;
+}
+.QRtoptext{
+	font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 16px;
+    height: 16px;
+    position: relative;
+    color: #000;
+}
+.QRtopcuo{
+	float: right;
+}
+.QRp{
+	font-size: 12px;
+    text-align: left;
+    line-height: 22px;
+    color: #666;
+}
+#qr3{
+	text-align: center;
+}
+#qr3 img{
+	width: 210px;
+	height: 210px;
+}

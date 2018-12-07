@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>企业主页</title>
+	<link rel="stylesheet" type="text/css" href="css/crm_style.css">
+	<link rel="stylesheet" type="text/css" href="css/company.css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/crm-style.js" ></script>
+	<script type="text/javascript" src="js/company.js"></script>
+</head>
+<body style="background: rgba(0,0,0,0.04)">
+	<header>
+		<div class="header-1">
+			<div class="header-1-ct">
+				<div class="header-1-l" style="display: flex;">
+					<span>广州</span>
+					<div class="gzyz">
+						<p style="text-align: center;">广州乙租 
+							<i class="iconfont icon-Group-" style="position: relative; top: 2px; left: 3px;"></i>
+						</p>
+						<div>
+							<ul>
+								<li><a href="">账号设置</a></li>
+								<li><a href="">系统通知</a></li>
+								<li><a href="">用户信息</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<ul class="user_inform clear">
+						<li><a href="">企业信息</a><i>56</i></li>
+						<li><a href="">系统通知</a><i>1</i></li>
+						<li><a href="">账号设置</a><i>99+</i></li>
+					</ul>
+				</div>
+				
+				<div class="header-1-r">
+					<a href="about.html">关于我们</a>
+					<a href="index.html" style="margin-left: 30px;">登录</a>
+					<i class="block45"> |</i>
+					<a href="login.html">注册</a>
+					<a href="" style="margin-left: 30px;">注销</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header-2">
+			<div class="header-2-ct">
+				<div class="header-2-l">
+					<div style="float: left; height: 100%; overflow: hidden;">
+						<img src="images/icon/logo_1.png" />
+					</div>
+					<ul style="float: left; margin-left: 50px;">
+						<li>首页</li>
+						<li>需求大厅</li>
+						<li>物业社区</li>
+					</ul>
+				</div>
+				
+				<div class="header-2-r">
+					<input type="" name="" id="" value="" placeholder="请输入商圈、名称、区域" />
+					<span class="sousuo iconfont icon-fangdajing"></span>
+					<button class="fabu-bt">发布房源</button>
+				</div>
+			</div>
+		</div>
+		
+		<!--/*右边固定导航栏*/-->
+		<div class="right_box">
+		    <ul class="right_icon">
+		        <li class="clickKF">
+		            <p><img src="images/icon/custom.png"></p>
+		            <p class="fsize18">客服</p>
+		        </li>
+		        <li class="clickSM">
+		            <img class="thisSM" style="display: none;position: absolute;top:80px;left:-120px;z-index: 999999;" src="images/qrcode/qrcode.png">
+		            <p><img src="images/icon/scan.png"></p>
+		            <p class="fsize18">扫码</p>
+		        </li>
+		        <li class="fankui">
+		            <p><img src="images/icon/feedback.png"></p>
+		            <p class="fsize18">反馈</p>
+		        </li>
+		        <li class="gototop">
+		            <p><img src="images/icon/arrow_top.png"></p>
+		        </li>
+		    </ul>
+		</div>
+	</header>
+
+	<main>
+		<p style="height: 3rem; line-height: 3rem; width: 100rem; margin: 0 auto; color: rgba(0,0,0,0.65);">
+    		乙租>写字楼出租>三号线>天河客运站</p>
+    	<div class="main_content">
+    		<!-- 中部内容左边 -->
+    		<div class="main_content_l">
+    			<div class="settledbox">
+    				<p>您还没有登录哦，请先登录再来吧。</p>
+    				<p>返回<a href="index.html" style="color:#198cff;">首页登录</a></p>
+    			</div>
+    		</div>
+    		<!-- 中部内容右边 -->
+    		<div class="main_content_r">
+				<div class="saoma-box">
+        			<img src="images/qrcode/qrcode.png" width="160px" height="160px"/>
+        			<p class="fsize18" style="text-align: center; margin-top: 8px;">扫码进入小程序</p>
+        		</div>
+        		<!-- 完善资料之后就消失 -->
+        		<div class="perfectdata">
+        			<span>未完善资料不能关注企业</span>
+        			<span><a href="#">完善资料</a></span>
+        		</div>
+        		<div class="img-box">
+        			<img src="images/banner/banner_3.jpg"/>
+        			<img src="images/banner/banner_3.jpg"/>
+        		</div>
+    		</div>
+    	</div>
+	</main>
+	<footer class="pc">
+	        <div style="width: 1200px; margin: 0 auto;">
+	           <div class="footer_title">广州乙租信息科技有限公司</div>
+	           <div class="footer_conter">
+	               <div class="footer_conter1">
+	                   <span>关于乙租</span>
+	                   <ul class="pad">
+	                       <li><a href="{:U('AboutUs/index')}?tag=1">联系我们</a></li>
+	                       <li><a href="{:U('AboutUs/index')}?tag=2">商务合作</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=3">常见问题</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=4">用户协议</a></li>
+	                        <li><a href="{:U('AboutUs/index')}?tag=5">隐私条款</a></li>
+	                   </ul>
+	               </div>
+	               <div class="footer_conter2">
+	                   <span>友情链接</span>
+	                   <ul class="pad">
+	                       <li><a href="{$vo.link_url}">今日头条</a></li>
+	                       <li><a href="{$vo.link_url}">知乎</a></li>
+	                       <li><a href="{$vo.link_url}">腾讯网</a></li>
+	                       <li><a href="{$vo.link_url}">搜狐</a></li>
+	                       <li><a href="{$vo.link_url}">UC头条</a></li>
+	                       <li><a href="{$vo.link_url}">网易</a></li>
+	                       <li><a href="{$vo.link_url}">新浪网</a></li>
+	                       <li><a href="{$vo.link_url}">南方财富网</a></li>
+	                   </ul>
+	               </div>
+	               <div class="footer_conter3">
+	                   <span>电话</span>
+	                   <h2 class="conter3_h2">400-886-6391</h2>
+	                   <span>地址</span>
+	                   <p style="color: rgba(255,255,255,.65);font-size: 14px;margin-bottom: 24px;">广州市白云大道北广贸商务中心C栋401</p>
+	                   <span>邮箱</span>
+	                   <p style="color:rgba(255,255,255,.65);font-size: 14px;">epassrent@163.com</p>
+	               </div>
+	               <div class="footer_conter4">
+	                    <span><img src="images/qrcode/qrcode_1.jpg"></span>
+	                    <span class="gzgzh">关注公众号</span>
+	               </div>
+	           </div>
+	        </div>
+	        <!-- 最底下 备案 -->
+	        <div class="foot_t_box">
+	            <div class="foot_t">
+	                <span>
+	                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011102002056">
+	                        <img src="images/GABA.png" />
+	                        粤公网安备 44011102002056号
+	                    </a>
+	                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                </span>
+	                <span>&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/"style="color:#fff">Copyright &#169 2017 广州乙租信息科技有限公司 粤ICP备18097655号</a></span>
+	            </div>
+	        </div>
+	</footer>
+</body>
+</html>

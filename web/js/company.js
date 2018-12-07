@@ -21,5 +21,10 @@ $(function(){
 			$('.title').eq(i).text(nText.substring(0,31)+"...");
 		}
 	}
-
+	$('.openRQ').click(function(){
+		$('.QRcodebox').show();
+	})
+	$('.QRtopcuo').click(function(){
+		$('.QRcodebox').hide();
+	})
 })	
