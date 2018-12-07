@@ -60,9 +60,8 @@ main{
 .yes_this_btn{
 	position: absolute;
     top: 50px;
-    left: 50px;
+    left: 100px;
 	width: 105px;
-	opacity:0;
 }
 .information{
 	width: 66px;
