@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootpage.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bootpage.js"></script>
+	<script type="text/javascript" src="js/clamp.js" ></script>
 	<script type="text/javascript" src="js/crm-style.js" ></script>
 </head>
 <body style="background: rgba(0,0,0,.04)">
@@ -116,6 +117,13 @@
 						<div class="pagenumberbox">
 							<span class="numberspan">3</span>
 							<span>步骤三</span>
+							<div>请正确选择信息，错误会导致楼盘删除</div>
+						</div>
+					</li>
+					<li>
+						<div class="pagenumberbox">
+							<span class="numberspan">4</span>
+							<span>步骤四</span>
 							<div>请正确选择信息，错误会导致楼盘删除</div>
 						</div>
 					</li>
@@ -292,7 +300,7 @@
 		    						<textarea class="propert_textarea" maxlength="300" placeholder="请输入园区简介"></textarea>
 		    						<p class="home_p2" style="color:red"></p>
 		    					</div>
-		    					<ul class="fbox_2_ul clear">
+		    					<!-- <ul class="fbox_2_ul clear">
 									<li class="qimingzizhennan">
 										<p>所在园区</p>
 										<input class="yuanqu" type="text" name="yuanqu" placeholder="请输入园区名字" autocomplete="off">
@@ -323,10 +331,10 @@
 										<input class="homeBZ" type="text" name="" maxlength="18" placeholder="备注园区号，如C401" autocomplete="off">
 										<p class="home_p3" style="margin:0;font-size: 14px;color:red"></p>	
 									</li>
-								</ul>
+								</ul> -->
 		    				</div>
     					</div>
-    					<span class="nextpage3">完成</span><span class="skip3">跳过</span>
+    					<span class="nextpage3">下一步</span><span class="skip3">跳过</span>
     				</div>
 				</form>
 			</div>
@@ -368,7 +376,7 @@
     });
 
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(function(){
 		$('.miniul').hide();
 		$('.tips').hide();
@@ -422,5 +430,42 @@
 			$('.yuanqu').removeAttr("disabled");
 		})
 	})
+</script> -->
+<script type="text/javascript">
+	// $(function(){
+	// 	var Selection = '';
+	// 	$('.nextpage3').click(function(){
+	//     	let i = $('.slt').val().length;
+	//     	let j = $('.property_text').val().length;
+	//     	// if(i == 0 || j == 0){
+	//     	// 	return false;
+	//     	// }else if(i != 0 && j != 0){
+	//     	// 	return true;
+	//     		$('.boxpage1').hide();
+	//     		$('.boxpage2').hide();
+	//             $('.boxpage3').hide();
+	//             $('.boxpage4').show();
+	//             $('.numberspan').eq(2).removeClass('thispage');
+ //            	$('.numberspan').eq(3).addClass('thispage');
+	//     	// }
+	//     })
+	// 	$('.zomes-box').on('click','.zome',function(){
+	// 		var ii = $(this).index();
+	// 		Selection = $('.zomes-box .zome').eq(ii).attr('id');
+	// 		$('.zome').css({'border':'1px solid rgba(0,0,0,.09)'});
+	// 		$(this).css({'border':'1px solid #198cff'});
+	// 	})
+
+	// 	$('.nextpage4').click(function(){
+	// 		if(Selection == '' && $('.beizu').val() == ''){
+	// 			if(Selection == ''){
+	// 				$('.datap7').show();
+	// 				$('.datap7').text('请选择园区')
+	// 			}
+	// 		}else{
+	// 			$('.datap7').hide();$('.datap8').hide();
+	// 		}
+	// 	})
+	// })
 </script>
 </html>
