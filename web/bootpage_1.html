@@ -286,6 +286,7 @@
 
 <script type="text/javascript">
 	$(function(){
+		// 点击之后获取的ID值  Selection
 		var Selection = '';
 		$('.zomes-box').on('click','.zome',function(){
 			var ii = $(this).index();
@@ -298,7 +299,7 @@
 			if(Selection == ''  || a.length == 0){
 				if(Selection == ''){
 					$('.datap7').show();
-					$('.datap7').text('请选择园区')
+					$('.datap7').text('请选择园区');
 				}
 				if(a.length == 0){
 					$('.datap8').show();
@@ -306,7 +307,8 @@
 				}
 			}else{
 				$('.datap7').hide();$('.datap8').hide();
-				console.log(123)
+				console.log(123);
+				console.log(Selection);
 			}
 		})
 		$('.lastp').click(function(){
