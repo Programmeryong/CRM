@@ -20,42 +20,45 @@ $(function(){
 										"</ul>"+
 									"</div>");
 		}
-		
+		scrolls();
 	})
 	$('.user-list>ul>li').eq(0).click();
 	
-	$('.talk-box').eq(index).scroll(function(){
-		var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高度
-		if(scrollTop<=5){ 
-			var dataInt = {"data":[{"tex":"1"},{"tex":"2"}]};
-		    //滚动条到达顶部
-		    console.log(scrollTop);
-		    var mydate = new Date(); 
-			var thisTime = mydate.toLocaleString('chinese', { hour12: false });
-			for (var i=0; i<dataInt.data.length;i++) {
-				if (i%2==0) {
-					$('.talk-box:eq('+index+') .talk-text').prepend("<li class='mine'>"+
-										"<p class='time-mine'>"+thisTime+"</p>"+
-										"<div class='mine-img'><img src='images/test/adf.jpg'/></div>"+
-										"<div class='text'>"+
-											"<p>"+dataInt.data[i].tex+"</p>"+
-										"</div>"+
-									"</li>");
-				} 
-				else{
-					$('.talk-box:eq('+index+') .talk-text').prepend("<li class='other'>"+
-										"<p class='time-other'>"+thisTime+"</p>"+
-										"<div class='other-img'><img src='images/test/minhead.png'/></div>"+
-										"<div class='text'>"+
-											"<p>"+dataInt.data[i].tex+"</p>"+
-										"</div>"+
-									"</li>");
-				}
-			}	
-			
-			$('.talk-box').eq(index).scrollTop($('.talk-box').eq(index).scrollTop());
-		}
-	});
+	function scrolls(){
+		$('.talk-box:eq('+index+')').scroll(function(){
+			var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高度
+			if(scrollTop<=5){ 
+				$('.jiaz').show();
+				var dataInt = {"data":[{"tex":"1"},{"tex":"2"}]};
+			    //滚动条到达顶部
+			    console.log(scrollTop);
+			    var mydate = new Date(); 
+				var thisTime = mydate.toLocaleString('chinese', { hour12: false });
+				for (var i=0; i<dataInt.data.length;i++) {
+					if (i%2==0) {
+						$('.talk-box:eq('+index+') .talk-text').prepend("<li class='mine'>"+
+											"<p class='time-mine'>"+thisTime+"</p>"+
+											"<div class='mine-img'><img src='images/test/adf.jpg'/></div>"+
+											"<div class='text'>"+
+												"<p>"+dataInt.data[i].tex+"</p>"+
+											"</div>"+
+										"</li>");
+					} 
+					else{
+						$('.talk-box:eq('+index+') .talk-text').prepend("<li class='other'>"+
+											"<p class='time-other'>"+thisTime+"</p>"+
+											"<div class='other-img'><img src='images/test/minhead.png'/></div>"+
+											"<div class='text'>"+
+												"<p>"+dataInt.data[i].tex+"</p>"+
+											"</div>"+
+										"</li>");
+					}
+				}	
+				
+				$('.talk-box').eq(index).scrollTop($('.talk-box').eq(index).scrollTop());
+			}
+		});
+	}
 	
 	var txt='';
 	var i = 0;
@@ -102,9 +105,21 @@ $(function(){
 	})
 	
 	$('#send').click(function(){
-       	var mydate = new Date();  
-		var thisTime = mydate.toLocaleString('chinese', { hour12: false });
+//     	var mydate = new Date();  
+//		var thisTime = mydate.toLocaleString('chinese', { hour12: false });
+
+		var myDate = new Date();
+		//获取当前年
+		var year=myDate.getFullYear();
+		//获取当前月
+		var month=myDate.getMonth()+1;
+		//获取当前日
+		var date=myDate.getDate(); 
+		var h=myDate.getHours();       //获取当前小时数(0-23)
+		var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+		var s=myDate.getSeconds();  
 		
+		var thisTime = year+'-'+(month)+"-"+(date)+" "+(h)+':'+(m)+":"+(s);
 		
 		txt = $('#txt').html();
 		txts = $('#txt').text();
