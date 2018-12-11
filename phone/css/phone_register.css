@@ -149,12 +149,12 @@ input:-webkit-autofill {
 	text-align: right;
 }
 .form2_ul>li{
-	display: block!important;
+	display: block;
 	width: 21px;
 	height: 21px;
 	float: left;
 }
-.form2_ul li i{
+.form2_ul>li>i{
 	font-size: 21px;
 }
 .icon-dui{
