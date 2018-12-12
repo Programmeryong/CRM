@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/about.css" />
 		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 		<link rel="stylesheet" href="https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
-	    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=330lI4uhwRc5vAGET9LNgYmcag7lH5K2&s=1"></script>
+	    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=bKpjcfR5hodPDUM5CD0teNGCGrHGsgrH&s=1"></script>
 	    <script type="text/javascript" src="https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript" src="js/crm-style.js" ></script>
@@ -461,9 +461,10 @@
 	<script type="text/javascript">
         // 百度地图API功能
         var map = new BMap.Map('allmap');
-        var poi = new BMap.Point(113.2956311606, 23.2095909690);
-        map.centerAndZoom(poi, 25);
+        var poi = new BMap.Point(113.296007,23.209565);
+        map.centerAndZoom(poi, 15);
         map.enableScrollWheelZoom();
+        map.panBy(510,233);  //强制居中 X，Y 是当前的PX值
 
         var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
             '<img src="images/logo/logo_1.png" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +'地址：广州市白云大道北广贸商务中心C栋401<br/>电话：400-886-6391<br/>简介：乙租租房，定位于面向中小微企业的互联网仓储运营管理平台' +'</div>';
@@ -483,14 +484,14 @@
             ]
         });
         var marker = new BMap.Marker(poi); //创建marker对象
-        marker.enableDragging(); //marker可拖拽
+        marker.enableDragging(); //marker可拖拽113.2956311606, 23.2085909690
         marker.addEventListener("click", function (e) {
             searchInfoWindow.open(marker);
         })
         map.addOverlay(marker); //在地图中添加marker
 
         function openInfoWindow3() {
-            searchInfoWindow3.open(new BMap.Point(113.2956311606, 23.2085909690));
+            searchInfoWindow3.open(new BMap.Point(113.296007,23.209565));
         }
         searchInfoWindow.open(marker);
         $(function () {
