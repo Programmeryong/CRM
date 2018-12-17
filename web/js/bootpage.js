@@ -39,6 +39,7 @@ $(function(){
                 var file = input_file.files[0];
                 //这里我们判断下类型如果不是图片就返回 去掉就可以上传任意文件
                 if (!/image\/\w+/.test(file.type)) {
+                    console.log(file.type);
                     alert("请确保文件为图像类型");
                     return false;
                 }
