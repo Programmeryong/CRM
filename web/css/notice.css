@@ -1,0 +1,45 @@
+.topUrl{
+	width: 1200px;
+	margin: 0 auto;
+	padding:5px 0; 
+}
+main{
+	width: 1200px;
+	min-height:600px; 
+	margin: 10px auto 40px;
+	display: flex;
+	justify-content:space-between;
+}
+.noticeleft{
+	width: 840px;
+	padding: 24px 20px;
+	background: #fff;
+}
+.noticeright{
+	width: 300px;
+}
+ul li img{
+	width: 300px;
+	height: 400px;
+	margin-bottom: 40px;
+}
+.shaoma{
+	width: 300px;
+	background: #fff;
+	text-align: center;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.tit{
+	color: rgba(0,0,0,.85);
+	text-align: center;
+	font-size: 24px;
+}
+.minitit{
+	margin: 20px 0;
+}
+.minitit li{
+	float: left;
+	margin-left:24px; 
+	font-size: 16px;
+}

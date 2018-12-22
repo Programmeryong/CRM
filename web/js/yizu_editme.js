@@ -28,7 +28,7 @@ $(function(){
 	function textphone(thisclass){
 			$(thisclass).blur(function(){
 				let Uphone = $(thisclass).val();
-				let Tphone = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+				let Tphone = /^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\d{8}$/;
 				if(Tphone.test(Uphone) == false|| Uphone == ''){
 					$(thisclass).css({'border':'1px solid #F52230'});
 				}else if(Tphone.test(Uphone)==true){
